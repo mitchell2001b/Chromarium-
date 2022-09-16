@@ -55,7 +55,8 @@ public class Weapon : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
             {
-                EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+                //EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+                Transform target = null;
                 Debug.Log(hit.collider.gameObject.name);
                 CreateHitImpact(hit);
 
@@ -67,7 +68,7 @@ public class Weapon : MonoBehaviour
                 }
                 else
                 {
-                    target.TakeDamage(Damage);
+                    //target.TakeDamage(Damage);
                 }
 
 
