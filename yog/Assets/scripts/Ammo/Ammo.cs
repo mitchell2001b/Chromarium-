@@ -29,6 +29,21 @@ public class Ammo : MonoBehaviour
         return GetAmmoSlot(ammoType).ammoAmount;       
     }
 
+    public int GetCurrentAmmoIndex(AmmoType ammotype)
+    {
+        int index = 0;
+        for (int i = 0; i < ammoSlots.Length; i++)
+        {
+            if (ammoSlots[i].typeOfAmmo == ammotype)
+            {
+                index = i;
+                break;
+            }
+        }
+
+        return index;
+    }
+
     public AmmoType GetCurrentAmmoType()
     {
         return currentAmmoSlot.typeOfAmmo;
@@ -77,12 +92,26 @@ public class Ammo : MonoBehaviour
     {
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-            SetCurrentAmmoSlot(AmmoType.Fire);
+            if (GetCurrentAmmoIndex(GetCurrentAmmoType()) >= ammoSlots.Length - 1)
+            {
+                SetCurrentAmmoSlot(ammoSlots[0].typeOfAmmo);
+            }
+            else
+            {               
+                SetCurrentAmmoSlot(ammoSlots[GetCurrentAmmoIndex(GetCurrentAmmoType()) + 1].typeOfAmmo);
+            }
         }
 
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-            SetCurrentAmmoSlot(AmmoType.Regular);
+            if (GetCurrentAmmoIndex(GetCurrentAmmoType()) <= 0)
+            {
+                SetCurrentAmmoSlot(ammoSlots[ammoSlots.Length - 1].typeOfAmmo);
+            }
+            else
+            {                
+                SetCurrentAmmoSlot(ammoSlots[GetCurrentAmmoIndex(GetCurrentAmmoType()) - 1].typeOfAmmo);
+            }
         }
     }
 }

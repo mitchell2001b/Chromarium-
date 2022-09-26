@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 6579762514839986500}
   - component: {fileID: 6579762514839986526}
   - component: {fileID: 2059234154}
+  - component: {fileID: 396121373}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -309,6 +310,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  freezeController: 0
 --- !u!54 &6579762513916172079
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -433,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f64f48014164d4fa863fa550700a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  maxHealth: 100
   HealthTextNumber: {fileID: 0}
 --- !u!114 &6579762514839986506
 MonoBehaviour:
@@ -487,12 +489,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13681efb74e334146b3518cc3b717735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmmoSlots:
-  - TypeOfAmmo: 0
-    AmmoAmount: 100
-  - TypeOfAmmo: 1
-    AmmoAmount: 50
-  AmmoNumber: {fileID: 0}
+  ammoSlots:
+  - typeOfAmmo: 0
+    ammoAmount: 100
+  - typeOfAmmo: 1
+    ammoAmount: 100
+  - typeOfAmmo: 2
+    ammoAmount: 100
+  - typeOfAmmo: 3
+    ammoAmount: 100
+  - typeOfAmmo: 4
+    ammoAmount: 100
+  - typeOfAmmo: 5
+    ammoAmount: 100
+  - typeOfAmmo: 6
+    ammoAmount: 100
+  ammoNumber: {fileID: 0}
+  currentAmmoSlot:
+    typeOfAmmo: 0
+    ammoAmount: 0
+--- !u!114 &396121373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579762513912820815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee534691184658140b49c31dd52021cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  dashForce: 0
+  dashCooldown: 0
 --- !u!1 &6579762514171229927
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158997199750, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158997199752, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_Layer
@@ -690,15 +720,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 100
   cam: {fileID: 6579762513746224243}
-  Damage: 25
-  MuzzleFlash: {fileID: 6701519661559820202}
-  HitEffect: {fileID: 8387638484726288822, guid: b3514b045e243464995d4d023d1204d1, type: 3}
-  mask:
-    serializedVersion: 2
-    m_Bits: 64
-  AmmoSlot: {fileID: 2059234154}
-  TypeOfAmmo: 0
-  TimeBetweenShots: 0
+  damage: 100
+  muzzleFlash: {fileID: 6701519661559820202}
+  hitEffect: {fileID: 8387638484726288822, guid: b3514b045e243464995d4d023d1204d1, type: 3}
+  ammoHandler: {fileID: 2059234154}
+  timeBetweenShots: 0.5
   AmmoNumber: {fileID: 0}
   CanShoot: 1
 --- !u!1001 &6579762515033373606
