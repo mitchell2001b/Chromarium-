@@ -6,7 +6,7 @@ public class AmmoPickUp : MonoBehaviour
 {
 
     [SerializeField] int AmmoAmount = 5;
-    [SerializeField] AmmoType TypeOfAmmo = AmmoType.Bullets;
+    [SerializeField] AmmoType TypeOfAmmo = AmmoType.Regular;
     
     // Start is called before the first frame update
     void Start()

@@ -7,25 +7,23 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] float range = 100f;
     [SerializeField] GameObject cam;
-    [SerializeField] float Damage = 100f;
-    [SerializeField] ParticleSystem MuzzleFlash;
-    [SerializeField] GameObject HitEffect;
-    [SerializeField] LayerMask mask;
-    [SerializeField] Ammo AmmoSlot;
-    [SerializeField] AmmoType TypeOfAmmo;
-    [SerializeField] float TimeBetweenShots = 0.5f;
+    [SerializeField] float damage = 100f;
+    [SerializeField] ParticleSystem muzzleFlash;
+    [SerializeField] GameObject hitEffect;
+    [SerializeField] Ammo ammoHandler;
+    [SerializeField] float timeBetweenShots = 0.5f;
     [SerializeField] TextMeshProUGUI AmmoNumber;
 
     public bool CanShoot = true;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     private void OnEnable()
     {
-        AmmoNumber.text = AmmoSlot.GetCurrentAmmoAmount(TypeOfAmmo).ToString();
+        AmmoNumber.text = ammoHandler.GetCurrentAmmoAmount(ammoHandler.GetCurrentAmmoType()).ToString();
     }
 
     // Update is called once per frame
@@ -41,17 +39,17 @@ public class Weapon : MonoBehaviour
 
     public void CreateHitImpact(RaycastHit hit)
     {
-       GameObject impact = Instantiate(HitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+       GameObject impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
        Destroy(impact, 1);
     }
 
    
     IEnumerator Shoot()
     {
-        if (AmmoSlot.GetCurrentAmmoAmount(TypeOfAmmo) > 0)
+        if (ammoHandler.GetCurrentAmmoAmount(ammoHandler.GetCurrentAmmoType()) > 0)
         {
             PlayMuzzleFlash();
-            AmmoSlot.ReduceAmmo(1, TypeOfAmmo);
+            ammoHandler.ReduceAmmo(1, ammoHandler.GetCurrentAmmoType());
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
             {
@@ -63,7 +61,7 @@ public class Weapon : MonoBehaviour
                 if (target == null)
                 {
 
-                    yield return new WaitForSeconds(TimeBetweenShots);
+                    yield return new WaitForSeconds(timeBetweenShots);
                     CanShoot = true;
                 }
                 else
@@ -78,18 +76,18 @@ public class Weapon : MonoBehaviour
             }
             else
             {
-                yield return new WaitForSeconds(TimeBetweenShots);
+                yield return new WaitForSeconds(timeBetweenShots);
                 CanShoot = true;
             }
         }
 
-        yield return new WaitForSeconds(TimeBetweenShots);
+        yield return new WaitForSeconds(timeBetweenShots);
         CanShoot = true;
        
     }
 
     private void PlayMuzzleFlash()
     {
-        MuzzleFlash.Play();
+        muzzleFlash.Play();
     }
 }
