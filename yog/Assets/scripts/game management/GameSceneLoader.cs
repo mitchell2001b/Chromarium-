@@ -20,8 +20,7 @@ public class GameSceneLoader : MonoBehaviour
     }
 
     public void ReloadGame()
-    {
-
+    {       
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
         //Player.GetComponent<FirstPersonController>().enabled = true;

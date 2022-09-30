@@ -6,6 +6,6 @@ public enum AmmoType
     Earth,
     Wind,
     Void,
-    Light
+    Holy
 
 }

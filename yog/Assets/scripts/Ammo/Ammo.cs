@@ -16,19 +16,20 @@ public class Ammo : MonoBehaviour
     private class AmmoSlot
     {
         public AmmoType typeOfAmmo;
-        public int ammoAmount;
+        public int ammoAmount;       
     }
 
     
     private void SetCurrentAmmoSlot(AmmoType ammoType)
     {
         currentAmmoSlot = GetAmmoSlot(ammoType);
+        ammoNumber.text = GetAmmoSlot(ammoType).ammoAmount.ToString();
+        BroadcastMessage("WeaponCanShootActive");
     }
     public int GetCurrentAmmoAmount(AmmoType ammoType)
     {
         return GetAmmoSlot(ammoType).ammoAmount;       
     }
-
     public int GetCurrentAmmoIndex(AmmoType ammotype)
     {
         int index = 0;
@@ -43,7 +44,7 @@ public class Ammo : MonoBehaviour
 
         return index;
     }
-
+   
     public AmmoType GetCurrentAmmoType()
     {
         return currentAmmoSlot.typeOfAmmo;
@@ -62,7 +63,7 @@ public class Ammo : MonoBehaviour
         ammoNumber.text = GetAmmoSlot(ammoType).ammoAmount.ToString();
     }
 
-
+   
 
     private AmmoSlot GetAmmoSlot(AmmoType ammoType)
     {
