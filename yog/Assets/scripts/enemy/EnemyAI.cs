@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     NavMeshAgent navMeshAgent;
     Animator animator;
     float distanceToTarget = Mathf.Infinity;
+    [SerializeField] GameObject drop;
     
     void Start()
     {
@@ -54,5 +55,15 @@ public class EnemyAI : MonoBehaviour
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
+    }
+
+    private void DropMaterial()
+    {
+        Instantiate(drop, transform.position, drop.transform.rotation);
+    }
+
+    private void Erase()
+    {
+        Destroy(gameObject);
     }
 }

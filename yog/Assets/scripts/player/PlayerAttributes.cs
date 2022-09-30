@@ -21,7 +21,11 @@ public class PlayerAttributes : MonoBehaviour
         
     }
 
-    
+    public void IncreaseXp(int xpValue)
+    {
+        XpCount += xpValue;
+        Debug.Log("XP: " + XpCount);
+    }
 
 
 
