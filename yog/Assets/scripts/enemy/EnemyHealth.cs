@@ -31,7 +31,7 @@ public class EnemyHealth : MonoBehaviour
 
         GetComponent<NavMeshAgent>().enabled = false;
         // Disable Collider
-        //GetComponent<Collider>().enabled = fasle;
+        //GetComponent<Collider>().enabled = false;
 
         // Trigger death animation when present
         if (GetComponent<Animator>() != null) GetComponent<Animator>().SetTrigger("die");
