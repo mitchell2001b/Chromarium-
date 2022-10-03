@@ -22,6 +22,15 @@ public class PlayerAttributes : MonoBehaviour
     float aoeRangeModifier = 1f;
     [SerializeField] TextMeshProUGUI aoeModifierTextNumber;
     
+    private void Start() {
+        currencyTextNumber.text = currency.ToString();
+        damageModifierTextNumber.text = damageModifier.ToString();
+        attackSpeedModifierTextNumber.text = attackSpeedModifier.ToString();
+        critChanceTextNumber.text = critChance.ToString();
+        critModifierTextNumber.text = critModifier.ToString();
+        rangeModifierTextNumber.text = rangeModifier.ToString();
+        aoeModifierTextNumber.text = aoeRangeModifier.ToString();
+    }
     public bool HasEnoughCurrency(int requiredAmount)
     {
         return currency >= requiredAmount;
