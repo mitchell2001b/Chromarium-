@@ -15,6 +15,6 @@ public class EnemyMeleeAttack : MonoBehaviour
     public void AttackHitEvent()
     {
         if (target == null) return;
-        target.RecieveDamage(damage);
+        target.ReceiveDamage(damage);
     }
 }

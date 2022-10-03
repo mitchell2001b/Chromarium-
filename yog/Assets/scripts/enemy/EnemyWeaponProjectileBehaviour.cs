@@ -8,7 +8,7 @@ public class EnemyWeaponProjectileBehaviour : MonoBehaviour
     float bulletDamage = 10f;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") other.GetComponent<PlayerHealth>().RecieveDamage(bulletDamage);
+        if (other.tag == "Player") other.GetComponent<PlayerHealth>().ReceiveDamage(bulletDamage);
 
         if (other.tag != "Enemy" && other.tag != "Projectile") Destroy(gameObject);
     }

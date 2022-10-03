@@ -5,6 +5,6 @@ using UnityEngine;
 public interface IAttackable
 {
     public float health { get; }
-    public void RecieveDamage(float damageAmountToRecieve);
+    public void ReceiveDamage(float damageAmountToRecieve);
     
 }
