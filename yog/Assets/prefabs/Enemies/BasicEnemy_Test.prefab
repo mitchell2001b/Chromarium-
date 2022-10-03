@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 3
-  drop: {fileID: 0}
+  drop: {fileID: 4318968702811732409, guid: 57402dd61a6e4a14baaac2577c9fec44, type: 3}
 --- !u!114 &3564150868222662826
 MonoBehaviour:
   m_ObjectHideFlags: 0
