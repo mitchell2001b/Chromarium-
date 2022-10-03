@@ -38,6 +38,7 @@ public class EnemyHealth : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
+        // Disable NavMeshAgent
         GetComponent<NavMeshAgent>().enabled = false;
         // Disable Collider
         //GetComponent<Collider>().enabled = false;
