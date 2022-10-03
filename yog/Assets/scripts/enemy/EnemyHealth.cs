@@ -14,8 +14,8 @@ public class EnemyHealth : MonoBehaviour
     float resistanceModifier = .5f;
 
     [SerializeField]
-    [Range(1, 2)]
-    float weaknessModifier = 1.5f;
+    [Range(0, 1)]
+    float weaknessModifier = .5f;
     public float hitPoints { get; private set; }
     public bool isDead { get; private set; } = false;
 
@@ -27,33 +27,33 @@ public class EnemyHealth : MonoBehaviour
     public void RecieveDamage(float damageAmount, AmmoType ammoTypeUsed)
     {
         if (elementalAffinity == AmmoType.Regular) hitPoints -= damageAmount;
-        else if (elementalAffinity == ammoTypeUsed) hitPoints -= damageAmount * resistanceModifier;
+        else if (elementalAffinity == ammoTypeUsed) hitPoints -= damageAmount * (1 - resistanceModifier);
         else
         {
             switch (elementalAffinity)
             {
                 case AmmoType.Fire:
-                    if (ammoTypeUsed == AmmoType.Ice) hitPoints -= damageAmount * weaknessModifier;
+                    if (ammoTypeUsed == AmmoType.Ice) hitPoints -= damageAmount * (1 + weaknessModifier);
                     else hitPoints -= damageAmount;
                     break;
                 case AmmoType.Ice:
-                    if (ammoTypeUsed == AmmoType.Fire) hitPoints -= damageAmount * weaknessModifier;
+                    if (ammoTypeUsed == AmmoType.Fire) hitPoints -= damageAmount * (1 + weaknessModifier);
                     else hitPoints -= damageAmount;
                     break;
                 case AmmoType.Earth:
-                    if (ammoTypeUsed == AmmoType.Wind) hitPoints -= damageAmount * weaknessModifier;
+                    if (ammoTypeUsed == AmmoType.Wind) hitPoints -= damageAmount * (1 + weaknessModifier);
                     else hitPoints -= damageAmount;
                     break;
                 case AmmoType.Wind:
-                    if (ammoTypeUsed == AmmoType.Earth) hitPoints -= damageAmount * weaknessModifier;
+                    if (ammoTypeUsed == AmmoType.Earth) hitPoints -= damageAmount * (1 + weaknessModifier);
                     else hitPoints -= damageAmount;
                     break;
                 case AmmoType.Holy:
-                    if (ammoTypeUsed == AmmoType.Void) hitPoints -= damageAmount * weaknessModifier;
+                    if (ammoTypeUsed == AmmoType.Void) hitPoints -= damageAmount * (1 + weaknessModifier);
                     else hitPoints -= damageAmount;
                     break;
                 case AmmoType.Void:
-                    if (ammoTypeUsed == AmmoType.Holy) hitPoints -= damageAmount * weaknessModifier;
+                    if (ammoTypeUsed == AmmoType.Holy) hitPoints -= damageAmount * (1 + weaknessModifier);
                     else hitPoints -= damageAmount;
                     break;
                 default:
