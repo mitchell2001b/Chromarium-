@@ -10,7 +10,7 @@ public class DeathHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameOverCanvas.enabled = false;
+        GameOverCanvas.enabled = false;        
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class DeathHandler : MonoBehaviour
         GameOverCanvas.enabled = true;
 
         Time.timeScale = 0;
-        FindObjectOfType<WeaponHandler>().enabled = false;
+        //FindObjectOfType<WeaponHandler>().enabled = false;
         GetComponent<FirstPersonController>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
