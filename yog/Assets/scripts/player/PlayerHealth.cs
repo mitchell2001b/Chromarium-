@@ -34,15 +34,21 @@ public class PlayerHealth : MonoBehaviour, IAttackable
         UpdateUIHealth(health.ToString() + "/" + maxHealth.ToString());
     }
 
-    public void ChangeMaxHealth(float newMaxHealthToAddOnTopOfCurrentMaxHealth)
+    public void ChangeMaxHealth(float newMaxHealth)
     {
-        maxHealth = maxHealth + newMaxHealthToAddOnTopOfCurrentMaxHealth;
+        maxHealth = newMaxHealth;
+        HealPlayer(maxHealth);
+    }
+
+    public void IncreaseMaxHealth(float extraHealth)
+    {
+        maxHealth += extraHealth;
         HealPlayer(maxHealth);
     }
 
     public void ResetMaxHealth()
     {
-        maxHealth = 100;
+        maxHealth = 100f;
     }
 
     public float GetMaxHealth()
@@ -52,7 +58,7 @@ public class PlayerHealth : MonoBehaviour, IAttackable
 
     public void HealPlayer(float HealAmount)
     {
-        health = health + HealAmount;
+        health += HealAmount;
         if(health > maxHealth)
         {
             health = maxHealth;
