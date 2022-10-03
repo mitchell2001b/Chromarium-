@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] float turnSpeed = 5f;
-
     Transform target;
     NavMeshAgent navMeshAgent;
     Animator animator;
