@@ -9,7 +9,7 @@ public class MaterialPickup : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player")
         {
-            FindObjectOfType<PlayerAttributes>().IncreaseXp(materialWorth);
+            FindObjectOfType<PlayerAttributes>().IncreaseCurrency(materialWorth);
             Destroy(gameObject);
         }  
     }
