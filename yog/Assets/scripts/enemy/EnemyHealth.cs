@@ -14,15 +14,6 @@ public class EnemyHealth : MonoBehaviour
         hitPoints = maxHealth;
     }
 
-    private void Update()
-    {
-        hitPoints--;
-        if(hitPoints <= 0)
-        {
-            Die();
-        }
-    }
-
     public void TakeDamage(int damageAmount)
     {
         hitPoints -= damageAmount;
