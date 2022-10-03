@@ -10,6 +10,6 @@ public class EnemyWeaponProjectileBehaviour : MonoBehaviour
     {
         if (other.tag == "Player") other.GetComponent<PlayerHealth>().RecieveDamage(bulletDamage);
 
-        if (other.tag != "Enemy" || other.tag != "Projectile") Destroy(gameObject);
+        if (other.tag != "Enemy" && other.tag != "Projectile") Destroy(gameObject);
     }
 }
