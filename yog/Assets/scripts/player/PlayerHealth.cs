@@ -6,7 +6,8 @@ using TMPro;
 
 public class PlayerHealth : MonoBehaviour, IAttackable
 {
-    [SerializeField] private float maxHealth = 100f;
+    private float maxHealth;
+    [SerializeField] private float initalMaxHealth = 100f;
     public float health { get; set; }
 
     [SerializeField] TextMeshProUGUI HealthTextNumber;
@@ -15,6 +16,7 @@ public class PlayerHealth : MonoBehaviour, IAttackable
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = initalMaxHealth;
         health = maxHealth;
         UpdateUIHealth(health.ToString() + "/" + maxHealth.ToString());
     }
@@ -24,7 +26,7 @@ public class PlayerHealth : MonoBehaviour, IAttackable
     {
         
     }
-    public void RecieveDamage(float damageCount)
+    public void ReceiveDamage(float damageCount)
     {
         health = health - damageCount;
         if (health < 0 || health == 0)
@@ -34,15 +36,21 @@ public class PlayerHealth : MonoBehaviour, IAttackable
         UpdateUIHealth(health.ToString() + "/" + maxHealth.ToString());
     }
 
-    public void ChangeMaxHealth(float newMaxHealthToAddOnTopOfCurrentMaxHealth)
+    public void ChangeMaxHealth(float newMaxHealth)
     {
-        maxHealth = maxHealth + newMaxHealthToAddOnTopOfCurrentMaxHealth;
+        maxHealth = newMaxHealth;
+        HealPlayer(maxHealth);
+    }
+
+    public void IncreaseMaxHealth(float extraHealth)
+    {
+        maxHealth += extraHealth;
         HealPlayer(maxHealth);
     }
 
     public void ResetMaxHealth()
     {
-        maxHealth = 100;
+        maxHealth = initalMaxHealth;
     }
 
     public float GetMaxHealth()
@@ -52,7 +60,7 @@ public class PlayerHealth : MonoBehaviour, IAttackable
 
     public void HealPlayer(float HealAmount)
     {
-        health = health + HealAmount;
+        health += HealAmount;
         if(health > maxHealth)
         {
             health = maxHealth;
