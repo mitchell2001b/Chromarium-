@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f64f48014164d4fa863fa550700a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  initalMaxHealth: 100
   HealthTextNumber: {fileID: 0}
 --- !u!114 &6579762514839986506
 MonoBehaviour:
@@ -493,8 +493,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c771bf82a590749bfe8c1fd6946224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerLevel: 0
-  XpCount: 0
+  currencyTextNumber: {fileID: 0}
+  damageModifierTextNumber: {fileID: 0}
+  attackSpeedModifierTextNumber: {fileID: 0}
+  critChanceTextNumber: {fileID: 0}
+  critModifierTextNumber: {fileID: 0}
+  rangeModifierTextNumber: {fileID: 0}
+  aoeModifierTextNumber: {fileID: 0}
 --- !u!114 &2059234154
 MonoBehaviour:
   m_ObjectHideFlags: 0
