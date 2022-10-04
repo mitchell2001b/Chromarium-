@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class AmmoHolyBehavior : BaseAmmoBehaivor
 {
+    [SerializeField] float timedRange;
+    [SerializeField] float explosionRadius;
+    [SerializeField] GameObject explosiveTriggerPrefab;
+    [SerializeField] float explosiveTriggerMoveSpeed;
+    [SerializeField] Transform playerWeapon;
     public override void AmmoShootEvent(float damageIncrease, float rangeIncrease)
     {
-        RaycastHit hit;
-        if (Physics.Raycast(this.GetPlayerCam().transform.position, this.GetPlayerCam().transform.forward, out hit, (this.GetBaseRange() + rangeIncrease)))
-        {
-            Debug.Log("joehoe");
-        }
+        GameObject triggerObject = Instantiate(explosiveTriggerPrefab, playerWeapon.position, playerWeapon.rotation);
+        triggerObject.GetComponent<HolyExplosion>().explosionDamage = GetBaseDamage() + damageIncrease;
+        triggerObject.GetComponent<HolyExplosion>().explosionRadius = explosionRadius;
+        triggerObject.GetComponent<Rigidbody>().AddForce(playerWeapon.forward * explosiveTriggerMoveSpeed, ForceMode.Impulse);
+
+        triggerObject.GetComponent<HolyExplosion>().Invoke("Explode", timedRange);
+
+
         this.PlayMuzzleFlash();
     }
 }

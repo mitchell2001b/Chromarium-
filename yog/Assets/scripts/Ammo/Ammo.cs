@@ -23,7 +23,7 @@ public class Ammo : MonoBehaviour
     private void SetCurrentAmmoSlot(AmmoType ammoType)
     {
         currentAmmoSlot = GetAmmoSlot(ammoType);
-        ammoNumber.text = GetAmmoSlot(ammoType).ammoAmount.ToString();
+        //ammoNumber.text = GetAmmoSlot(ammoType).ammoAmount.ToString();
         BroadcastMessage("WeaponCanShootActive");
     }
     public int GetCurrentAmmoAmount(AmmoType ammoType)
@@ -54,7 +54,7 @@ public class Ammo : MonoBehaviour
     public void ReduceAmmo(int reduceCount, AmmoType ammoType)
     {
         GetAmmoSlot(ammoType).ammoAmount = GetAmmoSlot(ammoType).ammoAmount - reduceCount;
-        ammoNumber.text = GetAmmoSlot(ammoType).ammoAmount.ToString();
+        //ammoNumber.text = GetAmmoSlot(ammoType).ammoAmount.ToString();
     }
 
     public void IncreaseAmmo(int increaseCount, AmmoType ammoType)

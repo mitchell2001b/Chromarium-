@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5065804975039173900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5065804975039173902}
+  - component: {fileID: 5065804975039173903}
+  - component: {fileID: 5065804975039173897}
+  - component: {fileID: 5065804975039173896}
+  - component: {fileID: 5065804975039173895}
+  - component: {fileID: 5065804975039173892}
+  - component: {fileID: 5065804975039173893}
+  - component: {fileID: 5065804975039173898}
+  - component: {fileID: 5065804975039173899}
+  m_Layer: 0
+  m_Name: AmmoBehaviorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5065804975039173902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065804975039173900}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &5065804975039173903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065804975039173900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dac5e04d3ea529e42b483b387e929792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 20
+  baseFiringDelay: 3
+  muzzleFlash: {fileID: 0}
+  baseRange: 50
+  cam: {fileID: 0}
+  timedRange: 8
+  explosionRadius: 0
+  explosiveTriggerPrefab: {fileID: 4290542281625039995, guid: a6940d1559b02d0419bd8eef1845796d, type: 3}
+  explosiveTriggerMoveSpeed: 0.3
+  playerWeapon: {fileID: 0}
+--- !u!114 &5065804975039173897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065804975039173900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f043fa575501f43469e225f89c81e8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5065804975039173896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065804975039173900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54e758dcc275f641a9c23ef48f67de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 15
+  baseFiringDelay: 0.5
+  muzzleFlash: {fileID: 0}
+  baseRange: 70
+  cam: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  hitEffect: {fileID: 8387638484726288822, guid: b3514b045e243464995d4d023d1204d1, type: 3}
+--- !u!114 &5065804975039173895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065804975039173900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b57f5a616fb4f674da89b84f7b0997a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 10
+  baseFiringDelay: 0.1
+  muzzleFlash: {fileID: 0}
+  baseRange: 70
+  cam: {fileID: 0}
+  hitEffect: {fileID: 5858364069599426676, guid: 4f6c80a905ed3a04194447541f71693c, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &5065804975039173892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065804975039173900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8295f7e501703a94db4f328e0d1e290f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 0
+  baseFiringDelay: 2
+  muzzleFlash: {fileID: 0}
+  baseRange: 40
+  cam: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  spreadCount: 5
+  hitEffect: {fileID: 1198595338301962688, guid: 605c1f5251513824894869eb9d567f76, type: 3}
+  spreadAngle: 38.4
+--- !u!114 &5065804975039173893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065804975039173900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea3c4fd67e784f41a583562d4062a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 0
+  baseFiringDelay: 0.1
+  muzzleFlash: {fileID: 0}
+  baseRange: 5
+  cam: {fileID: 0}
+  fireConeObject: {fileID: 0}
+  fire: {fileID: 0}
+--- !u!114 &5065804975039173898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065804975039173900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9233aaaebd95846abd9c2b9b98bbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 500
+  baseFiringDelay: 5
+  muzzleFlash: {fileID: 0}
+  baseRange: 100
+  cam: {fileID: 0}
+  weaponPoint: {fileID: 0}
+  iceTrailEffect: {fileID: 386292917231593868, guid: ab5b995695ab3e444805edef1947a874, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &5065804975039173899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065804975039173900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adcc9845fe7e08d4d9e8beee9879df23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 10
+  baseFiringDelay: 1
+  muzzleFlash: {fileID: 0}
+  baseRange: 0
+  cam: {fileID: 0}
+  timedRange: 2
+  explosionRadius: 10
+  explosiveTriggerPrefab: {fileID: 6884842220356404747, guid: ba1a82f3c27707247b0d8dd7f0422cca, type: 3}
+  explosiveTriggerMoveSpeed: 1.5
+  playerWeapon: {fileID: 0}
