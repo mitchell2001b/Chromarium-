@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Upgrade : MonoBehaviour
 {
     [SerializeField]
+    string upgradeTitle;
+
+    [SerializeField]
     UpgradeVariants upgradeVariant;
 
     [SerializeField]
-    TextMeshProUGUI upgradeTitle;
+    TextMeshProUGUI upgradeTitleText;
 
     [SerializeField]
     float value;
@@ -20,12 +24,21 @@ public class Upgrade : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI costText;
 
+    [SerializeField]
+    Button button;
+
     PlayerAttributes playerAttributes;
 
     private void Start() {
         playerAttributes = FindObjectOfType<PlayerAttributes>();
-        upgradeTitle.text = upgradeVariant.ToString() + " - " + (Mathf.RoundToInt(value * 100)).ToString() + "%";
+        if(upgradeVariant == UpgradeVariants.maxHP) upgradeTitleText.text = upgradeTitle + " - " + value.ToString() + " HP";
+        else upgradeTitleText.text = upgradeTitle + " - " + (Mathf.RoundToInt(value * 100)).ToString() + "%";
         costText.text = cost.ToString() + "$";
+    }
+
+    private void Update() {
+        if (playerAttributes.HasEnoughCurrency(cost)) button.image.color = Color.green;
+        else button.image.color = Color.red;
     }
 
     public void Buy()
