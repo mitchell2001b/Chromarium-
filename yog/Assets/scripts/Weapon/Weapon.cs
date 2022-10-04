@@ -25,14 +25,14 @@ public class Weapon : MonoBehaviour
 
     private void OnEnable()
     {
-        AmmoNumber.text = ammoHandler.GetCurrentAmmoAmount(ammoHandler.GetCurrentAmmoType()).ToString();
+        //AmmoNumber.text = ammoHandler.GetCurrentAmmoAmount(ammoHandler.GetCurrentAmmoType()).ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if(Input.GetButtonDown("Fire1") && CanShoot)
+        if(Input.GetButton("Fire1") && CanShoot)
         {
             StartCoroutine(Shoot());
             CanShoot = false;
@@ -57,8 +57,7 @@ public class Weapon : MonoBehaviour
         {
             ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().AmmoTypeBehaviorShootEvent(ammoHandler.GetCurrentAmmoType(), damageIncrease, rangeIncrease);
             ammoHandler.ReduceAmmo(1, ammoHandler.GetCurrentAmmoType());
-            yield return new WaitForSeconds(ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().GetAmmoShootCooldown(ammoHandler.GetCurrentAmmoType()));
-            CanShoot = true;
+            
 
             /*RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 100))

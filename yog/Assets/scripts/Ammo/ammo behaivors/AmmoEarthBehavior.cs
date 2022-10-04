@@ -4,13 +4,39 @@ using UnityEngine;
 
 public class AmmoEarthBehavior : BaseAmmoBehaivor
 {
+    [SerializeField] LayerMask mask;
+    [SerializeField] int spreadCount;
+    [SerializeField] GameObject hitEffect;
+    [Range(0, 90)]
+    public float spreadAngle = 0;
     public override void AmmoShootEvent(float damageIncrease, float rangeIncrease)
     {
-        RaycastHit hit;
-        if (Physics.Raycast(this.GetPlayerCam().transform.position, this.GetPlayerCam().transform.forward, out hit, (this.GetBaseRange() + rangeIncrease)))
+        for (int i = 0; i < spreadCount; i++)
         {
-            Debug.Log("joehoe");
+            RaycastHit hit;
+            Vector3 randomVector =
+                            Quaternion.AngleAxis(Random.Range(-spreadAngle, spreadAngle), Vector3.Cross((this.GetPlayerWeaponPoint().transform.forward).normalized, Vector3.up)) * (this.GetPlayerWeaponPoint().transform.forward).normalized +
+                            Quaternion.AngleAxis(Random.Range(-spreadAngle, spreadAngle), Vector3.Cross((this.GetPlayerWeaponPoint().transform.forward).normalized, Vector3.right)) * (this.GetPlayerWeaponPoint().transform.forward).normalized;
+
+
+            if (Physics.Raycast(this.GetPlayerWeaponPoint().transform.position, randomVector, out hit, (this.GetBaseRange() + rangeIncrease), ~mask))
+            {             
+                if(hit.collider.transform.gameObject.tag == "Enemy")
+                {
+                    Debug.Log("enemy hit");
+                }
+                CreateHitImpact(hit);
+            }
+
+          
         }
+       
         this.PlayMuzzleFlash();
+    }
+
+    private void CreateHitImpact(RaycastHit hit)
+    {
+        GameObject impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+        Destroy(impact, 1);
     }
 }
