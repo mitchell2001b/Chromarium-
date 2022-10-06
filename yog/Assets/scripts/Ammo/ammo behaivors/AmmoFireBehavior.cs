@@ -20,7 +20,16 @@ public class AmmoFireBehavior : BaseAmmoBehaivor
         fireConeObject.transform.localScale = new Vector3(backupScale.x + rangeIncrease, backupScale.y + rangeIncrease, backupScale.z + rangeIncrease);
         foreach(Collider c in fireConeObject.GetComponent<FireCone>().GetColliders())
         {
-            Debug.Log("enemy take damage");
+            if(c.gameObject.tag == "Enemy")
+            {
+                EnemyHealth health = c.transform.gameObject.GetComponent<EnemyHealth>();
+                if (health == null)
+                {
+                    return;
+                }
+
+                health.RecieveDamage((this.GetBaseDamage() + damageIncrease), AmmoType.Fire);
+            }
         }
         fire.Play();
         this.PlayMuzzleFlash();

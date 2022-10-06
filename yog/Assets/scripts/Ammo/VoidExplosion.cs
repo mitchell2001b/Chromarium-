@@ -23,7 +23,13 @@ public class VoidExplosion : MonoBehaviour
         {
             if (entity.collider.gameObject.tag == "Enemy")
             {
-                Debug.Log("enemy takes damage");
+                EnemyHealth health = entity.collider.transform.gameObject.GetComponent<EnemyHealth>();
+                if (health == null)
+                {
+                    return;
+                }
+
+                health.RecieveDamage((explosionDamage), AmmoType.Void);
             }
         }
 

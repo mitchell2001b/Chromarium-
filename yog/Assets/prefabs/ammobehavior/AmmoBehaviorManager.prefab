@@ -51,16 +51,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac5e04d3ea529e42b483b387e929792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 20
+  baseDamage: 200
   baseFiringDelay: 3
   muzzleFlash: {fileID: 0}
   baseRange: 50
-  cam: {fileID: 0}
+  weaponPoint: {fileID: 0}
   timedRange: 8
-  explosionRadius: 0
+  explosionRadius: 15
   explosiveTriggerPrefab: {fileID: 4290542281625039995, guid: a6940d1559b02d0419bd8eef1845796d, type: 3}
   explosiveTriggerMoveSpeed: 0.3
-  playerWeapon: {fileID: 0}
 --- !u!114 &5065804975039173897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,11 +84,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54e758dcc275f641a9c23ef48f67de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 15
-  baseFiringDelay: 0.5
+  baseDamage: 100
+  baseFiringDelay: 0.3
   muzzleFlash: {fileID: 0}
   baseRange: 70
-  cam: {fileID: 0}
+  weaponPoint: {fileID: 0}
   mask:
     serializedVersion: 2
     m_Bits: 64
@@ -110,7 +109,7 @@ MonoBehaviour:
   baseFiringDelay: 0.1
   muzzleFlash: {fileID: 0}
   baseRange: 70
-  cam: {fileID: 0}
+  weaponPoint: {fileID: 0}
   hitEffect: {fileID: 5858364069599426676, guid: 4f6c80a905ed3a04194447541f71693c, type: 3}
   mask:
     serializedVersion: 2
@@ -127,11 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8295f7e501703a94db4f328e0d1e290f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 0
+  baseDamage: 1000
   baseFiringDelay: 2
   muzzleFlash: {fileID: 0}
   baseRange: 40
-  cam: {fileID: 0}
+  weaponPoint: {fileID: 0}
   mask:
     serializedVersion: 2
     m_Bits: 64
@@ -150,11 +149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea3c4fd67e784f41a583562d4062a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 0
+  baseDamage: 50
   baseFiringDelay: 0.1
   muzzleFlash: {fileID: 0}
   baseRange: 5
-  cam: {fileID: 0}
+  weaponPoint: {fileID: 0}
   fireConeObject: {fileID: 0}
   fire: {fileID: 0}
 --- !u!114 &5065804975039173898
@@ -173,7 +172,6 @@ MonoBehaviour:
   baseFiringDelay: 5
   muzzleFlash: {fileID: 0}
   baseRange: 100
-  cam: {fileID: 0}
   weaponPoint: {fileID: 0}
   iceTrailEffect: {fileID: 386292917231593868, guid: ab5b995695ab3e444805edef1947a874, type: 3}
   mask:
@@ -191,13 +189,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcc9845fe7e08d4d9e8beee9879df23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 10
+  baseDamage: 100
   baseFiringDelay: 1
   muzzleFlash: {fileID: 0}
   baseRange: 0
-  cam: {fileID: 0}
+  weaponPoint: {fileID: 0}
   timedRange: 2
-  explosionRadius: 10
+  explosionRadius: 2
   explosiveTriggerPrefab: {fileID: 6884842220356404747, guid: ba1a82f3c27707247b0d8dd7f0422cca, type: 3}
   explosiveTriggerMoveSpeed: 1.5
   playerWeapon: {fileID: 0}

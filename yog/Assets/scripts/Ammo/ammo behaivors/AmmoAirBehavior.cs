@@ -14,7 +14,13 @@ public class AmmoAirBehavior : BaseAmmoBehaivor
         {
             if(hit.collider.transform.gameObject.tag == "Enemy")
             {
-                Debug.Log("damaging enemy");
+                EnemyHealth health = hit.collider.transform.gameObject.GetComponent<EnemyHealth>();
+                if (health == null)
+                {
+                    return;
+                }
+
+                health.RecieveDamage((this.GetBaseDamage() + damageIncrease), AmmoType.Wind);
             }
             CreateHitImpact(hit);
             

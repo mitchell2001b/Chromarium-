@@ -23,7 +23,13 @@ public class AmmoEarthBehavior : BaseAmmoBehaivor
             {             
                 if(hit.collider.transform.gameObject.tag == "Enemy")
                 {
-                    Debug.Log("enemy hit");
+                    EnemyHealth health = hit.collider.transform.gameObject.GetComponent<EnemyHealth>();
+                    if (health == null)
+                    {
+                        return;
+                    }
+
+                    health.RecieveDamage((this.GetBaseDamage() + damageIncrease), AmmoType.Earth);
                 }
                 CreateHitImpact(hit);
             }

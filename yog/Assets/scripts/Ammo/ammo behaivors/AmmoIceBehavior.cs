@@ -19,7 +19,13 @@ public class AmmoIceBehavior : BaseAmmoBehaivor
         {
             if(hit.transform.gameObject.tag == "Enemy")
             {
-                Debug.Log("joehoe");
+                EnemyHealth health = hit.collider.transform.gameObject.GetComponent<EnemyHealth>();
+                if (health == null)
+                {
+                    return;
+                }
+
+                health.RecieveDamage((this.GetBaseDamage() + damageIncrease), AmmoType.Ice);
             }
             
             //TrailRenderer trail = Instantiate(iceTrail, weaponPoint.position, Quaternion.identity);
