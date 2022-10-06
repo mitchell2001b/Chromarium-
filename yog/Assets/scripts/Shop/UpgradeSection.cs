@@ -13,7 +13,7 @@ public class UpgradeSection : MonoBehaviour
         RefreshUpgrades();
     }
 
-    void RefreshUpgrades()
+    public void RefreshUpgrades()
     {
         foreach (Transform upgrade in gameObject.transform)
         {

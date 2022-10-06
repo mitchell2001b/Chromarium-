@@ -70,5 +70,6 @@ public class Upgrade : MonoBehaviour
                 Debug.Log("Something went wrong...");
                 break;
         }
+        if (gameObject.transform.parent != null) gameObject.transform.parent.GetComponent<UpgradeSection>().RefreshUpgrades();
     }
 }
