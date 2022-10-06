@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7564667950619138494}
   - component: {fileID: 2159570953291744540}
   m_Layer: 0
-  m_Name: Damage - Small
+  m_Name: AoERange - Large
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,11 +52,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf031927eea0dfb4f9b1967fb70d1722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeTitle: Damage - Small
-  upgradeVariant: 0
+  upgradeTitle: AoE Range - Large
+  upgradeVariant: 5
   upgradeTitleText: {fileID: 4962029161347491807}
-  value: 0.05
-  cost: 10
+  value: 0.15
+  cost: 40
   costText: {fileID: 9128158793650951317}
   button: {fileID: 5700490198906942511}
 --- !u!1 &3493309435882391253

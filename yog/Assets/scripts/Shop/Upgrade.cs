@@ -32,6 +32,7 @@ public class Upgrade : MonoBehaviour
     private void Start() {
         playerAttributes = FindObjectOfType<PlayerAttributes>();
         if(upgradeVariant == UpgradeVariants.maxHP) upgradeTitleText.text = upgradeTitle + " - " + value.ToString() + " HP";
+        else if (upgradeVariant == UpgradeVariants.critChance) upgradeTitleText.text = upgradeTitle + " - " + value.ToString() + "%";
         else upgradeTitleText.text = upgradeTitle + " - " + (Mathf.RoundToInt(value * 100)).ToString() + "%";
         costText.text = cost.ToString() + "$";
     }

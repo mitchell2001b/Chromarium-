@@ -52,8 +52,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf031927eea0dfb4f9b1967fb70d1722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeTitle: Attack Speed - Large
   upgradeVariant: 1
-  upgradeTitle: {fileID: 4962029161347491807}
+  upgradeTitleText: {fileID: 4962029161347491807}
   value: 0.15
   cost: 40
   costText: {fileID: 9128158793650951317}

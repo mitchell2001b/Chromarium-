@@ -19,8 +19,8 @@ public class UpgradeSection : MonoBehaviour
         {
             Destroy(upgrade.gameObject);
         }
-        Instantiate(upgradePrefabs[Random.Range(0, 6)], gameObject.transform);
-        Instantiate(upgradePrefabs[Random.Range(0, 6)], gameObject.transform);
-        Instantiate(upgradePrefabs[Random.Range(0, 6)], gameObject.transform);
+        Instantiate(upgradePrefabs[Random.Range(0, upgradePrefabs.Count)], gameObject.transform);
+        Instantiate(upgradePrefabs[Random.Range(0, upgradePrefabs.Count)], gameObject.transform);
+        Instantiate(upgradePrefabs[Random.Range(0, upgradePrefabs.Count)], gameObject.transform);
     }
 }
