@@ -66,6 +66,9 @@ public class Upgrade : MonoBehaviour
             case UpgradeVariants.aoeRange:
                 playerAttributes.IncreaseAoERangeModifier(value);
                 break;
+            case UpgradeVariants.movementSpeed:
+                playerAttributes.IncreaseMovementSpeedModifier(value);
+                break;
             default:
                 Debug.Log("Something went wrong...");
                 break;

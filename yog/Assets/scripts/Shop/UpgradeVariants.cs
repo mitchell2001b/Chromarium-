@@ -16,5 +16,7 @@ public enum UpgradeVariants
     [Description("Extra HP")]
     maxHP,
     [Description("AoE Range")]
-    aoeRange
+    aoeRange,
+    [Description("Movement Speed")]
+    movementSpeed
 } 
