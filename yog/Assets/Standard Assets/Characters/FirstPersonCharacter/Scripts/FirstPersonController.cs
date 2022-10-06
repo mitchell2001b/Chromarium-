@@ -43,6 +43,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        private float runModifier;
+
         public bool freezeController;
 
         // Use this for initialization
@@ -59,6 +61,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
             freezeController = false;
+            runModifier = m_RunSpeed / m_WalkSpeed;
         }
 
         public void FreezeController()
@@ -273,6 +276,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+        }
+
+        public float GetMovementSpeed()
+        {
+            return m_WalkSpeed;
+        }
+
+        public void ChangeMovementSpeeds(float newMovementSpeed)
+        {
+            m_WalkSpeed = newMovementSpeed;
+            m_RunSpeed = newMovementSpeed * runModifier;
         }
     }
 }

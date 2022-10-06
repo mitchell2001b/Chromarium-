@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 using TMPro;
 
 public class PlayerAttributes : MonoBehaviour
@@ -17,8 +18,9 @@ public class PlayerAttributes : MonoBehaviour
     [SerializeField] TextMeshProUGUI critModifierTextNumber;
     float rangeModifier = 1f;
     [SerializeField] TextMeshProUGUI rangeModifierTextNumber;
-    //float baseMovementSpeed;
-    //float movementSpeedModifier = 1f;
+    float baseMovementSpeed;
+    [SerializeField] TextMeshProUGUI movementSpeedTextNumber;
+    float movementSpeedModifier = 1f;
     float aoeRangeModifier = 1f;
     [SerializeField] TextMeshProUGUI aoeModifierTextNumber;
     
@@ -30,6 +32,8 @@ public class PlayerAttributes : MonoBehaviour
         critModifierTextNumber.text = Mathf.RoundToInt(critModifier * 100).ToString() + "%";
         rangeModifierTextNumber.text = Mathf.RoundToInt(rangeModifier * 100).ToString() + "%";
         aoeModifierTextNumber.text = Mathf.RoundToInt(aoeRangeModifier * 100).ToString() + "%";
+        baseMovementSpeed = GetComponent<FirstPersonController>().GetMovementSpeed();
+        movementSpeedTextNumber.text = (baseMovementSpeed * movementSpeedModifier).ToString() + " m/s";
     }
     public bool HasEnoughCurrency(int requiredAmount)
     {
@@ -113,15 +117,17 @@ public class PlayerAttributes : MonoBehaviour
         rangeModifierTextNumber.text = Mathf.RoundToInt(rangeModifier * 100).ToString() + "%";
     }
 
-    // public void IncreaseMovementSpeedModifier(float modifierIncrease)
-    // {
-    //     movementSpeedModifier += modifierIncrease;
-    // }
+    public void IncreaseMovementSpeedModifier(float modifierIncrease)
+    {
+        movementSpeedModifier += modifierIncrease;
+        movementSpeedTextNumber.text = (baseMovementSpeed * movementSpeedModifier).ToString() + " m/s";
+        GetComponent<FirstPersonController>().ChangeMovementSpeeds(baseMovementSpeed * movementSpeedModifier);
+    }
 
-    // public void DecreaseMovementSpeedModifier(float modifierDecrease)
-    // {
-    //     movementSpeedModifier -= modifierDecrease;
-    // }
+    public void DecreaseMovementSpeedModifier(float modifierDecrease)
+    {
+        movementSpeedModifier -= modifierDecrease;
+    }
 
     public void IncreaseAoERangeModifier(float modifierIncrease)
     {
