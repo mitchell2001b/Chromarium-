@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6865702075457145866}
   - component: {fileID: 1647897912785316748}
   - component: {fileID: 6122098366811369423}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6324192913606205810}
   - component: {fileID: 7007687062020619710}
   - component: {fileID: 5206203969846182660}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TestBlob
   m_TagString: Projectile
   m_Icon: {fileID: 0}

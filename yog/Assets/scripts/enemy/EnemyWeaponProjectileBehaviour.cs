@@ -10,6 +10,6 @@ public class EnemyWeaponProjectileBehaviour : MonoBehaviour
     {
         if (other.tag == "Player") other.GetComponent<PlayerHealth>().ReceiveDamage(bulletDamage);
 
-        if (other.tag != "Enemy" && other.tag != "Projectile") Destroy(gameObject);
+        if (other.gameObject.tag != "Enemy" && other.gameObject.tag != "Projectile" && other.gameObject.layer != LayerMask.NameToLayer("Bullet")) Destroy(gameObject);
     }
 }
