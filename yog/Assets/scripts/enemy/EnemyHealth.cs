@@ -74,6 +74,7 @@ public class EnemyHealth : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
+        GameObject.Find("WaveSystem").GetComponent<EnemyWaveHandler>().UpdateCurrentWaveKillCount();
         // Disable NavMeshAgent
         GetComponent<NavMeshAgent>().enabled = false;
         // Disable Collider
