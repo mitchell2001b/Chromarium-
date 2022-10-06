@@ -7,14 +7,7 @@ public class ShopManager : MonoBehaviour
     [SerializeField]
     UpgradeSection upgradeSection;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnEnable() {
+        upgradeSection.RefreshUpgrades();
     }
 }
