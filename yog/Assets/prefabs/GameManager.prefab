@@ -3709,6 +3709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 843580505823926282}
   - component: {fileID: 4289002110321158}
+  - component: {fileID: 5457481769235858132}
   m_Layer: 0
   m_Name: AmmoList
   m_TagString: Untagged
@@ -3762,6 +3763,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &5457481769235858132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6564621506879192261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3a6552e3f0d664089827faa3d5f678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoPrefab: {fileID: 2216020515490095705, guid: 69a54fbf3f280484fa7ea46ad3f2c8f5, type: 3}
 --- !u!1 &6704151173929459087
 GameObject:
   m_ObjectHideFlags: 0
