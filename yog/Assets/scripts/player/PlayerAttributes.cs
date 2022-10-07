@@ -40,6 +40,11 @@ public class PlayerAttributes : MonoBehaviour
         return currency >= requiredAmount;
     }
 
+    public int GetCurrentCurrency()
+    {
+        return currency;
+    }
+
     public void IncreaseCurrency(int extraCurrency)
     {
         currency += extraCurrency;
