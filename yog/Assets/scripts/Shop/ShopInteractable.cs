@@ -21,4 +21,9 @@ public class ShopInteractable : MonoBehaviour
         healthAmmoCanvas.gameObject.SetActive(false);
         waveCanvas.gameObject.SetActive(false);
     }
+
+    private void EnableBoxCollider()
+    {
+        GetComponent<BoxCollider>().enabled = true;
+    }
 }
