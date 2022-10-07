@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1142816182021119720}
   - component: {fileID: 6689258530455465407}
   - component: {fileID: 3203455481418115838}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MaterialDrop
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2764650198642316223}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 2305771831381280015}
   - component: {fileID: 3567607421113647746}
   - component: {fileID: 5467762844783668248}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -17,8 +17,17 @@ public class AmmoHolyBehavior : BaseAmmoBehaivor
         triggerObject.GetComponent<Rigidbody>().AddForce(playerWeapon.forward * explosiveTriggerMoveSpeed, ForceMode.Impulse);
 
         triggerObject.GetComponent<HolyExplosion>().Invoke("Explode", timedRange);
-
-
+        //Destroy(triggerObject, timedRange);
+        
+        
         this.PlayMuzzleFlash();
     }
+
+    /*private IEnumerator HolyGrenadeTimer(GameObject triggerObject)
+    {
+        yield return new WaitForSeconds(timedRange);
+        triggerObject.GetComponent<HolyExplosion>().Explode();
+    }*/
+
+   
 }

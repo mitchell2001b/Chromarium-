@@ -8,9 +8,10 @@ public class HolyExplosion : MonoBehaviour
     public float explosionDamage;
     public ParticleSystem vfx;
     public LayerMask mask;
-   
 
-    private void Explode()
+
+   
+    public void Explode()
     {      
         vfx.Play();
         RaycastHit[] entitiesHit;
@@ -29,6 +30,14 @@ public class HolyExplosion : MonoBehaviour
             }
         }
 
-        Destroy(this.gameObject, 1);
+        //vfx.transform.parent = null;
+        //vfx.Play();
+        //Destroy(vfx.gameObject, 2f);
+        Debug.Log("destroy this");
+        Destroy(gameObject, 2f);
+
+
     }
+
+    
 }

@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
     [SerializeField]
-    AmmoType elementalAffinity = AmmoType.Regular;
+    AmmoType elementalAffinity = AmmoType.Regular;  
 
     [SerializeField]
     [Range(0, 1)]
@@ -94,6 +94,11 @@ public class EnemyHealth : MonoBehaviour
         else if (GetComponent<EnemyAI_Boss>() != null)
         {
             GetComponent<EnemyAI_Boss>().enabled = false;
+        }
+        else if(GetComponent<EnemyAiKamikaze>() != null)
+        {
+            GetComponent<EnemyAiKamikaze>().enabled = false;
+            Destroy(gameObject);
         }
     }
 }
