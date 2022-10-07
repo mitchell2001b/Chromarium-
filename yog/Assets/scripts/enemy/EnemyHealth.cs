@@ -77,8 +77,6 @@ public class EnemyHealth : MonoBehaviour
         GameObject.Find("WaveSystem").GetComponent<EnemyWaveHandler>().UpdateCurrentWaveKillCount();
         // Disable NavMeshAgent
         GetComponent<NavMeshAgent>().enabled = false;
-        // Disable Collider
-        //GetComponent<Collider>().enabled = false;
 
         // Trigger death animation when present
         if (GetComponent<Animator>() != null) GetComponent<Animator>().SetTrigger("die");
@@ -91,6 +89,7 @@ public class EnemyHealth : MonoBehaviour
         else if (GetComponent<EnemyAI_Ranged>() != null)
         {
             GetComponent<EnemyAI_Ranged>().enabled = false;
+            GetComponent<EnemyWeapon>().enabled = false;
         }
         else if (GetComponent<EnemyAI_Boss>() != null)
         {
