@@ -7,8 +7,7 @@ public class Weapon : MonoBehaviour
 {
     //[SerializeField] float range = 100f;
     [SerializeField] GameObject cam;
-    [SerializeField] float damageIncrease;
-    [SerializeField] float rangeIncrease;
+    [SerializeField] PlayerAttributes attributes;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoHandler;
@@ -20,7 +19,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+       attributes = FindObjectOfType<PlayerAttributes>();
     }
 
     private void OnEnable()
@@ -55,7 +54,9 @@ public class Weapon : MonoBehaviour
     {
         if (ammoHandler.GetCurrentAmmoAmount(ammoHandler.GetCurrentAmmoType()) > 0)
         {
-            ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().AmmoTypeBehaviorShootEvent(ammoHandler.GetCurrentAmmoType(), damageIncrease, rangeIncrease);
+            float damageIncrease = attributes.GetDamageModifier();
+            if (Random.Range(0, 100) < attributes.GetCritChance()) damageIncrease = damageIncrease * attributes.GetCritModifier();
+            ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().AmmoTypeBehaviorShootEvent(ammoHandler.GetCurrentAmmoType(), damageIncrease, attributes.GetRangeModifier(), attributes.GetAoERangeModifier());
             ammoHandler.ReduceAmmo(1, ammoHandler.GetCurrentAmmoType());
             
 

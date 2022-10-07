@@ -10,7 +10,7 @@ public class AmmoRegularBehavior : BaseAmmoBehaivor
     public override void AmmoShootEvent(float damageIncrease, float rangeIncrease)
     {
         RaycastHit hit;
-        if (Physics.Raycast(this.GetPlayerWeaponPoint().transform.position, this.GetPlayerWeaponPoint().transform.forward, out hit, (this.GetBaseRange() + rangeIncrease), ~mask))
+        if (Physics.Raycast(this.GetPlayerWeaponPoint().transform.position, this.GetPlayerWeaponPoint().transform.forward, out hit, (this.GetBaseRange() * rangeIncrease), ~mask))
         {           
             if(hit.collider.transform.gameObject.tag == "Enemy")
             {
@@ -21,7 +21,7 @@ public class AmmoRegularBehavior : BaseAmmoBehaivor
                     return;
                 }
 
-                health.RecieveDamage((this.GetBaseDamage() + damageIncrease), AmmoType.Regular);
+                health.RecieveDamage((this.GetBaseDamage() * damageIncrease), AmmoType.Regular);
             }
 
             CreateHitImpact(hit);

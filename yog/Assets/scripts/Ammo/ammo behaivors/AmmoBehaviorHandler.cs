@@ -49,13 +49,13 @@ public class AmmoBehaviorHandler : MonoBehaviour
         throw new System.NullReferenceException("no matching ammotype has been found");
     }
 
-    public void AmmoTypeBehaviorShootEvent(AmmoType ammoType, float damageIncrease, float rangeIncrease)
+    public void AmmoTypeBehaviorShootEvent(AmmoType ammoType, float damageIncrease, float rangeIncrease, float aoeIncrease)
     {
         switch(ammoType)
         {
 
             case AmmoType.Void:
-                GetComponent<AmmoVoidBehavior>().AmmoShootEvent(damageIncrease, rangeIncrease);
+                GetComponent<AmmoVoidBehavior>().AmmoShootEvent(damageIncrease, aoeIncrease);
                 break;
 
             case AmmoType.Fire:
@@ -74,7 +74,7 @@ public class AmmoBehaviorHandler : MonoBehaviour
                 break;
 
             case AmmoType.Holy:
-                GetComponent<AmmoHolyBehavior>().AmmoShootEvent(damageIncrease, rangeIncrease);
+                GetComponent<AmmoHolyBehavior>().AmmoShootEvent(damageIncrease, aoeIncrease);
                 break;
             case AmmoType.Wind:
                 GetComponent<AmmoAirBehavior>().AmmoShootEvent(damageIncrease, rangeIncrease);

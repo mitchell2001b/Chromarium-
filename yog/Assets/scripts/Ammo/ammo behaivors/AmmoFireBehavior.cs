@@ -17,7 +17,7 @@ public class AmmoFireBehavior : BaseAmmoBehaivor
             backupScale = new Vector3(fireConeObject.transform.localScale.x, fireConeObject.transform.localScale.y, fireConeObject.transform.localScale.z);
             backupSaved = true;
         }
-        fireConeObject.transform.localScale = new Vector3(backupScale.x + rangeIncrease, backupScale.y + rangeIncrease, backupScale.z + rangeIncrease);
+        fireConeObject.transform.localScale = new Vector3(backupScale.x * rangeIncrease, backupScale.y * rangeIncrease, backupScale.z * rangeIncrease);
         foreach(Collider c in fireConeObject.GetComponent<FireCone>().GetColliders())
         {
             if(c.gameObject.tag == "Enemy")
@@ -28,7 +28,7 @@ public class AmmoFireBehavior : BaseAmmoBehaivor
                     return;
                 }
 
-                health.RecieveDamage((this.GetBaseDamage() + damageIncrease), AmmoType.Fire);
+                health.RecieveDamage((this.GetBaseDamage() * damageIncrease), AmmoType.Fire);
             }
         }
         fire.Play();

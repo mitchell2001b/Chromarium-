@@ -15,7 +15,7 @@ public class AmmoIceBehavior : BaseAmmoBehaivor
         triggerObject.GetComponent<Rigidbody>().AddForce(this.GetPlayerWeaponPoint().transform.forward * 10, ForceMode.Impulse);
         Destroy(triggerObject, 1);
 
-        if (Physics.Raycast(this.GetPlayerWeaponPoint().transform.position, this.GetPlayerWeaponPoint().transform.forward, out hit, (this.GetBaseRange() + rangeIncrease), ~mask))
+        if (Physics.Raycast(this.GetPlayerWeaponPoint().transform.position, this.GetPlayerWeaponPoint().transform.forward, out hit, (this.GetBaseRange() * rangeIncrease), ~mask))
         {
             if(hit.transform.gameObject.tag == "Enemy")
             {
@@ -25,7 +25,7 @@ public class AmmoIceBehavior : BaseAmmoBehaivor
                     return;
                 }
 
-                health.RecieveDamage((this.GetBaseDamage() + damageIncrease), AmmoType.Ice);
+                health.RecieveDamage((this.GetBaseDamage() * damageIncrease), AmmoType.Ice);
             }
             
             //TrailRenderer trail = Instantiate(iceTrail, weaponPoint.position, Quaternion.identity);

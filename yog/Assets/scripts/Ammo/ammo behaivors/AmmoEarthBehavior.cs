@@ -19,7 +19,7 @@ public class AmmoEarthBehavior : BaseAmmoBehaivor
                             Quaternion.AngleAxis(Random.Range(-spreadAngle, spreadAngle), Vector3.Cross((this.GetPlayerWeaponPoint().transform.forward).normalized, Vector3.right)) * (this.GetPlayerWeaponPoint().transform.forward).normalized;
 
 
-            if (Physics.Raycast(this.GetPlayerWeaponPoint().transform.position, randomVector, out hit, (this.GetBaseRange() + rangeIncrease), ~mask))
+            if (Physics.Raycast(this.GetPlayerWeaponPoint().transform.position, randomVector, out hit, (this.GetBaseRange() * rangeIncrease), ~mask))
             {             
                 if(hit.collider.transform.gameObject.tag == "Enemy")
                 {
@@ -29,7 +29,7 @@ public class AmmoEarthBehavior : BaseAmmoBehaivor
                         return;
                     }
 
-                    health.RecieveDamage((this.GetBaseDamage() + damageIncrease), AmmoType.Earth);
+                    health.RecieveDamage((this.GetBaseDamage() * damageIncrease), AmmoType.Earth);
                 }
                 CreateHitImpact(hit);
             }

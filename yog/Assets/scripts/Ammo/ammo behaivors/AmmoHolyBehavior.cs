@@ -12,8 +12,8 @@ public class AmmoHolyBehavior : BaseAmmoBehaivor
     public override void AmmoShootEvent(float damageIncrease, float rangeIncrease)
     {
         GameObject triggerObject = Instantiate(explosiveTriggerPrefab, playerWeapon.position, playerWeapon.rotation);
-        triggerObject.GetComponent<HolyExplosion>().explosionDamage = GetBaseDamage() + damageIncrease;
-        triggerObject.GetComponent<HolyExplosion>().explosionRadius = explosionRadius;
+        triggerObject.GetComponent<HolyExplosion>().explosionDamage = GetBaseDamage() * damageIncrease;
+        triggerObject.GetComponent<HolyExplosion>().explosionRadius = explosionRadius * rangeIncrease;
         triggerObject.GetComponent<Rigidbody>().AddForce(playerWeapon.forward * explosiveTriggerMoveSpeed, ForceMode.Impulse);
 
         triggerObject.GetComponent<HolyExplosion>().Invoke("Explode", timedRange);

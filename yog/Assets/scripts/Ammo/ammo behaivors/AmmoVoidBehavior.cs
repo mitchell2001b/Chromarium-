@@ -14,8 +14,8 @@ public class AmmoVoidBehavior : BaseAmmoBehaivor
     public override void AmmoShootEvent(float damageIncrease, float rangeIncrease)
     {
         GameObject triggerObject = Instantiate(explosiveTriggerPrefab, this.GetPlayerWeaponPoint().transform.position, this.GetPlayerWeaponPoint().transform.rotation);
-        triggerObject.GetComponent<VoidExplosion>().explosionDamage = GetBaseDamage() + damageIncrease;
-        triggerObject.GetComponent<VoidExplosion>().explosionRadius = explosionRadius;
+        triggerObject.GetComponent<VoidExplosion>().explosionDamage = GetBaseDamage() * damageIncrease;
+        triggerObject.GetComponent<VoidExplosion>().explosionRadius = explosionRadius * rangeIncrease;
         triggerObject.GetComponent<Rigidbody>().AddForce(this.GetPlayerWeaponPoint().transform.forward * explosiveTriggerMoveSpeed, ForceMode.Impulse);
         Destroy(triggerObject, timedRange);
         /*RaycastHit hit;

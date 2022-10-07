@@ -58,10 +58,9 @@ public class PlayerAttributes : MonoBehaviour
         damageModifierTextNumber.text = Mathf.RoundToInt(damageModifier * 100).ToString() + "%";
     }
 
-    public void DecreaseDamageModifier(float modifierDecrease)
+    public float GetDamageModifier()
     {
-        damageModifier -= modifierDecrease;
-        damageModifierTextNumber.text = Mathf.RoundToInt(damageModifier * 100).ToString() + "%";
+        return damageModifier;
     }
 
     public void IncreaseAttackSpeed(float modifierIncrease)
@@ -70,10 +69,9 @@ public class PlayerAttributes : MonoBehaviour
         attackSpeedModifierTextNumber.text = Mathf.RoundToInt(attackSpeedModifier * 100).ToString() + "%";
     }
 
-    public void DecreaseAttackSpeed(float modifierDecrease)
+    public float GetAttackSpeedModifier()
     {
-        attackSpeedModifier -= modifierDecrease;
-        attackSpeedModifierTextNumber.text = Mathf.RoundToInt(attackSpeedModifier * 100).ToString() + "%";
+        return attackSpeedModifier;
     }
 
     public int GetCritChance()
@@ -87,22 +85,15 @@ public class PlayerAttributes : MonoBehaviour
         critChanceTextNumber.text = critChance.ToString() + "%";
     }
 
-    public void DecreaseCritChance(int critChanceLoss)
-    {
-        critChance -= critChanceLoss;
-        critChanceTextNumber.text = critChance.ToString() + "%";
-    }
-
     public void IncreaseCritModifier(float modifierIncrease)
     {
         critModifier += modifierIncrease;
         critModifierTextNumber.text = Mathf.RoundToInt(critModifier * 100).ToString() + "%";
     }
 
-    public void DecreaseCritModifier(float modifierDecrease)
+    public float GetCritModifier()
     {
-        critModifier -= modifierDecrease;
-        critModifierTextNumber.text = Mathf.RoundToInt(critModifier * 100).ToString() + "%";
+        return critModifier;
     }
 
     public void IncreaseRangeModifier(float modifierIncrease)
@@ -111,10 +102,9 @@ public class PlayerAttributes : MonoBehaviour
         rangeModifierTextNumber.text = Mathf.RoundToInt(rangeModifier * 100).ToString() + "%";
     }
 
-    public void DecreaseRangeModifier(float modifierDecrease)
+    public float GetRangeModifier()
     {
-        rangeModifier -= modifierDecrease;
-        rangeModifierTextNumber.text = Mathf.RoundToInt(rangeModifier * 100).ToString() + "%";
+        return rangeModifier;
     }
 
     public void IncreaseMovementSpeedModifier(float modifierIncrease)
@@ -124,9 +114,9 @@ public class PlayerAttributes : MonoBehaviour
         GetComponent<FirstPersonController>().ChangeMovementSpeeds(baseMovementSpeed * movementSpeedModifier);
     }
 
-    public void DecreaseMovementSpeedModifier(float modifierDecrease)
+    public float GetMovementSpeedModifier()
     {
-        movementSpeedModifier -= modifierDecrease;
+        return movementSpeedModifier;
     }
 
     public void IncreaseAoERangeModifier(float modifierIncrease)
@@ -135,9 +125,8 @@ public class PlayerAttributes : MonoBehaviour
         aoeModifierTextNumber.text = Mathf.RoundToInt(aoeRangeModifier * 100).ToString() + "%";
     }
 
-    public void DecreaseAoERangeModifier(float modifierDecrease)
+    public float GetAoERangeModifier()
     {
-        aoeRangeModifier -= modifierDecrease;
-        aoeModifierTextNumber.text = Mathf.RoundToInt(aoeRangeModifier * 100).ToString() + "%";
+        return aoeRangeModifier;
     }
 }
