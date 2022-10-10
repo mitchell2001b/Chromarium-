@@ -54,12 +54,20 @@ public class EnemyKamikazeAttack : MonoBehaviour
                 health.ReceiveDamage(explosionDamage);
             }
         }
-        vfx.transform.parent = null;
+       
         //vfx.transform.position = gameObject.transform.position;
-        vfx.Play();
-        Destroy(this.gameObject);
-        Destroy(vfx.gameObject, 2f);
+        if(gameObject.activeSelf)
+        {
+            vfx.transform.parent = null;
+            vfx.Play();
+            Destroy(vfx.gameObject, 2f);
+            Destroy(this.gameObject);
+            
+        }
+        
     }
+
+    
 
     public void AttackHitEvent()
     {

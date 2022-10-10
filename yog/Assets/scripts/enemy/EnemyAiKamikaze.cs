@@ -16,10 +16,11 @@ public class EnemyAiKamikaze : MonoBehaviour
     [SerializeField] GameObject drop;
     [SerializeField] float meleeRange = 10f;
 
-    [SerializeField] EnemyKamikazeAttack attack;
+    public EnemyKamikazeAttack attack;
 
     private bool hasExploded = false;
 
+    //public EnemyHealth health;
    
    // [SerializeField] float navmeshStoppingDistanceMelee = 2f;
 
@@ -31,6 +32,7 @@ public class EnemyAiKamikaze : MonoBehaviour
         target = GameObject.FindWithTag("Player").transform;
         walkSpeed = navMeshAgent.speed;
         attack = GetComponent<EnemyKamikazeAttack>();
+        //health = GetComponent<EnemyHealth>();
     }
 
     // Update is called once per frame
@@ -38,6 +40,16 @@ public class EnemyAiKamikaze : MonoBehaviour
     {
         distanceToTarget = Vector3.Distance(target.position, transform.position);
         EngageTarget();
+
+        /*if(health.isDead)
+        {
+            if (!hasExploded)
+            {
+                Debug.Log("explode");
+                attack.Explode();
+                hasExploded = true;
+            }
+        }*/
     }
 
     private void RotateToTarget()
@@ -104,9 +116,10 @@ public class EnemyAiKamikaze : MonoBehaviour
     {
         if (!hasExploded)
         {
+            Debug.Log("explode");
             attack.Explode();
             hasExploded = true;
-        }       
+        }
     }
 
 }

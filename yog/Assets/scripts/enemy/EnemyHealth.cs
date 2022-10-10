@@ -98,7 +98,8 @@ public class EnemyHealth : MonoBehaviour
         else if(GetComponent<EnemyAiKamikaze>() != null)
         {
             GetComponent<EnemyAiKamikaze>().enabled = false;
-            Destroy(gameObject);
+            
+            //Destroy(gameObject);
         }
     }
 }
