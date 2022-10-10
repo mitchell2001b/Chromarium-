@@ -30,4 +30,16 @@ public class GameSceneLoader : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void MainMenu()
+    {
+        //Implement Return to Main Menu
+        Debug.Log("MainMenu");
+    }
+
+    public void RestartGame()
+    {
+        //Implement Restart Game
+        Debug.Log("Restart Game");
+    }
 }
