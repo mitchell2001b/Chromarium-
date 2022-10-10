@@ -25,7 +25,7 @@ public class PlayerAttributes : MonoBehaviour
     [SerializeField] TextMeshProUGUI aoeModifierTextNumber;
     
     private void Start() {
-        currencyTextNumber.text = currency.ToString() + " $";
+        currencyTextNumber.text = currency.ToString() + "$";
         damageModifierTextNumber.text = Mathf.RoundToInt(damageModifier * 100).ToString() + "%";
         attackSpeedModifierTextNumber.text = Mathf.RoundToInt(attackSpeedModifier * 100).ToString() + "%";
         critChanceTextNumber.text = critChance.ToString() + "%";
@@ -33,23 +33,28 @@ public class PlayerAttributes : MonoBehaviour
         rangeModifierTextNumber.text = Mathf.RoundToInt(rangeModifier * 100).ToString() + "%";
         aoeModifierTextNumber.text = Mathf.RoundToInt(aoeRangeModifier * 100).ToString() + "%";
         baseMovementSpeed = GetComponent<FirstPersonController>().GetMovementSpeed();
-        movementSpeedTextNumber.text = (baseMovementSpeed * movementSpeedModifier).ToString() + " m/s";
+        movementSpeedTextNumber.text = (Mathf.Round(baseMovementSpeed * movementSpeedModifier * 100) / 100).ToString() + " m/s";
     }
     public bool HasEnoughCurrency(int requiredAmount)
     {
         return currency >= requiredAmount;
     }
 
+    public int GetCurrentCurrency()
+    {
+        return currency;
+    }
+
     public void IncreaseCurrency(int extraCurrency)
     {
         currency += extraCurrency;
-        currencyTextNumber.text = currency.ToString() + " $";
+        currencyTextNumber.text = currency.ToString() + "$";
     }
 
     public void RemoveCurrency(int currencyLoss)
     {
         currency -= currencyLoss;
-        currencyTextNumber.text = currency.ToString() + " $";
+        currencyTextNumber.text = currency.ToString() + "$";
     }
 
     public void IncreaseDamageModifier(float modifierIncrease)
@@ -110,7 +115,7 @@ public class PlayerAttributes : MonoBehaviour
     public void IncreaseMovementSpeedModifier(float modifierIncrease)
     {
         movementSpeedModifier += modifierIncrease;
-        movementSpeedTextNumber.text = (baseMovementSpeed * movementSpeedModifier).ToString() + " m/s";
+        movementSpeedTextNumber.text = (Mathf.Round(baseMovementSpeed * movementSpeedModifier * 100) / 100).ToString() + " m/s";
         GetComponent<FirstPersonController>().ChangeMovementSpeeds(baseMovementSpeed * movementSpeedModifier);
     }
 
