@@ -171,7 +171,7 @@ MonoBehaviour:
   baseDamage: 500
   baseFiringDelay: 5
   muzzleFlash: {fileID: 0}
-  baseRange: 100
+  baseRange: 500
   weaponPoint: {fileID: 0}
   iceTrailEffect: {fileID: 386292917231593868, guid: ab5b995695ab3e444805edef1947a874, type: 3}
   mask:

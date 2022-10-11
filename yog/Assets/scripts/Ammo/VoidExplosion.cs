@@ -16,7 +16,7 @@ public class VoidExplosion : MonoBehaviour
         {
             return;
         }
-        vfx.Play();
+        
         RaycastHit[] entitiesHit;
         entitiesHit = Physics.SphereCastAll(other.transform.position, explosionRadius, transform.up);
         foreach (RaycastHit entity in entitiesHit)
@@ -32,8 +32,12 @@ public class VoidExplosion : MonoBehaviour
                 health.RecieveDamage((explosionDamage), AmmoType.Void);
             }
         }
+        vfx.transform.parent = null;
+        vfx.Play();
 
-        Destroy(this.gameObject, 1);
+       
+        Destroy(this.gameObject);
+        Destroy(vfx, 2);
 
     }
 }

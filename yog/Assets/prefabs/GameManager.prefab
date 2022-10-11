@@ -558,7 +558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1487499167814113873
 RectTransform:
   m_ObjectHideFlags: 0
@@ -942,7 +942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3269638476671331592
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1590,7 +1590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3269638477541504969
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1708,7 +1708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -209, y: 22}
+  m_AnchoredPosition: {x: -293, y: 22}
   m_SizeDelta: {x: 90.5354, y: 53.065186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3269638477563466227
@@ -1843,7 +1843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -61.158478, y: 22.00003}
+  m_AnchoredPosition: {x: -145.15851, y: 22.000061}
   m_SizeDelta: {x: 159.73389, y: 53.065186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3269638477563749237
@@ -1874,7 +1874,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 2147483647
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1937,7 +1937,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 21.894604, w: 0}
+  m_margin: {x: 0, y: 0, z: -65.98826, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2894,7 +2894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7403369483662526305
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5124,6 +5124,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3269638476796241359}
     m_Modifications:
+    - target: {fileID: 3367584265094618817, guid: 76613cdc9dc834542beaf43455acc27a, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367584265094618817, guid: 76613cdc9dc834542beaf43455acc27a, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3367584265094618878, guid: 76613cdc9dc834542beaf43455acc27a, type: 3}
       propertyPath: m_Name
       value: WaveCanvas
@@ -5211,6 +5219,30 @@ PrefabInstance:
     - target: {fileID: 3367584265094618879, guid: 76613cdc9dc834542beaf43455acc27a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367584265316388285, guid: 76613cdc9dc834542beaf43455acc27a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367584265316388285, guid: 76613cdc9dc834542beaf43455acc27a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367584265316388285, guid: 76613cdc9dc834542beaf43455acc27a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367584266607602313, guid: 76613cdc9dc834542beaf43455acc27a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367584266607602313, guid: 76613cdc9dc834542beaf43455acc27a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367584266607602313, guid: 76613cdc9dc834542beaf43455acc27a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -88
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76613cdc9dc834542beaf43455acc27a, type: 3}

@@ -15,11 +15,14 @@ public class Weapon : MonoBehaviour
     [SerializeField] TextMeshProUGUI AmmoNumber;
     [SerializeField] GameObject ammoTypeBehaviorManager;
 
+    
+
     public bool CanShoot = true;
     // Start is called before the first frame update
     void Start()
     {
        attributes = FindObjectOfType<PlayerAttributes>();
+        
     }
 
     private void OnEnable()
@@ -33,6 +36,7 @@ public class Weapon : MonoBehaviour
         
         if(Input.GetButton("Fire1") && CanShoot)
         {
+            
             StartCoroutine(Shoot());
             CanShoot = false;
             //Shoot();
@@ -47,6 +51,7 @@ public class Weapon : MonoBehaviour
 
     void WeaponCanShootActive()
     {
+        StopAllCoroutines();
         CanShoot = true;
     }
 
@@ -54,11 +59,12 @@ public class Weapon : MonoBehaviour
     {
         if (ammoHandler.GetCurrentAmmoAmount(ammoHandler.GetCurrentAmmoType()) > 0)
         {
+            
             float damageIncrease = attributes.GetDamageModifier();
             if (Random.Range(0, 100) < attributes.GetCritChance()) damageIncrease = damageIncrease * attributes.GetCritModifier();
-            ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().AmmoTypeBehaviorShootEvent(ammoHandler.GetCurrentAmmoType(), damageIncrease, attributes.GetRangeModifier(), attributes.GetAoERangeModifier());
+            ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().AmmoTypeBehaviorShootEvent(ammoHandler.GetCurrentAmmoType(), damageIncrease, attributes.GetRangeModifier(), attributes.GetAoERangeModifier());          
             ammoHandler.ReduceAmmo(1, ammoHandler.GetCurrentAmmoType());
-            
+
 
             /*RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 100))

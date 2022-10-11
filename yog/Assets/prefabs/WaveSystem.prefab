@@ -67,6 +67,9 @@ MonoBehaviour:
     - tierLevel: 100
       enemyPrefabs:
       - {fileID: 3564150868222662823, guid: 7e50abc341025bc41917b7c0a77e353e, type: 3}
+    - tierLevel: 80
+      enemyPrefabs:
+      - {fileID: 2132597009167322575, guid: 85e89367b29991645b559c58adec3c3f, type: 3}
     spawnPoints:
     - {fileID: 7875165741524884335}
     - {fileID: 7875165740342331595}
@@ -95,7 +98,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7875165740342331594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.51, y: -2.83, z: 48.4}
+  m_LocalPosition: {x: 201.74, y: -1.68, z: 381.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -126,7 +129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7875165741524884334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.9, y: -2.83, z: 48.4}
+  m_LocalPosition: {x: 161, y: 4, z: 359}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

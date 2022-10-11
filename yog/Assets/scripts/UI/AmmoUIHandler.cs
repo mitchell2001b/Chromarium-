@@ -18,10 +18,12 @@ public class AmmoUIHandler : MonoBehaviour
     void Update()
     {        
         ChangeAmmoNumberUI(ammoInventory.GetCurrentAmmoAmount(ammoInventory.GetCurrentAmmoType()).ToString());
+        //Debug.Log(ammoInventory.GetCurrentAmmoAmount(ammoInventory.GetCurrentAmmoType()).ToString());
     }
 
     public void ChangeAmmoNumberUI(string newText)
     {
+        Debug.Log("new text: " + newText);
         ammoNumber.text = newText;
     }
 }

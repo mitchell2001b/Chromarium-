@@ -12,6 +12,9 @@ public class Ammo : MonoBehaviour
     [SerializeField] TextMeshProUGUI ammoNumber;
     [SerializeField] AmmoSlot currentAmmoSlot;
 
+    
+    [SerializeField] AmmoIndicatorAnimationHandler indicatorHandler;
+    [SerializeField] GunAnimationHandler gunAnimationHandler;
     [System.Serializable]
     private class AmmoSlot
     {
@@ -22,8 +25,16 @@ public class Ammo : MonoBehaviour
     
     private void SetCurrentAmmoSlot(AmmoType ammoType)
     {
+        indicatorHandler.ChangeIndicatorMaterial(ammoType);
         currentAmmoSlot = GetAmmoSlot(ammoType);
+        gunAnimationHandler.ChangeGunAnimation(ammoType);
+        
+
         //ammoNumber.text = GetAmmoSlot(ammoType).ammoAmount.ToString();
+        
+    }
+    public void WeaponChangeComplete()
+    {
         BroadcastMessage("WeaponCanShootActive");
     }
     public int GetCurrentAmmoAmount(AmmoType ammoType)
@@ -53,6 +64,7 @@ public class Ammo : MonoBehaviour
 
     public void ReduceAmmo(int reduceCount, AmmoType ammoType)
     {
+        gunAnimationHandler.TriggerShootAnimation();
         GetAmmoSlot(ammoType).ammoAmount = GetAmmoSlot(ammoType).ammoAmount - reduceCount;
         //ammoNumber.text = GetAmmoSlot(ammoType).ammoAmount.ToString();
     }
@@ -80,7 +92,7 @@ public class Ammo : MonoBehaviour
     }
     void Start()
     {
-        SetCurrentAmmoSlot(AmmoType.Regular);
+        SetCurrentAmmoSlot(AmmoType.Regular);      
     }
 
     // Update is called once per frame
