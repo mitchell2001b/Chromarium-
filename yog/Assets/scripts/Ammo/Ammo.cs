@@ -27,7 +27,11 @@ public class Ammo : MonoBehaviour
     {
         indicatorHandler.ChangeIndicatorMaterial(ammoType);
         currentAmmoSlot = GetAmmoSlot(ammoType);
-        gunAnimationHandler.ChangeGunAnimation(ammoType);
+        if(this.gameObject.activeSelf)
+        {
+            gunAnimationHandler.ChangeGunAnimation(ammoType);
+        }
+        
         
 
         //ammoNumber.text = GetAmmoSlot(ammoType).ammoAmount.ToString();
@@ -92,7 +96,9 @@ public class Ammo : MonoBehaviour
     }
     void Start()
     {
-        SetCurrentAmmoSlot(AmmoType.Regular);      
+       
+        //SetCurrentAmmoSlot(AmmoType.Regular);
+               
     }
 
     // Update is called once per frame

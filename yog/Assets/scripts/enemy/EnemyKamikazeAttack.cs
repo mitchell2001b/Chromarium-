@@ -71,7 +71,8 @@ public class EnemyKamikazeAttack : MonoBehaviour
 
     public void AttackHitEvent()
     {
-        Explode();
+        EnemyHealth health = GetComponent<EnemyHealth>();
+        health.RecieveDamage(health.hitPoints * 100, AmmoType.Regular);
     }
 
 }

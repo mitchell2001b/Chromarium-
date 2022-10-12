@@ -49,27 +49,44 @@ MonoBehaviour:
   currentActiveWaveIndex: 0
   enemiesActive: []
   enemiesDefeated: 0
-  waveCooldown: 5
+  waveCooldown: 2
   waves:
   - spawnDelay: 1
     enemyCount: 5
     availablePools:
     - tierLevel: 100
       enemyPrefabs:
-      - {fileID: 3564150868222662823, guid: 7e50abc341025bc41917b7c0a77e353e, type: 3}
+      - {fileID: 5706511630603979170, guid: 8784c6efbd81f3747938605861379db1, type: 3}
+    - tierLevel: 80
+      enemyPrefabs:
+      - {fileID: 4955564850361594346, guid: 53a7fd73ea1cd5448956a7feb1350c65, type: 3}
+    spawnPoints:
+    - {fileID: 7875165741524884335}
+    - {fileID: 7875165740342331595}
+    activeEnemies: []
+  - spawnDelay: 1.5
+    enemyCount: 12
+    availablePools:
+    - tierLevel: 100
+      enemyPrefabs:
+      - {fileID: 5706511630603979170, guid: 8784c6efbd81f3747938605861379db1, type: 3}
+    - tierLevel: 80
+      enemyPrefabs:
+      - {fileID: 2132597009167322575, guid: 85e89367b29991645b559c58adec3c3f, type: 3}
+      - {fileID: 4955564850361594346, guid: 53a7fd73ea1cd5448956a7feb1350c65, type: 3}
+    - tierLevel: 35
+      enemyPrefabs:
+      - {fileID: 1422751104556952818, guid: 1fcca7fa0e5a5044182b54a1cc8aaaa2, type: 3}
     spawnPoints:
     - {fileID: 7875165741524884335}
     - {fileID: 7875165740342331595}
     activeEnemies: []
   - spawnDelay: 1
-    enemyCount: 5
+    enemyCount: 2
     availablePools:
     - tierLevel: 100
       enemyPrefabs:
-      - {fileID: 3564150868222662823, guid: 7e50abc341025bc41917b7c0a77e353e, type: 3}
-    - tierLevel: 80
-      enemyPrefabs:
-      - {fileID: 2132597009167322575, guid: 85e89367b29991645b559c58adec3c3f, type: 3}
+      - {fileID: 1422751104556952818, guid: 1fcca7fa0e5a5044182b54a1cc8aaaa2, type: 3}
     spawnPoints:
     - {fileID: 7875165741524884335}
     - {fileID: 7875165740342331595}

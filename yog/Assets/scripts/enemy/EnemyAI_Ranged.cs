@@ -35,6 +35,7 @@ public class EnemyAI_Ranged : MonoBehaviour
             if(animator != null)
             {
                 animator.SetTrigger("idle");
+                RotateToTarget();
             }
         }
 
@@ -44,9 +45,7 @@ public class EnemyAI_Ranged : MonoBehaviour
             if (hit.collider.tag == "Player")
             {
                 RotateToTarget();
-            }
-           
-
+            }           
         }       
     }
 
