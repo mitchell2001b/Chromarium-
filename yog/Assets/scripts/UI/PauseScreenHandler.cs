@@ -27,17 +27,30 @@ public class PauseScreenHandler : MonoBehaviour
         if(Input.GetButton("Pause") && !isPaused)
         {
             isPaused = true;
-            FindObjectOfType<FirstPersonController>().enabled = false;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            Pause();
             pauseCanvas.enabled = true;
             foreach (Canvas canvas in otherCanvi)
             {
                 canvas.enabled = false;
             }
             LoadData();
-            Time.timeScale = 0;
         }
+    }
+
+    public static void Pause()
+    {
+        Time.timeScale = 0;
+        FindObjectOfType<FirstPersonController>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public static void UnPause()
+    {
+        Time.timeScale = 1;
+        FindObjectOfType<FirstPersonController>().enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     
     private void LoadData()
@@ -71,10 +84,7 @@ public class PauseScreenHandler : MonoBehaviour
         {
             canvas.enabled = true;
         }
-        Time.timeScale = 1;
-        FindObjectOfType<FirstPersonController>().enabled = true;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        UnPause();
         isPaused = false;
     }
 
