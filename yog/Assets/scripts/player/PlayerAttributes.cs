@@ -124,6 +124,11 @@ public class PlayerAttributes : MonoBehaviour
         return movementSpeedModifier;
     }
 
+    public float GetBaseMovementSpeed()
+    {
+        return baseMovementSpeed;
+    }
+
     public void IncreaseAoERangeModifier(float modifierIncrease)
     {
         aoeRangeModifier += modifierIncrease;
