@@ -29,7 +29,6 @@ public class GameSceneLoader : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(0);
-        Debug.Log("Succesfull Game Load");
     }
 
     public void QuitGame()
@@ -39,13 +38,15 @@ public class GameSceneLoader : MonoBehaviour
 
     public void MainMenu()
     {
-        //Implement Return to Main Menu
+        // Implement Return to Main Menu
+        //SceneManager.LoadScene();
         Debug.Log("MainMenu");
     }
 
     public void RestartGame()
     {
-        //Implement Restart Game
+        // Implement Restart Game
+        //SceneManager.LoadScene();
         Debug.Log("Restart Game");
     }
 }

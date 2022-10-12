@@ -13,7 +13,6 @@ public class MainMenuHandler : MonoBehaviour
 
     public void StartNewGame()
     {
-        Debug.Log("Game Loading");
         gameSceneLoader.StartGame();
     }
 }
