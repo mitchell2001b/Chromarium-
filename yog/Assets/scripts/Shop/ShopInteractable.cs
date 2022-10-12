@@ -11,7 +11,6 @@ public class ShopInteractable : MonoBehaviour
     [SerializeField] Canvas waveCanvas;
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag != "Player") return;
-        Debug.Log("Hi");
         Time.timeScale = 0;
         FindObjectOfType<FirstPersonController>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
