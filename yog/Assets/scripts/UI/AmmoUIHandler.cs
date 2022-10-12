@@ -22,8 +22,7 @@ public class AmmoUIHandler : MonoBehaviour
     }
 
     public void ChangeAmmoNumberUI(string newText)
-    {
-        Debug.Log("new text: " + newText);
+    {        
         ammoNumber.text = newText;
     }
 }

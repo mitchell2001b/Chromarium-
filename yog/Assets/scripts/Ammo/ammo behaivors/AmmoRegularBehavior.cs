@@ -6,7 +6,6 @@ public class AmmoRegularBehavior : BaseAmmoBehaivor
 {
     [SerializeField] LayerMask mask;
     [SerializeField] GameObject hitEffect;
-
     public override void AmmoShootEvent(float damageIncrease, float rangeIncrease)
     {
         RaycastHit hit;
@@ -15,9 +14,9 @@ public class AmmoRegularBehavior : BaseAmmoBehaivor
             if(hit.collider.transform.gameObject.tag == "Enemy")
             {
                 Debug.Log(hit.collider.gameObject.name);
-                EnemyHealth health = hit.collider.transform.gameObject.GetComponent<EnemyHealth>();
+                EnemyHealth health = hit.collider.transform.gameObject.GetComponent<EnemyHealth>();               
                 if(health == null)
-                {
+                {                   
                     return;
                 }
 

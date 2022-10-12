@@ -11,6 +11,10 @@ public class EnemyAI_Ranged : MonoBehaviour
     Animator animator;
     float distanceToTarget = Mathf.Infinity;
     [SerializeField] GameObject drop;
+    [SerializeField] LayerMask mask;
+    //private bool canSeePlayer = false;
+
+    
 
     void Start()
     {
@@ -22,8 +26,28 @@ public class EnemyAI_Ranged : MonoBehaviour
     void Update()
     {
         distanceToTarget = Vector3.Distance(target.position, transform.position);
-        if (distanceToTarget >= navMeshAgent.stoppingDistance) ChaseTarget();
-        RotateToTarget();
+        if (distanceToTarget >= navMeshAgent.stoppingDistance)
+        {
+            ChaseTarget();
+        }
+        else
+        {
+            if(animator != null)
+            {
+                animator.SetTrigger("idle");
+            }
+        }
+
+        RaycastHit hit;
+        if (Physics.Linecast(transform.position, target.position, out hit, ~mask))
+        {
+            if (hit.collider.tag == "Player")
+            {
+                RotateToTarget();
+            }
+           
+
+        }       
     }
 
     void ChaseTarget()
@@ -39,7 +63,7 @@ public class EnemyAI_Ranged : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
     }
 
-    private void DropMaterial()
+    public void DropMaterial()
     {
         Instantiate(drop, transform.position, drop.transform.rotation);
     }

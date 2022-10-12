@@ -19,10 +19,14 @@ public class EnemyHealth : MonoBehaviour
     public float hitPoints { get; private set; }
     public bool isDead { get; private set; } = false;
 
+    [SerializeField] bool NoEraseAnimation = false;
+    
     void Start()
     {
         hitPoints = maxHealth;
     }
+
+    
 
     public void RecieveDamage(float damageAmount, AmmoType ammoTypeUsed)
     {
@@ -85,11 +89,21 @@ public class EnemyHealth : MonoBehaviour
         if (GetComponent<EnemyAI>() != null)
         {
             GetComponent<EnemyAI>().enabled = false;
+            if (NoEraseAnimation)
+            {
+                GetComponent<EnemyAI>().DropMaterial();
+                Destroy(gameObject);
+            }
         }
         else if (GetComponent<EnemyAI_Ranged>() != null)
-        {
+        {           
             GetComponent<EnemyAI_Ranged>().enabled = false;
             GetComponent<EnemyWeapon>().enabled = false;
+            if(NoEraseAnimation)
+            {
+                GetComponent<EnemyAI_Ranged>().DropMaterial();
+                Destroy(gameObject);
+            }
         }
         else if (GetComponent<EnemyAI_Boss>() != null)
         {
@@ -101,5 +115,6 @@ public class EnemyHealth : MonoBehaviour
             
             //Destroy(gameObject);
         }
+        
     }
 }

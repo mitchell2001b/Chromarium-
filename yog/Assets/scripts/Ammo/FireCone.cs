@@ -11,10 +11,21 @@ public class FireCone : MonoBehaviour
         List<Collider> colliderList = new List<Collider>();
         foreach(Collider c in colliders)
         {
-            colliderList.Add(c);
+            if(c != null)
+            {
+                colliderList.Add(c);
+            }
+            else
+            {
+                colliderList.Remove(c);
+            }
+            
         }
+        //ClearList();
         return colliderList;    
     }
+
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,6 +37,10 @@ public class FireCone : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if(other == null)
+        {
+            return;
+        }
         colliders.Remove(other);
     }
 }

@@ -56,7 +56,7 @@ public class EnemyAI : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
     }
 
-    private void DropMaterial()
+    public void DropMaterial()
     {
         Instantiate(drop, transform.position, drop.transform.rotation);
     }

@@ -12,7 +12,7 @@ public class VoidExplosion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {     
-        if(other.gameObject.layer == LayerMask.NameToLayer("Bullet"))
+        if(other.gameObject.layer == LayerMask.NameToLayer("Bullet") || other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             return;
         }

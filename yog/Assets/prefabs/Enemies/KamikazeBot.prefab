@@ -480,6 +480,7 @@ MonoBehaviour:
   elementalAffinity: 0
   resistanceModifier: 0.5
   weaknessModifier: 0.5
+  NoEraseAnimation: 0
 --- !u!195 &1250286006391342416
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -533,7 +534,7 @@ MonoBehaviour:
   runSpeed: 11
   navMeshAgent: {fileID: 1250286006391342416}
   drop: {fileID: 4318968702811732409, guid: 57402dd61a6e4a14baaac2577c9fec44, type: 3}
-  meleeRange: 10
+  meleeRange: 17
   attack: {fileID: 1250286006391342417}
 --- !u!1 &2585281582386167454
 GameObject:

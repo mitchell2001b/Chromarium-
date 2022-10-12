@@ -1,0 +1,233 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: tankturret
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature.003
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/Bone.001
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/Bone.001/Bone.002
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/Bone.001/Bone.002/Bone.003
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/Bone.001/Bone.002/Bone.003/Bone.003_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t1
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t1/t1_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t2
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t2/t2_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t3
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t3/t3_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t4
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t4/t4_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t5
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t5/t5_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t6
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t6/t6_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t7
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t7/t7_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t8
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t8/t8_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t9
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t9/t9_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t10
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t10/t10_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t11
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t11/t11_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t12
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t12/t12_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t13
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t13/t13_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t14
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t14/t14_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t15
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t15/t15_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t16
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t16/t16_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t17
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t17/t17_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t18
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t18/t18_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t19
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t19/t19_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t20
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t20/t20_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t21
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t21/t21_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t22
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t22/t22_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t23
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t23/t23_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/t24
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/t24/t24_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track1.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track1.L/track1.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track3.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track3.L/track3.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track4.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track4.L/track4.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track5.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track5.L/track5.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track6.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track6.L/track6.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track7.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track7.L/track7.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track8.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track8.L/track8.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track9.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track9.L/track9.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track10.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track10.L/track10.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track11.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track11.L/track11.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track12.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track12.L/track12.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track13.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track13.L/track13.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track14.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track14.L/track14.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track15.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track15.L/track15.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track16.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track16.L/track16.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track17.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track17.L/track17.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track18.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track18.L/track18.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track19.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track19.L/track19.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track20.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track20.L/track20.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track21.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track21.L/track21.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track22.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track22.L/track22.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track23.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track23.L/track23.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/track24.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/track24.L/track24.L_end
+    m_Weight: 1
+  - m_Path: Armature.003/Bone.004/Bone/trask2.L
+    m_Weight: 0
+  - m_Path: Armature.003/Bone.004/Bone/trask2.L/trask2.L_end
+    m_Weight: 1
+  - m_Path: Cube.001
+    m_Weight: 0
+  - m_Path: Cube.004
+    m_Weight: 0
+  - m_Path: Cube.005
+    m_Weight: 1
+  - m_Path: Cube.019
+    m_Weight: 0
+  - m_Path: Cube.033
+    m_Weight: 0
+  - m_Path: Cylinder.001
+    m_Weight: 0
+  - m_Path: Cylinder.002
+    m_Weight: 0
