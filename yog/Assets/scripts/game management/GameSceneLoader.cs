@@ -26,8 +26,26 @@ public class GameSceneLoader : MonoBehaviour
         //Player.GetComponent<FirstPersonController>().enabled = true;
     }
 
+    public void StartGame()
+    {
+        SceneManager.LoadScene(0);
+        Debug.Log("Succesfull Game Load");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        //Implement Return to Main Menu
+        Debug.Log("MainMenu");
+    }
+
+    public void RestartGame()
+    {
+        //Implement Restart Game
+        Debug.Log("Restart Game");
     }
 }
