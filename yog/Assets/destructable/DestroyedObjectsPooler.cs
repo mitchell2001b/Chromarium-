@@ -68,29 +68,34 @@ public class DestroyedObjectsPooler : MonoBehaviour
         }
     }
 
-    public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
+    public GameObject SpawnFromPool(DestructableObjectType tag, Vector3 position, Quaternion rotation)
     {
-        Debug.Log(tag + "dit is de tag");
-        ObjectPool selectedPool = null;
-        foreach(ObjectPool pool in ObjectPools)
+        GameObject objectToSpawn = null;
+        if (tag != DestructableObjectType.Invalid)
         {
-            if(pool.PoolTag == tag)
+            Debug.Log(tag + "dit is de tag");
+            ObjectPool selectedPool = null;
+            foreach (ObjectPool pool in ObjectPools)
             {
-                selectedPool = pool;
+                if (pool.PoolTag == tag.ToString())
+                {
+                    selectedPool = pool;
+                }
             }
-        }
-        if (selectedPool == null)
-        {
-            throw new System.Exception("No pool with given tag exists");
-        }
-        GameObject objectToSpawn = PoolDestroyedObjectsDictionary[tag].Dequeue();
-        
-        selectedPool.ResetAllChildsOfPoolObject(objectToSpawn);
-        objectToSpawn.SetActive(true);
-        objectToSpawn.transform.position = position;
-        objectToSpawn.transform.rotation = rotation;
+            if (selectedPool == null)
+            {
+                throw new System.Exception("No pool with given tag exists");
+            }
+            objectToSpawn = PoolDestroyedObjectsDictionary[tag.ToString()].Dequeue();
 
-        PoolDestroyedObjectsDictionary[tag].Enqueue(objectToSpawn);
+            selectedPool.ResetAllChildsOfPoolObject(objectToSpawn);
+            objectToSpawn.SetActive(true);
+            objectToSpawn.transform.position = position;
+            objectToSpawn.transform.rotation = rotation;
+
+            PoolDestroyedObjectsDictionary[tag.ToString()].Enqueue(objectToSpawn);
+        }
+       
 
         return objectToSpawn;
     }

@@ -20,10 +20,12 @@ public class EnemyHealth : MonoBehaviour
     public bool isDead { get; private set; } = false;
 
     [SerializeField] bool NoEraseAnimation = false;
-    
+    [SerializeField] DestructableObjectType destructableVersion;
+    private DestroyedObjectsPooler pooler;
     void Start()
     {
         hitPoints = maxHealth;
+        pooler = GameObject.FindGameObjectWithTag("DestructableEnemyPooler").GetComponent<DestroyedObjectsPooler>();
     }
 
     
@@ -77,11 +79,11 @@ public class EnemyHealth : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
-
+        
         GameObject.Find("WaveSystem").GetComponent<EnemyWaveHandler>().UpdateCurrentWaveKillCount();
         // Disable NavMeshAgent
         GetComponent<NavMeshAgent>().enabled = false;
-
+        pooler.SpawnFromPool(destructableVersion, transform.position, transform.rotation);
         // Trigger death animation when present
         if (GetComponent<Animator>() != null) GetComponent<Animator>().SetTrigger("die");
 

@@ -1850,6 +1850,7 @@ MonoBehaviour:
   resistanceModifier: 0.5
   weaknessModifier: 0.5
   NoEraseAnimation: 1
+  destructableVersion: 1
 --- !u!114 &4895680828759857957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2497,7 +2498,7 @@ SkinnedMeshRenderer:
   m_Materials:
   - {fileID: -3846018093981099296, guid: f00297ea85569e9428a5de2ef2c20132, type: 3}
   - {fileID: -6922793697723135513, guid: f00297ea85569e9428a5de2ef2c20132, type: 3}
-  - {fileID: 4874126678125670354, guid: f00297ea85569e9428a5de2ef2c20132, type: 3}
+  - {fileID: 2100000, guid: 18ef17619edc9d74f877f1b1c29e4aaa, type: 2}
   - {fileID: -6629797300637803691, guid: f00297ea85569e9428a5de2ef2c20132, type: 3}
   - {fileID: -2813467912831258332, guid: f00297ea85569e9428a5de2ef2c20132, type: 3}
   m_StaticBatchInfo:

@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     float distanceToTarget = Mathf.Infinity;
     [SerializeField] GameObject drop;
     
+    
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();

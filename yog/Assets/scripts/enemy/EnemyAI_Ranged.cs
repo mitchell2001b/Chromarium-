@@ -12,7 +12,7 @@ public class EnemyAI_Ranged : MonoBehaviour
     float distanceToTarget = Mathf.Infinity;
     [SerializeField] GameObject drop;
     [SerializeField] LayerMask mask;
-
+    [SerializeField] Transform eyes;
     [SerializeField] float stoppingDistanceRange;
     //private bool canSeePlayer = false;
 
@@ -42,7 +42,7 @@ public class EnemyAI_Ranged : MonoBehaviour
         }
 
         RaycastHit hit;
-        if (Physics.Linecast(transform.position, target.position, out hit, ~mask))
+        if (Physics.Linecast(eyes.position, target.position, out hit, ~mask))
         {
             if (hit.collider.tag == "Player")
             {

@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new DestructableObject", menuName = "Destructable")]
 public class DestructableObject : ScriptableObject
 {
-    public DestructableTypes.DestructableObjectType ObjectType;
+    public DestructableObjectType ObjectType;
 }
