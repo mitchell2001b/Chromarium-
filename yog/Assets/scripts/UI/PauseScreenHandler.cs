@@ -90,6 +90,9 @@ public class PauseScreenHandler : MonoBehaviour
 
     public void QuitToMainMenu()
     {
+        UnPause();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         sceneLoader.MainMenu();
     }
 }

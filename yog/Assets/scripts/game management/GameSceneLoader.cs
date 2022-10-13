@@ -6,7 +6,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class GameSceneLoader : MonoBehaviour
 {
-        
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -21,14 +21,16 @@ public class GameSceneLoader : MonoBehaviour
 
     public void ReloadGame()
     {       
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         Time.timeScale = 1;
-        //Player.GetComponent<FirstPersonController>().enabled = true;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;      
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
+        //Time.timeScale = 1;
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
     }
 
     public void QuitGame()
@@ -39,14 +41,14 @@ public class GameSceneLoader : MonoBehaviour
     public void MainMenu()
     {
         // Implement Return to Main Menu
-        //SceneManager.LoadScene();
+        SceneManager.LoadScene(0);
         Debug.Log("MainMenu");
     }
 
     public void RestartGame()
     {
         // Implement Restart Game
-        //SceneManager.LoadScene();
+        SceneManager.LoadScene(1);
         Debug.Log("Restart Game");
     }
 }

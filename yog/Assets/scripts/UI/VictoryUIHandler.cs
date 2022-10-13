@@ -32,11 +32,15 @@ public class VictoryUIHandler : MonoBehaviour
 
     public void MainMenu()
     {
+        PauseScreenHandler.UnPause();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         gameSceneLoader.MainMenu();
     }
 
     public void Restart()
     {
+        PauseScreenHandler.UnPause();
         gameSceneLoader.RestartGame();
     }
 }
