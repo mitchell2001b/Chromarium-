@@ -15,9 +15,6 @@ public class ShopManager : MonoBehaviour
         currencyNumber.text = attributes.GetCurrentCurrency() + "$";
     }
     private void OnDisable() {
-        Time.timeScale = 1;
-        FindObjectOfType<FirstPersonController>().enabled = true;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        PauseScreenHandler.UnPause();
     }
 }
