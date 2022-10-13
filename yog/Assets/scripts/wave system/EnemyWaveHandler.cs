@@ -13,6 +13,8 @@ public class EnemyWaveHandler : MonoBehaviour
     [SerializeField] List<GameObject> enemiesActive = new List<GameObject>();
     [SerializeField] int enemiesDefeated;
     [SerializeField] float waveCooldown = 0;
+    [SerializeField] PlayerShip playerShip;
+    [SerializeField] ShopInteractable shop;
 
     [System.Serializable]
     public class Wave
@@ -149,6 +151,8 @@ public class EnemyWaveHandler : MonoBehaviour
         if (currentActiveWaveIndex >= waves.Count)
         {
             Debug.Log("all clear"); //all waves have been cleared
+            if(playerShip != null) playerShip.ActivateShip();
+            if(shop != null) shop.SpawnShop();
         }
         else
         {
