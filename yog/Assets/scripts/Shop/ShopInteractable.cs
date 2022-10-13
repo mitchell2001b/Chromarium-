@@ -18,8 +18,8 @@ public class ShopInteractable : MonoBehaviour
         waveCanvas.gameObject.SetActive(false);
     }
 
-    private void EnableBoxCollider()
+    public void SpawnShop()
     {
-        GetComponent<BoxCollider>().enabled = true;
+        GetComponent<Animator>().SetTrigger("Arrive");
     }
 }
