@@ -9,8 +9,8 @@ public class PauseScreenHandler : MonoBehaviour
     [SerializeField] GameSceneLoader sceneLoader;
     [SerializeField] EnemyWaveHandler waveHandler;
     [SerializeField] PlayerAttributes attributes;
-    [SerializeField] Canvas pauseCanvas;
-    [SerializeField] List<Canvas> otherCanvi;
+    [SerializeField] GameObject pauseCanvas;
+    [SerializeField] List<GameObject> otherCanvi;
     [SerializeField] TextMeshProUGUI waveIndicatorText;
     [SerializeField] TextMeshProUGUI enemiesRemainingText;
     [SerializeField] TextMeshProUGUI damageModifierText;
@@ -28,10 +28,10 @@ public class PauseScreenHandler : MonoBehaviour
         {
             isPaused = true;
             Pause();
-            pauseCanvas.enabled = true;
-            foreach (Canvas canvas in otherCanvi)
+            pauseCanvas.SetActive(true);
+            foreach (GameObject canvas in otherCanvi)
             {
-                canvas.enabled = false;
+                canvas.SetActive(false);
             }
             LoadData();
         }
@@ -79,10 +79,10 @@ public class PauseScreenHandler : MonoBehaviour
 
     public void ContinueGame()
     {
-        pauseCanvas.enabled = false;
-        foreach (Canvas canvas in otherCanvi)
+        pauseCanvas.SetActive(false);
+        foreach (GameObject canvas in otherCanvi)
         {
-            canvas.enabled = true;
+            canvas.SetActive(true);
         }
         UnPause();
         isPaused = false;

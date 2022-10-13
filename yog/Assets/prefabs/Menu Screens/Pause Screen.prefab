@@ -318,7 +318,8 @@ MonoBehaviour:
   sceneLoader: {fileID: 0}
   waveHandler: {fileID: 0}
   attributes: {fileID: 0}
-  pauseCanvas: {fileID: 7823824493953366613}
+  pauseCanvas: {fileID: 1223562890355415801}
+  otherCanvi: []
   waveIndicatorText: {fileID: 88774199756032110}
   enemiesRemainingText: {fileID: 7456198385974080382}
   damageModifierText: {fileID: 5708008315664919543}

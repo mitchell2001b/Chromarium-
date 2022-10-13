@@ -5440,7 +5440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223562890355415801, guid: 4a63af4f39885f7418ce1d4b339687b3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6938450270903478772, guid: 4a63af4f39885f7418ce1d4b339687b3, type: 3}
       propertyPath: m_RootOrder
@@ -5488,7 +5488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7823824493953366613, guid: 4a63af4f39885f7418ce1d4b339687b3, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9053963681610232445, guid: 4a63af4f39885f7418ce1d4b339687b3, type: 3}
       propertyPath: sceneLoader
