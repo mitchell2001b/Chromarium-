@@ -831,6 +831,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 592
+  stoppingDistanceRange: 20
 --- !u!1 &1430227007957029676
 GameObject:
   m_ObjectHideFlags: 0

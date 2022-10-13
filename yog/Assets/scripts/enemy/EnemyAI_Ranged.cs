@@ -12,9 +12,11 @@ public class EnemyAI_Ranged : MonoBehaviour
     float distanceToTarget = Mathf.Infinity;
     [SerializeField] GameObject drop;
     [SerializeField] LayerMask mask;
+
+    [SerializeField] float stoppingDistanceRange;
     //private bool canSeePlayer = false;
 
-    
+
 
     void Start()
     {
@@ -45,7 +47,14 @@ public class EnemyAI_Ranged : MonoBehaviour
             if (hit.collider.tag == "Player")
             {
                 RotateToTarget();
-            }           
+                navMeshAgent.stoppingDistance = stoppingDistanceRange;
+            }
+            else
+            {
+                navMeshAgent.stoppingDistance = 1f;
+            }
+
+
         }       
     }
 
