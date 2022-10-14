@@ -787,7 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495a610154aa32043b911f38e48c2754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 750
   elementalAffinity: 0
   resistanceModifier: 0.5
   weaknessModifier: 0.5
@@ -829,7 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 10
-  drop: {fileID: 4318968702811732409, guid: 57402dd61a6e4a14baaac2577c9fec44, type: 3}
+  drop: {fileID: 505078265933199572, guid: 7b5536cfb07967f4ca367964d1c1b4a0, type: 3}
   mask:
     serializedVersion: 2
     m_Bits: 592

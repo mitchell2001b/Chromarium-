@@ -3054,7 +3054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 5
-  drop: {fileID: 4318968702811732409, guid: 57402dd61a6e4a14baaac2577c9fec44, type: 3}
+  drop: {fileID: 6888697756014002681, guid: 06b1e246117d375429e4cf6539912a5c, type: 3}
   mask:
     serializedVersion: 2
     m_Bits: 592

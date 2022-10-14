@@ -51,13 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac5e04d3ea529e42b483b387e929792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 200
-  baseFiringDelay: 3
+  baseDamage: 90
+  baseFiringDelay: 5
   muzzleFlash: {fileID: 0}
-  baseRange: 50
+  baseRange: 30
   weaponPoint: {fileID: 0}
   timedRange: 8
-  explosionRadius: 15
+  explosionRadius: 12
   explosiveTriggerPrefab: {fileID: 4290542281625039995, guid: a6940d1559b02d0419bd8eef1845796d, type: 3}
   explosiveTriggerMoveSpeed: 0.3
 --- !u!114 &5065804975039173897
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54e758dcc275f641a9c23ef48f67de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 100
+  baseDamage: 15
   baseFiringDelay: 0.3
   muzzleFlash: {fileID: 0}
   baseRange: 70
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b57f5a616fb4f674da89b84f7b0997a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 10
+  baseDamage: 20
   baseFiringDelay: 0.1
   muzzleFlash: {fileID: 0}
   baseRange: 70
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8295f7e501703a94db4f328e0d1e290f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 1000
+  baseDamage: 50
   baseFiringDelay: 2
   muzzleFlash: {fileID: 0}
   baseRange: 40
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea3c4fd67e784f41a583562d4062a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 50
+  baseDamage: 35
   baseFiringDelay: 0.1
   muzzleFlash: {fileID: 0}
   baseRange: 5
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9233aaaebd95846abd9c2b9b98bbe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 500
+  baseDamage: 150
   baseFiringDelay: 5
   muzzleFlash: {fileID: 0}
   baseRange: 500
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcc9845fe7e08d4d9e8beee9879df23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 100
+  baseDamage: 40
   baseFiringDelay: 1
   muzzleFlash: {fileID: 0}
   baseRange: 0

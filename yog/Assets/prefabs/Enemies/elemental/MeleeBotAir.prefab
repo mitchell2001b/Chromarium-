@@ -2808,7 +2808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 5
-  drop: {fileID: 4318968702811732409, guid: 57402dd61a6e4a14baaac2577c9fec44, type: 3}
+  drop: {fileID: 863927685068699839, guid: 1207c298c8b9c6a43945c2a25e5cdefc, type: 3}
 --- !u!195 &8674292862184167981
 NavMeshAgent:
   m_ObjectHideFlags: 0

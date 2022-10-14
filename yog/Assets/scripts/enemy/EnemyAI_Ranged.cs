@@ -73,7 +73,7 @@ public class EnemyAI_Ranged : MonoBehaviour
 
     public void DropMaterial()
     {
-        Instantiate(drop, transform.position, drop.transform.rotation);
+        Instantiate(drop, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), drop.transform.rotation);
     }
 
     private void Erase()
