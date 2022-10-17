@@ -13,7 +13,7 @@ public class Ammo : MonoBehaviour
     [SerializeField] AmmoSlot currentAmmoSlot;
 
     
-    [SerializeField] AmmoIndicatorAnimationHandler indicatorHandler;
+    [SerializeField] AmmoIndicatorHandler indicatorHandler;
     [SerializeField] GunAnimationHandler gunAnimationHandler;
     [System.Serializable]
     private class AmmoSlot
@@ -40,6 +40,7 @@ public class Ammo : MonoBehaviour
     public void WeaponChangeComplete()
     {
         BroadcastMessage("WeaponCanShootActive");
+        indicatorHandler.ChangeIndicatorMaterial(currentAmmoSlot.typeOfAmmo);
     }
     public int GetCurrentAmmoAmount(AmmoType ammoType)
     {

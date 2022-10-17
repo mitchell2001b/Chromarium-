@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AmmoIndicatorAnimationHandler : MonoBehaviour
+public class AmmoIndicatorHandler : MonoBehaviour
 {
     [SerializeField] GameObject bulletIndicator;
     [SerializeField] GameObject bulletIndicatorSide;
@@ -17,8 +17,7 @@ public class AmmoIndicatorAnimationHandler : MonoBehaviour
 
     public void ChangeIndicatorMaterial(AmmoType ammoType)
     {
-        
-
+       
         foreach(IndicatorMaterial i in materials)
         {
             if(i.ammoType == ammoType)
