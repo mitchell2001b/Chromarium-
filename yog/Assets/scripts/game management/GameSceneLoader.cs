@@ -51,4 +51,22 @@ public class GameSceneLoader : MonoBehaviour
         SceneManager.LoadScene(1);
         Debug.Log("Restart Game");
     }
+
+    public void LoadDesertPlanet()
+    {
+        // Insert Desert Planet Scene
+        //SceneManager.LoadScene();
+    }
+
+    public void LoadJunglePlanet()
+    {
+        // Insert Jungle Planet Scene
+        //SceneManager.LoadScene();
+    }
+
+    public void LoadVoidPlanet()
+    {
+        // Insert Void Planet Scene
+        //SceneManager.LoadScene();
+    }
 }
