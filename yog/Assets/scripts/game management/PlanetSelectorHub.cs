@@ -8,10 +8,24 @@ public class PlanetSelectorHub : MonoBehaviour
     [SerializeField] Button desertButton;
     [SerializeField] Button jungleButton;
     [SerializeField] Button voidButton;
+    private GameSceneLoader sceneLoader;
 
     private void Start() {
-        desertButton.image.color = Color.green;
-        jungleButton.image.color = Color.green;
-        voidButton.image.color = Color.green;
+        sceneLoader = GetComponent<GameSceneLoader>();
+    }
+
+    public void LoadDesertPlanet()
+    {
+        sceneLoader.LoadDesertPlanet();
+    }
+
+    public void LoadJunglePlanet()
+    {
+        sceneLoader.LoadJunglePlanet();
+    }
+
+    public void LoadVoidPlanet()
+    {
+        sceneLoader.LoadVoidPlanet();
     }
 }
