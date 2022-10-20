@@ -12,10 +12,13 @@ public class EnemyExplodingProjectile : MonoBehaviour
     [SerializeField] ParticleSystem vfx;
 
     private Transform target;
+
+    private SoundOcclusion sound;
     // Start is called before the first frame update
     void Start()
     {
        target = GameObject.FindGameObjectWithTag("Player").transform;
+       sound = GetComponent<SoundOcclusion>();
     }
 
     // Update is called once per frame
@@ -68,6 +71,7 @@ public class EnemyExplodingProjectile : MonoBehaviour
         vfx.transform.parent = null;
         
         vfx.Play();
+        sound.PlaySound();
 
 
         Destroy(this.gameObject);

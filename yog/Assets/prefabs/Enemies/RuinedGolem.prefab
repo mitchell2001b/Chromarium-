@@ -1748,6 +1748,7 @@ MonoBehaviour:
   resistanceModifier: 0.5
   weaknessModifier: 0.5
   NoEraseAnimation: 1
+  destructableVersion: 4
 --- !u!114 &5751970965307819488
 MonoBehaviour:
   m_ObjectHideFlags: 0

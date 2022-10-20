@@ -68,6 +68,11 @@ public class EnemyWeapon : MonoBehaviour
 
     private IEnumerator FireWeapon()
     {
+        if(GetComponent<SoundOcclusion>() != null)
+        {
+            BroadcastMessage("PlayShootSound");
+           // Debug.Log("YEEEEEEEEEEEEEEEEEE");
+        }
         if(hasShootAnimation)
         {
             animator.SetTrigger("shoot");

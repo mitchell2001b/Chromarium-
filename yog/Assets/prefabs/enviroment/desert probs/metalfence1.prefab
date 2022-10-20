@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7905064431993744230}
   - component: {fileID: 5354948724355178412}
   - component: {fileID: 8396047263167761002}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: metalfence1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

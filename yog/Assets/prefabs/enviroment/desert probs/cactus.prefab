@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6241140560057205826}
   - component: {fileID: 8308659057537515966}
   - component: {fileID: 5914510179558730931}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4836076868914365513}
   - component: {fileID: 9123993121823695574}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 1778146410754324883}
   - component: {fileID: 1076332429030513639}
   - component: {fileID: 2838411866324276605}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
