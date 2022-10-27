@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RockLordShoot
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 1
+  - m_Path: Armature/Bone
+    m_Weight: 0
+  - m_Path: Armature/Bone/Bone.001
+    m_Weight: 1
+  - m_Path: Armature/Bone/Bone.001/Bone.002
+    m_Weight: 1
+  - m_Path: Armature/Bone/Bone.001/Bone.002/Bone.003
+    m_Weight: 1
+  - m_Path: Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.003_end
+    m_Weight: 1
+  - m_Path: Armature/Bone/Bone.004
+    m_Weight: 0
+  - m_Path: Armature/Bone/Bone.004/Bone.005
+    m_Weight: 0
+  - m_Path: Armature/Bone/Bone.004/Bone.005/Bone.006
+    m_Weight: 0
+  - m_Path: Armature/Bone/Bone.004/Bone.005/Bone.006/Bone.006_end
+    m_Weight: 0
+  - m_Path: Armature/Bone/Bone.007
+    m_Weight: 0
+  - m_Path: Armature/Bone/Bone.007/Bone.007_end
+    m_Weight: 0
+  - m_Path: Armature/Bone/leg1.L
+    m_Weight: 0
+  - m_Path: Armature/Bone/leg1.L/leg2.L
+    m_Weight: 0
+  - m_Path: Armature/Bone/leg1.L/leg2.L/leg3.L
+    m_Weight: 0
+  - m_Path: Armature/Bone/leg1.L/leg2.L/leg3.L/ankle.L
+    m_Weight: 0
+  - m_Path: Armature/Bone/leg1.L/leg2.L/leg3.L/ankle.L/feet.L
+    m_Weight: 0
+  - m_Path: Armature/Bone/leg1.L/leg2.L/leg3.L/ankle.L/feet.L/feet.L_end
+    m_Weight: 0
+  - m_Path: Armature/Bone/leg1.R
+    m_Weight: 0
+  - m_Path: Armature/Bone/leg1.R/leg2.R
+    m_Weight: 0
+  - m_Path: Armature/Bone/leg1.R/leg2.R/leg3.R
+    m_Weight: 0
+  - m_Path: Armature/Bone/leg1.R/leg2.R/leg3.R/ankle.R
+    m_Weight: 0
+  - m_Path: Armature/Bone/leg1.R/leg2.R/leg3.R/ankle.R/feet.R
+    m_Weight: 0
+  - m_Path: Armature/Bone/leg1.R/leg2.R/leg3.R/ankle.R/feet.R/feet.R_end
+    m_Weight: 0
+  - m_Path: Armature/legIK.L
+    m_Weight: 0
+  - m_Path: Armature/legIK.L/legIK.L_end
+    m_Weight: 0
+  - m_Path: Armature/legIK.R
+    m_Weight: 0
+  - m_Path: Armature/legIK.R/legIK.R_end
+    m_Weight: 0
+  - m_Path: Armature/legPoleTarget.L
+    m_Weight: 0
+  - m_Path: Armature/legPoleTarget.L/legPoleTarget.L_end
+    m_Weight: 0
+  - m_Path: Armature/legPoleTarget.R
+    m_Weight: 0
+  - m_Path: Armature/legPoleTarget.R/legPoleTarget.R_end
+    m_Weight: 0
+  - m_Path: Circle.001
+    m_Weight: 0
+  - m_Path: Cylinder.001
+    m_Weight: 0
+  - m_Path: Cylinder.002
+    m_Weight: 0
+  - m_Path: Icosphere
+    m_Weight: 1
+  - m_Path: Icosphere.002
+    m_Weight: 0
+  - m_Path: Icosphere.003
+    m_Weight: 0
+  - m_Path: Icosphere.005
+    m_Weight: 0
+  - m_Path: Icosphere.006
+    m_Weight: 0
+  - m_Path: Icosphere.007
+    m_Weight: 0
+  - m_Path: Icosphere.008
+    m_Weight: 1
+  - m_Path: Icosphere.009
+    m_Weight: 1
+  - m_Path: Icosphere.010
+    m_Weight: 0
+  - m_Path: Icosphere.011
+    m_Weight: 0
+  - m_Path: Icosphere.012
+    m_Weight: 0
+  - m_Path: Icosphere.013
+    m_Weight: 0
+  - m_Path: Icosphere.014
+    m_Weight: 0
+  - m_Path: Icosphere.015
+    m_Weight: 0
+  - m_Path: Icosphere.016
+    m_Weight: 0
+  - m_Path: Icosphere.017
+    m_Weight: 0

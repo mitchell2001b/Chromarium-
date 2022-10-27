@@ -26,11 +26,12 @@ public class EnemyWeapon : MonoBehaviour
     [SerializeField] GameObject gunPoint;
     [SerializeField] bool autoFire = true;
     [SerializeField] LayerMask mask;
-
+    [SerializeField] EnemySoundHandler soundHandler;
     public bool canSeePlayer = false;
     private Animator animator;
     void Start()
     {
+        soundHandler = GetComponent<EnemySoundHandler>();
         if(hasShootAnimation)
         {
             animator = GetComponent<Animator>();
@@ -68,11 +69,7 @@ public class EnemyWeapon : MonoBehaviour
 
     private IEnumerator FireWeapon()
     {
-        if(GetComponent<SoundOcclusion>() != null)
-        {
-            BroadcastMessage("PlayShootSound");
-           // Debug.Log("YEEEEEEEEEEEEEEEEEE");
-        }
+        soundHandler.PlayAttackSound();
         if(hasShootAnimation)
         {
             animator.SetTrigger("shoot");

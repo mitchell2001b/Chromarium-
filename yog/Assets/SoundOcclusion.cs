@@ -14,8 +14,10 @@ public class SoundOcclusion : MonoBehaviour
    
     [SerializeField] EventReference moveSound;
     [SerializeField] EventReference moveSound2;
+    [SerializeField] EventReference moveSound3;
     private EventInstance soundInstance;
     private EventInstance soundInstance2;
+    public EventInstance soundInstance3;
     [SerializeField] bool isProjectile;
 
     [SerializeField] float detectionRange;
@@ -29,6 +31,8 @@ public class SoundOcclusion : MonoBehaviour
         soundInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
         soundInstance2 = RuntimeManager.CreateInstance(moveSound2);
         soundInstance2.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        soundInstance3 = RuntimeManager.CreateInstance(moveSound3);
+        soundInstance3.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
         if (!isProjectile)
         {
             soundInstance.start();
@@ -71,7 +75,7 @@ public class SoundOcclusion : MonoBehaviour
     {
         if(Vector3.Distance(transform.position, PlayerTarget.position) <= detectionRange)
         {
-            CastLine(transform.position, PlayerTarget.position);
+            //CastLine(transform.position, PlayerTarget.position);
             //x side +
             CastLine(new Vector3(transform.position.x + occlusionBetweenWidthSound, transform.position.y + 1, transform.position.z), new Vector3(PlayerTarget.position.x + occlusionBetweenWidthPlayer, PlayerTarget.position.y, PlayerTarget.position.z));
             CastLine(new Vector3(transform.position.x + occlusionBetweenWidthSound, transform.position.y + 1, transform.position.z), new Vector3(PlayerTarget.position.x - occlusionBetweenWidthPlayer, PlayerTarget.position.y, PlayerTarget.position.z));
@@ -104,6 +108,12 @@ public class SoundOcclusion : MonoBehaviour
         soundInstance2.start();
     }
 
+    public void PlayDeathSound()
+    {
+        soundInstance3.start();
+        Debug.Log("ksfjksjfksjfisjfsjfisj");
+    }
+
     private void OnDisable()
     {
         if(!isProjectile)
@@ -113,6 +123,7 @@ public class SoundOcclusion : MonoBehaviour
         
         soundInstance.release();
         soundInstance2.release();
+        soundInstance3.release();
     }
 
 

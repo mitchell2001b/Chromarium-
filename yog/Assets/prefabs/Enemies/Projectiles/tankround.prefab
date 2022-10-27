@@ -167,6 +167,13 @@ MonoBehaviour:
       Data3: 1996980403
       Data4: -1506002966
     Path: event:/tankshell explosion
+  moveSound3:
+    Guid:
+      Data1: 256326351
+      Data2: 1099422468
+      Data3: 1996980403
+      Data4: -1506002966
+    Path: event:/tankshell explosion
   isProjectile: 1
   detectionRange: 20
 --- !u!1001 &1126742019824827192

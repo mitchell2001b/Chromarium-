@@ -11,8 +11,41 @@ public class EnemyAI : MonoBehaviour
     Animator animator;
     float distanceToTarget = Mathf.Infinity;
     [SerializeField] GameObject drop;
-    
-    
+
+    [SerializeField] bool isCargoUnit = false;
+    [SerializeField] CargoUnit cargo;
+    [System.Serializable]
+    public class CargoUnit
+    {
+        [SerializeField] GameObject cargoSpawnPrefab;
+        [SerializeField] float cargoSpawnRange;
+        [SerializeField] int cargoUnitCount;
+
+
+        public void SpawnCargoUnits(Transform transformEnemy)
+        {
+            bool offsetBool = false;
+            for (int i = 0; i < cargoUnitCount; i++)
+            {
+                
+                float offset = Random.Range(0, cargoSpawnRange);
+                if (offsetBool)
+                {
+                    Instantiate(cargoSpawnPrefab, new Vector3(transformEnemy.position.x + offset, transformEnemy.position.y + 1, transformEnemy.position.z + offset), cargoSpawnPrefab.transform.rotation);
+                    offsetBool = false;
+                }
+                else
+                {
+                    Instantiate(cargoSpawnPrefab, new Vector3(transformEnemy.position.x - offset, transformEnemy.position.y + 1, transformEnemy.position.z - offset), cargoSpawnPrefab.transform.rotation);
+                    offsetBool = true;
+                }
+                
+                
+            }
+        }
+    }
+
+
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -60,6 +93,10 @@ public class EnemyAI : MonoBehaviour
     public void DropMaterial()
     {
         Instantiate(drop, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), drop.transform.rotation);
+        if(isCargoUnit)
+        {
+            cargo.SpawnCargoUnits(this.transform);
+        }
     }
 
     private void Erase()

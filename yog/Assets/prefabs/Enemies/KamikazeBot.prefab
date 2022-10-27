@@ -398,6 +398,8 @@ GameObject:
   - component: {fileID: 1250286006391342416}
   - component: {fileID: 1250286006391342417}
   - component: {fileID: 1250286006391342422}
+  - component: {fileID: 7698627743911011937}
+  - component: {fileID: 2203361148224043599}
   m_Layer: 0
   m_Name: KamikazeBot
   m_TagString: Enemy
@@ -537,6 +539,68 @@ MonoBehaviour:
   drop: {fileID: 4318968702811732409, guid: 57402dd61a6e4a14baaac2577c9fec44, type: 3}
   meleeRange: 17
   attack: {fileID: 1250286006391342417}
+--- !u!114 &7698627743911011937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132597009167322575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994662ac6f8be7847a3313ecd07d607e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSound:
+    Guid:
+      Data1: 1507564258
+      Data2: 1218056076
+      Data3: 264114583
+      Data4: 2103357818
+    Path: event:/RobotSmallFootstepsRun
+  attackSound:
+    Guid:
+      Data1: 256326351
+      Data2: 1099422468
+      Data3: 1996980403
+      Data4: -1506002966
+    Path: event:/tankshell explosion
+  deathSound:
+    Guid:
+      Data1: -389840003
+      Data2: 1296410614
+      Data3: -419647814
+      Data4: -1747636281
+    Path: event:/RobotDeath
+  runSound:
+    Guid:
+      Data1: 1507564258
+      Data2: 1218056076
+      Data3: 264114583
+      Data4: 2103357818
+    Path: event:/RobotSmallFootstepsRun
+  debug: 1
+--- !u!114 &2203361148224043599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132597009167322575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c830982cb3b6679478b41c15bd0250b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  occlusionHitCount: 0
+  PlayerTarget: {fileID: 0}
+  occlusionBetweenWidthSound: 2
+  occlusionBetweenWidthPlayer: 2
+  occlusionLayerMask:
+    serializedVersion: 2
+    m_Bits: 1271
+  detectionRange: 9
+  soundHandler: {fileID: 0}
 --- !u!1 &2585281582386167454
 GameObject:
   m_ObjectHideFlags: 0

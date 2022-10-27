@@ -590,6 +590,18 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: fire
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: earth
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: air
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: holy
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: void
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1977319242450186563}
   m_Solo: 0

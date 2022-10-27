@@ -24,6 +24,58 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-8377422333798060475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/lasergunRobot1/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 852605549
+    data2: 1264810636
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-7847881983301099389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RobotDeath
+  m_EditorClassIdentifier: 
+  Path: event:/RobotDeath
+  Guid:
+    Data1: -389840003
+    Data2: 1296410614
+    Data3: -419647814
+    Data4: -1747636281
+  Banks:
+  - {fileID: 2220892256351367442}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5983782152851061020}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1293
 --- !u!114 &-7435595260140693848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,6 +104,61 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5535457862457915809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RobotFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/RobotFootsteps
+  Guid:
+    Data1: 768718651
+    Data2: 1210957860
+    Data3: -1314667120
+    Data4: -1806941590
+  Banks:
+  - {fileID: 2220892256351367442}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3173620416020592535}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &-4232165597265770002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RobotSmallFootstepsWalk/run
+  m_EditorClassIdentifier: 
+  Name: run
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 4190174859
+    data2: 1757688945
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - walking
+  - running
+  - Value C
+  Exists: 1
 --- !u!114 &-3738602863769793666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,10 +174,63 @@ MonoBehaviour:
   Path: ../../../projecten/soundTestProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638018961110922837
+  lastModified: 638023382391117825
   FileSizes:
   - Name: Desktop
-    Value: 964
+    Value: 1290
+  Exists: 1
+--- !u!114 &-3613582561094920032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RobotSmallFootstepsWalk
+  m_EditorClassIdentifier: 
+  Path: event:/RobotSmallFootstepsWalk
+  Guid:
+    Data1: -1572120020
+    Data2: 1274998488
+    Data3: -801991803
+    Data4: 2011063882
+  Banks:
+  - {fileID: 2220892256351367442}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2921397473196331460}
+  - {fileID: -4232165597265770002}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 660
+--- !u!114 &-3173620416020592535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RobotFootsteps/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 852605549
+    data2: 1264810636
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &-3032908982205283786
 MonoBehaviour:
@@ -100,6 +260,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1976991118975346566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RobotSmallFootstepsRun
+  m_EditorClassIdentifier: 
+  Path: event:/RobotSmallFootstepsRun
+  Guid:
+    Data1: 1507564258
+    Data2: 1218056076
+    Data3: 264114583
+    Data4: 2103357818
+  Banks:
+  - {fileID: 2220892256351367442}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8388376334235586865}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 174
 --- !u!114 &-1906772674521980767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +316,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-928820652374360216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/tank death
+  m_EditorClassIdentifier: 
+  Path: event:/tank death
+  Guid:
+    Data1: -868606150
+    Data2: 1132797213
+    Data3: -1426019145
+    Data4: -840006099
+  Banks:
+  - {fileID: 2220892256351367442}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7990714660020901250}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,12 +364,18 @@ MonoBehaviour:
   - {fileID: 1705778186664371836}
   - {fileID: -7435595260140693848}
   - {fileID: -3032908982205283786}
+  - {fileID: -928820652374360216}
+  - {fileID: -3613582561094920032}
+  - {fileID: -5535457862457915809}
+  - {fileID: -1976991118975346566}
+  - {fileID: -7847881983301099389}
+  - {fileID: 8591225255529181452}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2220892256351367442}
   StringsBanks:
   - {fileID: -3738602863769793666}
-  cacheTime: 638018961110922837
+  cacheTime: 638023382391117825
   cacheVersion: 131593
 --- !u!114 &1074993409711945753
 MonoBehaviour:
@@ -246,10 +468,34 @@ MonoBehaviour:
   Path: ../../../projecten/soundTestProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638018961110912861
+  lastModified: 638023382391097814
   FileSizes:
   - Name: Desktop
-    Value: 1017920
+    Value: 1408192
+  Exists: 1
+--- !u!114 &2921397473196331460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RobotSmallFootstepsWalk/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 852605549
+    data2: 1264810636
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &3001952825713436123
 MonoBehaviour:
@@ -275,3 +521,103 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &5983782152851061020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RobotDeath/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 852605549
+    data2: 1264810636
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7990714660020901250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/tank death/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 852605549
+    data2: 1264810636
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8388376334235586865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RobotSmallFootstepsRun/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 852605549
+    data2: 1264810636
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8591225255529181452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/lasergunRobot1
+  m_EditorClassIdentifier: 
+  Path: event:/lasergunRobot1
+  Guid:
+    Data1: -1980762573
+    Data2: 1261940658
+    Data3: 1665211071
+    Data4: 151997674
+  Banks:
+  - {fileID: 2220892256351367442}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8377422333798060475}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1299
