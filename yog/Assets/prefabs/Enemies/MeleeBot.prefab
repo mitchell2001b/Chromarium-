@@ -1850,6 +1850,7 @@ MonoBehaviour:
   maxHealth: 100
   elementalAffinity: 0
   resistanceModifier: 0.5
+  isInvalidToWaveCounter: 0
   weaknessModifier: 0.5
   NoEraseAnimation: 1
   destructableVersion: 1
@@ -1880,6 +1881,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 5
   drop: {fileID: 4318968702811732409, guid: 57402dd61a6e4a14baaac2577c9fec44, type: 3}
+  isCargoUnit: 0
+  cargo:
+    cargoSpawnPrefab: {fileID: 0}
+    cargoSpawnRange: 0
+    cargoUnitCount: 0
 --- !u!195 &4895680828759857959
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1963,6 +1969,7 @@ MonoBehaviour:
       Data3: 264114583
       Data4: 2103357818
     Path: event:/RobotSmallFootstepsRun
+  debug: 0
 --- !u!1 &5913855137996747157
 GameObject:
   m_ObjectHideFlags: 0

@@ -793,6 +793,7 @@ MonoBehaviour:
   maxHealth: 750
   elementalAffinity: 0
   resistanceModifier: 0.5
+  isInvalidToWaveCounter: 0
   weaknessModifier: 0.5
   NoEraseAnimation: 1
   destructableVersion: 5
@@ -942,6 +943,7 @@ MonoBehaviour:
       Data3: -1200913745
       Data4: 775163002
     Path: event:/tank shoot
+  debug: 0
 --- !u!1 &1430227007957029676
 GameObject:
   m_ObjectHideFlags: 0
