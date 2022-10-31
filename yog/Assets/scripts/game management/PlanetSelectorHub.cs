@@ -12,6 +12,30 @@ public class PlanetSelectorHub : MonoBehaviour
 
     private void Start() {
         sceneLoader = GetComponent<GameSceneLoader>();
+        CheckCompletedPlanets();
+    }
+
+    private void CheckCompletedPlanets()
+    {
+        List<PlanetType> completedPlanets = DataManager.instance.GetCompletedPlanets();
+        if (completedPlanets == null) return;
+        foreach (PlanetType planetType in completedPlanets)
+        {
+            switch (planetType)
+            {
+                case PlanetType.Desert:
+                    desertButton.interactable = false;
+                    break;
+                case PlanetType.Jungle:
+                    jungleButton.interactable = false;
+                    break;
+                case PlanetType.Void:
+                    voidButton.interactable = false;
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     public void LoadDesertPlanet()
