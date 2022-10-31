@@ -481,6 +481,7 @@ MonoBehaviour:
   maxHealth: 150
   elementalAffinity: 0
   resistanceModifier: 0.5
+  isInvalidToWaveCounter: 0
   weaknessModifier: 0.5
   NoEraseAnimation: 0
   destructableVersion: 3
@@ -553,11 +554,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSound:
     Guid:
-      Data1: 1507564258
-      Data2: 1218056076
-      Data3: 264114583
-      Data4: 2103357818
-    Path: event:/RobotSmallFootstepsRun
+      Data1: -1572120020
+      Data2: 1274998488
+      Data3: -801991803
+      Data4: 2011063882
+    Path: event:/RobotSmallFootstepsWalk
   attackSound:
     Guid:
       Data1: 256326351
@@ -579,7 +580,7 @@ MonoBehaviour:
       Data3: 264114583
       Data4: 2103357818
     Path: event:/RobotSmallFootstepsRun
-  debug: 1
+  debug: 0
 --- !u!114 &2203361148224043599
 MonoBehaviour:
   m_ObjectHideFlags: 0

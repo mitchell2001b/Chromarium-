@@ -6,7 +6,9 @@
        GunBot,
        KamikazeBot,
        RuinedGolem,
-       RobotTank
+       RobotTank,
+       IceLordMelee,
+       IceLordRanged
     }
 
    

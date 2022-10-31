@@ -14,6 +14,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] float timeBetweenShots = 0.5f;
     [SerializeField] TextMeshProUGUI AmmoNumber;
     [SerializeField] GameObject ammoTypeBehaviorManager;
+    [SerializeField] AmmoIndicatorHandler indicator;
+    
 
     
 
@@ -53,6 +55,7 @@ public class Weapon : MonoBehaviour
     {
         StopAllCoroutines();
         CanShoot = true;
+        indicator.ChangeIndicatorMaterial(ammoHandler.GetCurrentAmmoType());
     }
 
     IEnumerator Shoot()
@@ -95,10 +98,13 @@ public class Weapon : MonoBehaviour
                 yield return new WaitForSeconds(ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().GetAmmoShootCooldown(ammoHandler.GetCurrentAmmoType()));
                 CanShoot = true;
             }*/
+            indicator.ChangeIndicatorToReloadMaterial();
         }
 
         yield return new WaitForSeconds(ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().GetAmmoShootCooldown(ammoHandler.GetCurrentAmmoType()));
         CanShoot = true;
-       
+        indicator.ChangeIndicatorMaterial(ammoHandler.GetCurrentAmmoType());
+
+
     }
 }

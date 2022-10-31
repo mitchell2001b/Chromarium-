@@ -718,6 +718,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 5
   drop: {fileID: 4318968702811732409, guid: 57402dd61a6e4a14baaac2577c9fec44, type: 3}
+  isCargoUnit: 0
+  cargo:
+    cargoSpawnPrefab: {fileID: 0}
+    cargoSpawnRange: 0
+    cargoUnitCount: 0
 --- !u!114 &3833231854431525161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,9 +738,10 @@ MonoBehaviour:
   maxHealth: 350
   elementalAffinity: 2
   resistanceModifier: 1
+  isInvalidToWaveCounter: 0
   weaknessModifier: 1
   NoEraseAnimation: 1
-  destructableVersion: 0
+  destructableVersion: 6
 --- !u!1 &4199654505972878099
 GameObject:
   m_ObjectHideFlags: 0

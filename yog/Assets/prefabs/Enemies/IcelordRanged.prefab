@@ -1278,7 +1278,7 @@ MonoBehaviour:
   isInvalidToWaveCounter: 0
   weaknessModifier: 1
   NoEraseAnimation: 1
-  destructableVersion: 0
+  destructableVersion: 7
 --- !u!114 &460534394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireDelay: 2.5
-  bulletPrefab: {fileID: 2371841603562369975, guid: b60fa917452220242bd64277f5bbd609, type: 3}
+  bulletPrefab: {fileID: 1862073919714336293, guid: dda0f37490a20564db023178be1e479e, type: 3}
   bulletSpeed: 30
   bulletDecayTime: 8
   hasShootAnimation: 1

@@ -52,7 +52,7 @@ public class EnemyAI_Ranged : MonoBehaviour
             }
             else
             {
-                //navMeshAgent.stoppingDistance = 1f;
+                navMeshAgent.stoppingDistance = 1f;
             }
 
 
