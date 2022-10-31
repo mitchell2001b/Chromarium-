@@ -47,6 +47,7 @@ public class GameSceneLoader : MonoBehaviour
     public void RestartGame()
     {
         // Implement Restart Game
+        Destroy(DataManager.instance.gameObject);
         SceneManager.LoadScene(1);
     }
 
