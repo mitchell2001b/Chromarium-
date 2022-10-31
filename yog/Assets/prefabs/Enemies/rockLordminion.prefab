@@ -2671,7 +2671,7 @@ MonoBehaviour:
   isInvalidToWaveCounter: 0
   weaknessModifier: 1
   NoEraseAnimation: 1
-  destructableVersion: 0
+  destructableVersion: 8
 --- !u!114 &7005857889192889964
 MonoBehaviour:
   m_ObjectHideFlags: 0

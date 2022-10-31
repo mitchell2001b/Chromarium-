@@ -8,7 +8,9 @@
        RuinedGolem,
        RobotTank,
        IceLordMelee,
-       IceLordRanged
+       IceLordRanged,
+       RockGolem,
+       RockGolemMini
     }
 
    
