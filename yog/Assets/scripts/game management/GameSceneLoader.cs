@@ -42,13 +42,34 @@ public class GameSceneLoader : MonoBehaviour
     {
         // Implement Return to Main Menu
         SceneManager.LoadScene(0);
-        Debug.Log("MainMenu");
     }
 
     public void RestartGame()
     {
         // Implement Restart Game
         SceneManager.LoadScene(1);
-        Debug.Log("Restart Game");
+    }
+
+    public void LoadPlanetSelectorHub()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void LoadDesertPlanet()
+    {
+        // Insert Desert Planet Scene
+        SceneManager.LoadScene(2);
+    }
+
+    public void LoadJunglePlanet()
+    {
+        // Insert Jungle Planet Scene
+        //SceneManager.LoadScene(3);
+    }
+
+    public void LoadVoidPlanet()
+    {
+        // Insert Void Planet Scene
+        //SceneManager.LoadScene(4);
     }
 }

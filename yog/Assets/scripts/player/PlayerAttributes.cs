@@ -25,6 +25,7 @@ public class PlayerAttributes : MonoBehaviour
     [SerializeField] TextMeshProUGUI aoeModifierTextNumber;
     
     private void Start() {
+        GetData();
         currencyTextNumber.text = currency.ToString() + "$";
         damageModifierTextNumber.text = Mathf.RoundToInt(damageModifier * 100).ToString() + "%";
         attackSpeedModifierTextNumber.text = Mathf.RoundToInt(attackSpeedModifier * 100).ToString() + "%";
@@ -138,5 +139,21 @@ public class PlayerAttributes : MonoBehaviour
     public float GetAoERangeModifier()
     {
         return aoeRangeModifier;
+    }
+
+    private void GetData()
+    {
+        float maxHealth = GetComponent<PlayerHealth>().GetMaxHealth();
+        DataManager.instance.LoadData(out currency,
+                                      out maxHealth,
+                                      out damageModifier,
+                                      out attackSpeedModifier,
+                                      out critChance,
+                                      out critModifier,
+                                      out rangeModifier,
+                                      out aoeRangeModifier,
+                                      out baseMovementSpeed,
+                                      out movementSpeedModifier);
+        GetComponent<PlayerHealth>().ChangeMaxHealth(maxHealth);
     }
 }
