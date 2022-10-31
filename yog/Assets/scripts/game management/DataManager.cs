@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    int currency;
-    float maxHealth;
-    float damageModifier;
-    float attackSpeedModifier;
-    int critChance;
-    float critModifier;
-    float rangeModifier;
-    float aoeRangeModifier;
+    int currency = 0;
+    float maxHealth = 100;
+    float damageModifier = 1f;
+    float attackSpeedModifier = 1f;
+    int critChance = 0;
+    float critModifier = 1f;
+    float rangeModifier = 1f;
+    float aoeRangeModifier = 1f;
     float baseMovementSpeed = 5f;
-    float movementSpeedModifier;
+    float movementSpeedModifier = 1f;
     List<PlanetType> completedPlanets = new List<PlanetType>();
     int planetsToComplete = 3;
 
