@@ -33,7 +33,6 @@ public class PlayerAttributes : MonoBehaviour
         critModifierTextNumber.text = Mathf.RoundToInt(critModifier * 100).ToString() + "%";
         rangeModifierTextNumber.text = Mathf.RoundToInt(rangeModifier * 100).ToString() + "%";
         aoeModifierTextNumber.text = Mathf.RoundToInt(aoeRangeModifier * 100).ToString() + "%";
-        baseMovementSpeed = GetComponent<FirstPersonController>().GetMovementSpeed();
         movementSpeedTextNumber.text = (Mathf.Round(baseMovementSpeed * movementSpeedModifier * 100) / 100).ToString() + " m/s";
     }
     public bool HasEnoughCurrency(int requiredAmount)
@@ -155,5 +154,6 @@ public class PlayerAttributes : MonoBehaviour
                                       out baseMovementSpeed,
                                       out movementSpeedModifier);
         GetComponent<PlayerHealth>().ChangeMaxHealth(maxHealth);
+        GetComponent<FirstPersonController>().ChangeMovementSpeeds(baseMovementSpeed * movementSpeedModifier);
     }
 }
