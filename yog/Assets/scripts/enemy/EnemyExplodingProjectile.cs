@@ -13,12 +13,12 @@ public class EnemyExplodingProjectile : MonoBehaviour
 
     private Transform target;
 
-    private SoundOcclusion sound;
+    private EnemySoundHandler sound;
     // Start is called before the first frame update
     void Start()
     {
        target = GameObject.FindGameObjectWithTag("Player").transform;
-       sound = GetComponent<SoundOcclusion>();
+       sound = GetComponent<EnemySoundHandler>();
     }
 
     // Update is called once per frame
@@ -71,7 +71,7 @@ public class EnemyExplodingProjectile : MonoBehaviour
         vfx.transform.parent = null;
         
         vfx.Play();
-        sound.PlaySound();
+        sound.PlayDeathSound();
 
 
         Destroy(this.gameObject);

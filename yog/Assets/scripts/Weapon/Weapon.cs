@@ -15,7 +15,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] TextMeshProUGUI AmmoNumber;
     [SerializeField] GameObject ammoTypeBehaviorManager;
     [SerializeField] AmmoIndicatorHandler indicator;
-    
+    [SerializeField] AmmoSoundHandler ammoSoundHandler;
 
     
 
@@ -62,7 +62,7 @@ public class Weapon : MonoBehaviour
     {
         if (ammoHandler.GetCurrentAmmoAmount(ammoHandler.GetCurrentAmmoType()) > 0)
         {
-            
+            ammoSoundHandler.PlayAmmoShootSound(ammoHandler.GetCurrentAmmoType());
             float damageIncrease = attributes.GetDamageModifier();
             if (Random.Range(0, 100) < attributes.GetCritChance()) damageIncrease = damageIncrease * attributes.GetCritModifier();
             ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().AmmoTypeBehaviorShootEvent(ammoHandler.GetCurrentAmmoType(), damageIncrease, attributes.GetRangeModifier(), attributes.GetAoERangeModifier());          

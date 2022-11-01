@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 6081943891156668316}
   - component: {fileID: 5728925789039213679}
   - component: {fileID: -4981330340901064061}
-  - component: {fileID: 1047726099}
+  - component: {fileID: 3104924106074403286}
+  - component: {fileID: 2439111593417944572}
   m_Layer: 6
   m_Name: tankround
   m_TagString: Projectile
@@ -134,7 +135,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 05d8bb1379553564c93722a6f98a1813, type: 3}
---- !u!114 &1047726099
+--- !u!114 &3104924106074403286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +144,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 2890403835899674092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 700a5edaf8f6258439c78d7c8d1885b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 994662ac6f8be7847a3313ecd07d607e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSound:
+    Guid:
+      Data1: -1834112328
+      Data2: 1189745774
+      Data3: 1291358863
+      Data4: -686166628
+    Path: event:/tankroundFlyby
+  attackSound:
+    Guid:
+      Data1: 256326351
+      Data2: 1099422468
+      Data3: 1996980403
+      Data4: -1506002966
+    Path: event:/tankshell explosion
+  deathSound:
+    Guid:
+      Data1: 256326351
+      Data2: 1099422468
+      Data3: 1996980403
+      Data4: -1506002966
+    Path: event:/tankshell explosion
+  debug: 0
+--- !u!114 &2439111593417944572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890403835899674092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c830982cb3b6679478b41c15bd0250b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   occlusionHitCount: 0
@@ -152,30 +187,9 @@ MonoBehaviour:
   occlusionBetweenWidthPlayer: 2
   occlusionLayerMask:
     serializedVersion: 2
-    m_Bits: 1191
-  moveSound:
-    Guid:
-      Data1: 256326351
-      Data2: 1099422468
-      Data3: 1996980403
-      Data4: -1506002966
-    Path: event:/tankshell explosion
-  moveSound2:
-    Guid:
-      Data1: 256326351
-      Data2: 1099422468
-      Data3: 1996980403
-      Data4: -1506002966
-    Path: event:/tankshell explosion
-  moveSound3:
-    Guid:
-      Data1: 256326351
-      Data2: 1099422468
-      Data3: 1996980403
-      Data4: -1506002966
-    Path: event:/tankshell explosion
-  isProjectile: 1
+    m_Bits: 759
   detectionRange: 20
+  soundHandler: {fileID: 0}
 --- !u!1001 &1126742019824827192
 PrefabInstance:
   m_ObjectHideFlags: 0

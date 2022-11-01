@@ -664,11 +664,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSound:
     Guid:
-      Data1: -1572120020
-      Data2: 1274998488
-      Data3: -801991803
-      Data4: 2011063882
-    Path: event:/RobotSmallFootstepsWalk
+      Data1: 522919378
+      Data2: 1190905300
+      Data3: 872446135
+      Data4: -532567976
+    Path: event:/IceLordWalking
   attackSound:
     Guid:
       Data1: -2097716126
@@ -678,18 +678,11 @@ MonoBehaviour:
     Path: event:/tank shoot
   deathSound:
     Guid:
-      Data1: -389840003
-      Data2: 1296410614
-      Data3: -419647814
-      Data4: -1747636281
-    Path: event:/RobotDeath
-  runSound:
-    Guid:
-      Data1: 1507564258
-      Data2: 1218056076
-      Data3: 264114583
-      Data4: 2103357818
-    Path: event:/RobotSmallFootstepsRun
+      Data1: -515555760
+      Data2: 1136449341
+      Data3: -801925731
+      Data4: 2038103127
+    Path: event:/IceLordDeath
   debug: 0
 --- !u!114 &3833231854431525175
 MonoBehaviour:

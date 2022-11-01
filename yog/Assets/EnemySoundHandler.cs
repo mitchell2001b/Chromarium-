@@ -9,11 +9,11 @@ public class EnemySoundHandler : MonoBehaviour
     [SerializeField] EventReference moveSound;
     [SerializeField] EventReference attackSound;
     [SerializeField] EventReference deathSound;
-    [SerializeField] EventReference runSound;
+    //[SerializeField] EventReference runSound;
     private EventInstance soundInstanceMove;
     private EventInstance soundInstanceAttack;
     private EventInstance soundInstanceDeath;
-    private EventInstance soundInstanceRun;
+    //private EventInstance soundInstanceRun;
 
     [SerializeField] bool debug;
     // Start is called before the first frame update
@@ -28,8 +28,8 @@ public class EnemySoundHandler : MonoBehaviour
         soundInstanceDeath = RuntimeManager.CreateInstance(deathSound);
         soundInstanceDeath.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
 
-        soundInstanceRun = RuntimeManager.CreateInstance(runSound);
-        soundInstanceRun.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        //soundInstanceRun = RuntimeManager.CreateInstance(runSound);
+        //soundInstanceRun.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
 
         soundInstanceMove.start();
         if(debug)
@@ -50,7 +50,7 @@ public class EnemySoundHandler : MonoBehaviour
         soundInstanceDeath.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
         soundInstanceAttack.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
         soundInstanceMove.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-        soundInstanceRun.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        //soundInstanceRun.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
     }
 
     public EventInstance GetSoundInstanceMove()
@@ -99,8 +99,8 @@ public class EnemySoundHandler : MonoBehaviour
         soundInstanceMove.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         soundInstanceMove.release();
 
-        soundInstanceRun.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        soundInstanceRun.release();
+        //soundInstanceRun.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        //soundInstanceRun.release();
 
         soundInstanceAttack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         soundInstanceAttack.release();
