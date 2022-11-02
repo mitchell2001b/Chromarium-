@@ -16,6 +16,7 @@ public class EnemySoundHandler : MonoBehaviour
     //private EventInstance soundInstanceRun;
 
     [SerializeField] bool debug;
+    [SerializeField] bool moveSoundDisableOnStart;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,11 @@ public class EnemySoundHandler : MonoBehaviour
         //soundInstanceRun = RuntimeManager.CreateInstance(runSound);
         //soundInstanceRun.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
 
-        soundInstanceMove.start();
+        if(!moveSoundDisableOnStart)
+        {
+          soundInstanceMove.start();
+        }    
+        
         if(debug)
         {
             //PlayRunSound();

@@ -10,7 +10,8 @@
        IceLordMelee,
        IceLordRanged,
        RockGolem,
-       RockGolemMini
+       RockGolemMini,
+       RockGolemTree
     }
 
    

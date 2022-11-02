@@ -1240,11 +1240,11 @@ MonoBehaviour:
     Path: event:/IceLordWalking
   attackSound:
     Guid:
-      Data1: -2097716126
-      Data2: 1331850536
-      Data3: -1200913745
-      Data4: 775163002
-    Path: event:/tank shoot
+      Data1: -140515264
+      Data2: 1091378193
+      Data3: 1223064704
+      Data4: 698721001
+    Path: event:/voidExplosion
   deathSound:
     Guid:
       Data1: -515555760
@@ -1253,6 +1253,7 @@ MonoBehaviour:
       Data4: 2038103127
     Path: event:/IceLordDeath
   debug: 0
+  moveSoundDisableOnStart: 0
 --- !u!114 &8752773330998927161
 MonoBehaviour:
   m_ObjectHideFlags: 0

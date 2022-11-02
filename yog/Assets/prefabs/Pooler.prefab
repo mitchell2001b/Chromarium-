@@ -99,3 +99,9 @@ MonoBehaviour:
     ObjectPrefabChildCount: 15
     StartPositionChild: {x: 0, y: 0, z: 0}
     StartRotationChild: {x: -0.7069834, y: 0, z: 0, w: 0.70723015}
+  - PoolTag: RockGolemTree
+    ObjectPrefab: {fileID: 8880779826343804411, guid: 88a6eac30cdd2074ebfea1143f0568e8, type: 3}
+    PoolSize: 1
+    ObjectPrefabChildCount: 18
+    StartPositionChild: {x: 0, y: 0, z: 0}
+    StartRotationChild: {x: -0.7069834, y: 0, z: 0, w: 0.70723015}

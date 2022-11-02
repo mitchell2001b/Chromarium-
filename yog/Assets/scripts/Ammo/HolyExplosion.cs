@@ -30,6 +30,7 @@ public class HolyExplosion : MonoBehaviour
             }
         }
 
+        GetComponent<EnemySoundHandler>().PlayDeathSound();
         //vfx.transform.parent = null;
         //vfx.Play();
         //Destroy(vfx.gameObject, 2f);

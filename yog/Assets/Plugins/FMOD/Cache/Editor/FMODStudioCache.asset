@@ -332,10 +332,10 @@ MonoBehaviour:
   Path: ../../../projecten/soundTestProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638029437933296687
+  lastModified: 638029776104023051
   FileSizes:
   - Name: Desktop
-    Value: 2034
+    Value: 2086
   Exists: 1
 --- !u!114 &-3613582561094920032
 MonoBehaviour:
@@ -709,12 +709,13 @@ MonoBehaviour:
   - {fileID: -813891069119298873}
   - {fileID: -1746019699727933937}
   - {fileID: -6079501142596298990}
+  - {fileID: 2495080710077915873}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2220892256351367442}
   StringsBanks:
   - {fileID: -3738602863769793666}
-  cacheTime: 638029437933296687
+  cacheTime: 638029776104023051
   cacheVersion: 131593
 --- !u!114 &144581396696376554
 MonoBehaviour:
@@ -888,11 +889,39 @@ MonoBehaviour:
   Path: ../../../projecten/soundTestProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638029437933256226
+  lastModified: 638029776103983066
   FileSizes:
   - Name: Desktop
-    Value: 2273984
+    Value: 2303200
   Exists: 1
+--- !u!114 &2495080710077915873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/HolyExplosion
+  m_EditorClassIdentifier: 
+  Path: event:/HolyExplosion
+  Guid:
+    Data1: 161420403
+    Data2: 1122675225
+    Data3: -685166146
+    Data4: -996176080
+  Banks:
+  - {fileID: 2220892256351367442}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6775455396337249748}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2266
 --- !u!114 &2849768507792680121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1067,6 +1096,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 566
+--- !u!114 &6775455396337249748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HolyExplosion/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 852605549
+    data2: 1264810636
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7255629041489116678
 MonoBehaviour:
   m_ObjectHideFlags: 0

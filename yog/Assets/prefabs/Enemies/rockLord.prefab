@@ -1091,7 +1091,7 @@ MonoBehaviour:
   isInvalidToWaveCounter: 0
   weaknessModifier: 1
   NoEraseAnimation: 1
-  destructableVersion: 0
+  destructableVersion: 10
 --- !u!114 &2634999917235147619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,6 +1147,7 @@ MonoBehaviour:
       Data4: -589083494
     Path: event:/RockGolemDeath
   debug: 0
+  moveSoundDisableOnStart: 0
 --- !u!114 &2634999917235147629
 MonoBehaviour:
   m_ObjectHideFlags: 0
