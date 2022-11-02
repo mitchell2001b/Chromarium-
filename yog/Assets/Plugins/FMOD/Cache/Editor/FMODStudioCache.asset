@@ -332,7 +332,7 @@ MonoBehaviour:
   Path: ../../../projecten/soundTestProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638029776104023051
+  lastModified: 638030292340451323
   FileSizes:
   - Name: Desktop
     Value: 2086
@@ -715,7 +715,7 @@ MonoBehaviour:
   - {fileID: 2220892256351367442}
   StringsBanks:
   - {fileID: -3738602863769793666}
-  cacheTime: 638029776104023051
+  cacheTime: 638030292340451323
   cacheVersion: 131593
 --- !u!114 &144581396696376554
 MonoBehaviour:
@@ -889,7 +889,7 @@ MonoBehaviour:
   Path: ../../../projecten/soundTestProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638029776103983066
+  lastModified: 638030292340416195
   FileSizes:
   - Name: Desktop
     Value: 2303200
