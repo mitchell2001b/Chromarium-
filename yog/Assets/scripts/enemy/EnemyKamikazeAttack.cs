@@ -8,6 +8,7 @@ public class EnemyKamikazeAttack : MonoBehaviour
     [SerializeField] float explosionRadius;
     [SerializeField] ParticleSystem vfx;
 
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -70,9 +71,9 @@ public class EnemyKamikazeAttack : MonoBehaviour
     
 
     public void AttackHitEvent()
-    {
+    {                     
         EnemyHealth health = GetComponent<EnemyHealth>();
-        health.RecieveDamage(health.hitPoints * 100, AmmoType.Regular);
+        health.RecieveDamage(health.hitPoints * 100, AmmoType.Regular);             
     }
 
 }

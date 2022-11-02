@@ -1707,6 +1707,8 @@ GameObject:
   - component: {fileID: 5189512537117333165}
   - component: {fileID: 5189512537117333166}
   - component: {fileID: 5189512537117333167}
+  - component: {fileID: 1339566768}
+  - component: {fileID: 1339566769}
   m_Layer: 9
   m_Name: GunBot
   m_TagString: Enemy
@@ -1797,6 +1799,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 592
+  soundHandler: {fileID: 0}
   canSeePlayer: 0
 --- !u!114 &5189512537117333165
 MonoBehaviour:
@@ -1816,7 +1819,6 @@ MonoBehaviour:
   weaknessModifier: 0.5
   NoEraseAnimation: 1
   destructableVersion: 2
-  pooler: {fileID: 0}
 --- !u!114 &5189512537117333166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,6 +1860,67 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1339566768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4955564850361594346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994662ac6f8be7847a3313ecd07d607e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSound:
+    Guid:
+      Data1: -1572120020
+      Data2: 1274998488
+      Data3: -801991803
+      Data4: 2011063882
+    Path: event:/RobotSmallFootstepsWalk
+  attackSound:
+    Guid:
+      Data1: -1980762573
+      Data2: 1261940658
+      Data3: 1665211071
+      Data4: 151997674
+    Path: event:/lasergunRobot1
+  deathSound:
+    Guid:
+      Data1: -389840003
+      Data2: 1296410614
+      Data3: -419647814
+      Data4: -1747636281
+    Path: event:/RobotDeath
+  runSound:
+    Guid:
+      Data1: -1572120020
+      Data2: 1274998488
+      Data3: -801991803
+      Data4: 2011063882
+    Path: event:/RobotSmallFootstepsWalk
+--- !u!114 &1339566769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4955564850361594346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c830982cb3b6679478b41c15bd0250b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  occlusionHitCount: 0
+  PlayerTarget: {fileID: 0}
+  occlusionBetweenWidthSound: 1
+  occlusionBetweenWidthPlayer: 1
+  occlusionLayerMask:
+    serializedVersion: 2
+    m_Bits: 1271
+  detectionRange: 13
+  soundHandler: {fileID: 0}
 --- !u!1 &5189512536122978983
 GameObject:
   m_ObjectHideFlags: 0

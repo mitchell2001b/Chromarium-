@@ -1768,6 +1768,8 @@ GameObject:
   - component: {fileID: 4895680828759857957}
   - component: {fileID: 4895680828759857956}
   - component: {fileID: 4895680828759857959}
+  - component: {fileID: 1250377213}
+  - component: {fileID: 1250377214}
   m_Layer: 9
   m_Name: MeleeBot
   m_TagString: Enemy
@@ -1848,6 +1850,7 @@ MonoBehaviour:
   maxHealth: 100
   elementalAffinity: 0
   resistanceModifier: 0.5
+  isInvalidToWaveCounter: 0
   weaknessModifier: 0.5
   NoEraseAnimation: 1
   destructableVersion: 1
@@ -1878,6 +1881,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 5
   drop: {fileID: 4318968702811732409, guid: 57402dd61a6e4a14baaac2577c9fec44, type: 3}
+  isCargoUnit: 0
+  cargo:
+    cargoSpawnPrefab: {fileID: 0}
+    cargoSpawnRange: 0
+    cargoUnitCount: 0
 --- !u!195 &4895680828759857959
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1900,6 +1908,68 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1250377213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5706511630603979170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c830982cb3b6679478b41c15bd0250b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  occlusionHitCount: 0
+  PlayerTarget: {fileID: 0}
+  occlusionBetweenWidthSound: 1
+  occlusionBetweenWidthPlayer: 1
+  occlusionLayerMask:
+    serializedVersion: 2
+    m_Bits: 1271
+  detectionRange: 12
+  soundHandler: {fileID: 0}
+--- !u!114 &1250377214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5706511630603979170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994662ac6f8be7847a3313ecd07d607e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSound:
+    Guid:
+      Data1: -1572120020
+      Data2: 1274998488
+      Data3: -801991803
+      Data4: 2011063882
+    Path: event:/RobotSmallFootstepsWalk
+  attackSound:
+    Guid:
+      Data1: -2097716126
+      Data2: 1331850536
+      Data3: -1200913745
+      Data4: 775163002
+    Path: event:/tank shoot
+  deathSound:
+    Guid:
+      Data1: -389840003
+      Data2: 1296410614
+      Data3: -419647814
+      Data4: -1747636281
+    Path: event:/RobotDeath
+  runSound:
+    Guid:
+      Data1: 1507564258
+      Data2: 1218056076
+      Data3: 264114583
+      Data4: 2103357818
+    Path: event:/RobotSmallFootstepsRun
+  debug: 0
 --- !u!1 &5913855137996747157
 GameObject:
   m_ObjectHideFlags: 0

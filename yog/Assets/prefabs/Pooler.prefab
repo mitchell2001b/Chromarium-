@@ -63,3 +63,45 @@ MonoBehaviour:
     ObjectPrefabChildCount: 16
     StartPositionChild: {x: 0, y: 0, z: 0}
     StartRotationChild: {x: -0.7069834, y: 0, z: 0, w: 0.70723015}
+  - PoolTag: RobotTank
+    ObjectPrefab: {fileID: 8217875001286618185, guid: 1295f12b9c6f1eb4891fe292bba0903f, type: 3}
+    PoolSize: 1
+    ObjectPrefabChildCount: 16
+    StartPositionChild: {x: 0, y: 0, z: 0}
+    StartRotationChild: {x: -0.7069834, y: 0, z: 0, w: 0.70723015}
+  - PoolTag: RuinedGolem
+    ObjectPrefab: {fileID: 857826492030164854, guid: a1a6861f2deb69b48b4735880f6ead6c, type: 3}
+    PoolSize: 1
+    ObjectPrefabChildCount: 20
+    StartPositionChild: {x: 0, y: 0, z: 0}
+    StartRotationChild: {x: -0.7069834, y: 0, z: 0, w: 0.70723015}
+  - PoolTag: IceLordRanged
+    ObjectPrefab: {fileID: 3739711982293148826, guid: 75ab95528103ea5459fdb02babf495e9, type: 3}
+    PoolSize: 1
+    ObjectPrefabChildCount: 7
+    StartPositionChild: {x: 0, y: 0, z: 0}
+    StartRotationChild: {x: -0.7069834, y: 0, z: 0, w: 0.70723015}
+  - PoolTag: IceLordMelee
+    ObjectPrefab: {fileID: 2819914403237847964, guid: 3351150aee76d7241af4533472826a6c, type: 3}
+    PoolSize: 1
+    ObjectPrefabChildCount: 7
+    StartPositionChild: {x: 0, y: 0, z: 0}
+    StartRotationChild: {x: -0.7069834, y: 0, z: 0, w: 0.70723015}
+  - PoolTag: RockGolem
+    ObjectPrefab: {fileID: 5608258209547888841, guid: b361f00c2b827534b9fd5153c73c7895, type: 3}
+    PoolSize: 1
+    ObjectPrefabChildCount: 15
+    StartPositionChild: {x: 0, y: 0, z: 0}
+    StartRotationChild: {x: -0.7069834, y: 0, z: 0, w: 0.70723015}
+  - PoolTag: RockGolemMini
+    ObjectPrefab: {fileID: 6855157347253418188, guid: b27a7a1609675d743b211bc3ff74d9c6, type: 3}
+    PoolSize: 2
+    ObjectPrefabChildCount: 15
+    StartPositionChild: {x: 0, y: 0, z: 0}
+    StartRotationChild: {x: -0.7069834, y: 0, z: 0, w: 0.70723015}
+  - PoolTag: RockGolemTree
+    ObjectPrefab: {fileID: 8880779826343804411, guid: 88a6eac30cdd2074ebfea1143f0568e8, type: 3}
+    PoolSize: 1
+    ObjectPrefabChildCount: 18
+    StartPositionChild: {x: 0, y: 0, z: 0}
+    StartRotationChild: {x: -0.7069834, y: 0, z: 0, w: 0.70723015}
