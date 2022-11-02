@@ -44,3 +44,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf4bca044b7d2444a275dac36ff0ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currency: 0
+  maxHealth: 100
+  damageModifier: 1
+  attackSpeedModifier: 1
+  critChance: 0
+  critModifier: 1
+  rangeModifier: 1
+  aoeRangeModifier: 1
+  baseMovementSpeed: 5
+  movementSpeedModifier: 1
+  completedPlanets: 0300000004000000
+  planetsToComplete: 3
+  ammoSlots:
+  - typeOfAmmo: 0
+    ammoAmount: 2147483647
+  - typeOfAmmo: 1
+    ammoAmount: 5000
+  - typeOfAmmo: 2
+    ammoAmount: 80
+  - typeOfAmmo: 3
+    ammoAmount: 80
+  - typeOfAmmo: 4
+    ammoAmount: 1000
+  - typeOfAmmo: 5
+    ammoAmount: 25
+  - typeOfAmmo: 6
+    ammoAmount: 25

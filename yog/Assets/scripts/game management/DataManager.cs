@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    int currency;
-    float maxHealth;
-    float damageModifier;
-    float attackSpeedModifier;
-    int critChance;
-    float critModifier;
-    float rangeModifier;
-    float aoeRangeModifier;
-    float baseMovementSpeed = 5f;
-    float movementSpeedModifier;
-    List<PlanetType> completedPlanets = new List<PlanetType>();
-    int planetsToComplete = 3;
+    [SerializeField] int currency = 0;
+    [SerializeField] float maxHealth = 100;
+    [SerializeField] float damageModifier = 1f;
+    [SerializeField] float attackSpeedModifier = 1f;
+    [SerializeField] int critChance = 0;
+    [SerializeField] float critModifier = 1f;
+    [SerializeField] float rangeModifier = 1f;
+    [SerializeField] float aoeRangeModifier = 1f;
+    [SerializeField] float baseMovementSpeed = 5f;
+    [SerializeField] float movementSpeedModifier = 1f;
+    [SerializeField] List<PlanetType> completedPlanets = new List<PlanetType>();
+    [SerializeField] int planetsToComplete = 3;
+    [SerializeField] Ammo.AmmoSlot[] ammoSlots;
 
     public static DataManager instance { get; private set; }
     
@@ -71,6 +72,11 @@ public class DataManager : MonoBehaviour
         newAoERangeModifier = aoeRangeModifier;
         newBaseMovementSpeed = baseMovementSpeed;
         newMovementSpeedModifier = movementSpeedModifier;
+    }
+
+    public void LoadAmmoSlots(out Ammo.AmmoSlot[] ammoSlots)
+    {
+        ammoSlots = this.ammoSlots;
     }
 
     public void CompletePlanet(PlanetType planetType)
