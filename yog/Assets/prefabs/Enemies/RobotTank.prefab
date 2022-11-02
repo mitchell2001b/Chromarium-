@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 10
-  drop: {fileID: 505078265933199572, guid: 7b5536cfb07967f4ca367964d1c1b4a0, type: 3}
+  drop: {fileID: 480366847708479438, guid: b1a173fdae429214baae3c51bf66a056, type: 3}
   mask:
     serializedVersion: 2
     m_Bits: 592
@@ -900,7 +900,7 @@ MonoBehaviour:
   occlusionBetweenWidthPlayer: 2
   occlusionLayerMask:
     serializedVersion: 2
-    m_Bits: 1271
+    m_Bits: 5367
   detectionRange: 25
   soundHandler: {fileID: 0}
 --- !u!114 &1705665062
@@ -936,14 +936,8 @@ MonoBehaviour:
       Data3: -1426019145
       Data4: -840006099
     Path: event:/tank death
-  runSound:
-    Guid:
-      Data1: -2097716126
-      Data2: 1331850536
-      Data3: -1200913745
-      Data4: 775163002
-    Path: event:/tank shoot
   debug: 0
+  moveSoundDisableOnStart: 0
 --- !u!1 &1430227007957029676
 GameObject:
   m_ObjectHideFlags: 0

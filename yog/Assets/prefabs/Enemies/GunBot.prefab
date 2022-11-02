@@ -1816,6 +1816,7 @@ MonoBehaviour:
   maxHealth: 100
   elementalAffinity: 0
   resistanceModifier: 0.5
+  isInvalidToWaveCounter: 0
   weaknessModifier: 0.5
   NoEraseAnimation: 1
   destructableVersion: 2
@@ -1832,10 +1833,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 5
-  drop: {fileID: 4318968702811732409, guid: 57402dd61a6e4a14baaac2577c9fec44, type: 3}
+  drop: {fileID: 3699831814405596915, guid: ec909115ec9dbd643aede4a35530d616, type: 3}
   mask:
     serializedVersion: 2
-    m_Bits: 592
+    m_Bits: 4688
   eyes: {fileID: 3843507112068651815}
   stoppingDistanceRange: 10
 --- !u!195 &5189512537117333167
@@ -1893,13 +1894,8 @@ MonoBehaviour:
       Data3: -419647814
       Data4: -1747636281
     Path: event:/RobotDeath
-  runSound:
-    Guid:
-      Data1: -1572120020
-      Data2: 1274998488
-      Data3: -801991803
-      Data4: 2011063882
-    Path: event:/RobotSmallFootstepsWalk
+  debug: 0
+  moveSoundDisableOnStart: 0
 --- !u!114 &1339566769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1918,7 +1914,7 @@ MonoBehaviour:
   occlusionBetweenWidthPlayer: 1
   occlusionLayerMask:
     serializedVersion: 2
-    m_Bits: 1271
+    m_Bits: 5367
   detectionRange: 13
   soundHandler: {fileID: 0}
 --- !u!1 &5189512536122978983

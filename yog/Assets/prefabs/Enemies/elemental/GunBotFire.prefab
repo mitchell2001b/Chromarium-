@@ -3217,7 +3217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 5
-  drop: {fileID: 6783284292317320334, guid: 72cdd575798a5b4479f227a497ce836e, type: 3}
+  drop: {fileID: 8296589932800813408, guid: fdeb706337ab9204eac52a93b3b6400e, type: 3}
   mask:
     serializedVersion: 2
     m_Bits: 592
@@ -3278,14 +3278,8 @@ MonoBehaviour:
       Data3: -419647814
       Data4: -1747636281
     Path: event:/RobotDeath
-  runSound:
-    Guid:
-      Data1: -1572120020
-      Data2: 1274998488
-      Data3: -801991803
-      Data4: 2011063882
-    Path: event:/RobotSmallFootstepsWalk
   debug: 0
+  moveSoundDisableOnStart: 0
 --- !u!114 &4159034939874116121
 MonoBehaviour:
   m_ObjectHideFlags: 0

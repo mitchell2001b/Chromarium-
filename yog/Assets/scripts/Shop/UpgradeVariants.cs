@@ -18,5 +18,7 @@ public enum UpgradeVariants
     [Description("AoE Range")]
     aoeRange,
     [Description("Movement Speed")]
-    movementSpeed
+    movementSpeed,
+    [Description("Range")]
+    range,
 } 

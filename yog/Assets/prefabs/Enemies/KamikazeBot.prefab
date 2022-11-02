@@ -573,14 +573,8 @@ MonoBehaviour:
       Data3: -419647814
       Data4: -1747636281
     Path: event:/RobotDeath
-  runSound:
-    Guid:
-      Data1: 1507564258
-      Data2: 1218056076
-      Data3: 264114583
-      Data4: 2103357818
-    Path: event:/RobotSmallFootstepsRun
   debug: 0
+  moveSoundDisableOnStart: 0
 --- !u!114 &2203361148224043599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,7 +593,7 @@ MonoBehaviour:
   occlusionBetweenWidthPlayer: 2
   occlusionLayerMask:
     serializedVersion: 2
-    m_Bits: 1271
+    m_Bits: 5367
   detectionRange: 9
   soundHandler: {fileID: 0}
 --- !u!1 &2585281582386167454

@@ -91,7 +91,7 @@ MonoBehaviour:
   weaponPoint: {fileID: 0}
   mask:
     serializedVersion: 2
-    m_Bits: 1088
+    m_Bits: 5184
   hitEffect: {fileID: 8387638484726288822, guid: b3514b045e243464995d4d023d1204d1, type: 3}
 --- !u!114 &5065804975039173895
 MonoBehaviour:
@@ -113,7 +113,7 @@ MonoBehaviour:
   hitEffect: {fileID: 5858364069599426676, guid: 4f6c80a905ed3a04194447541f71693c, type: 3}
   mask:
     serializedVersion: 2
-    m_Bits: 1088
+    m_Bits: 5184
 --- !u!114 &5065804975039173892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   weaponPoint: {fileID: 0}
   mask:
     serializedVersion: 2
-    m_Bits: 1088
+    m_Bits: 5184
   spreadCount: 5
   hitEffect: {fileID: 1198595338301962688, guid: 605c1f5251513824894869eb9d567f76, type: 3}
   spreadAngle: 38.4
@@ -176,7 +176,7 @@ MonoBehaviour:
   iceTrailEffect: {fileID: 386292917231593868, guid: ab5b995695ab3e444805edef1947a874, type: 3}
   mask:
     serializedVersion: 2
-    m_Bits: 1088
+    m_Bits: 5184
 --- !u!114 &5065804975039173899
 MonoBehaviour:
   m_ObjectHideFlags: 0

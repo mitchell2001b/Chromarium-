@@ -60,12 +60,14 @@ public class GameSceneLoader : MonoBehaviour
     {
         // Insert Desert Planet Scene
         SceneManager.LoadScene(2);
+        Time.timeScale = 1;
     }
 
     public void LoadJunglePlanet()
     {
         // Insert Jungle Planet Scene
-        //SceneManager.LoadScene(3);
+        SceneManager.LoadScene(3);
+        Time.timeScale = 1;
     }
 
     public void LoadVoidPlanet()

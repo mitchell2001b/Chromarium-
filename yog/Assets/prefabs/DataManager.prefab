@@ -54,7 +54,7 @@ MonoBehaviour:
   aoeRangeModifier: 1
   baseMovementSpeed: 5
   movementSpeedModifier: 1
-  completedPlanets: 0300000004000000
+  completedPlanets: 04000000
   planetsToComplete: 3
   ammoSlots:
   - typeOfAmmo: 0

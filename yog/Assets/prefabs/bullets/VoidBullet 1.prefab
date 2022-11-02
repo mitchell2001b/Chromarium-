@@ -135,7 +135,7 @@ MonoBehaviour:
   vfx: {fileID: 305894667688393990}
   mask:
     serializedVersion: 2
-    m_Bits: 1088
+    m_Bits: 5184
 --- !u!114 &7633463124210516193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
   occlusionBetweenWidthPlayer: 2
   occlusionLayerMask:
     serializedVersion: 2
-    m_Bits: 1271
+    m_Bits: 5367
   detectionRange: 17
   soundHandler: {fileID: 0}
 --- !u!1001 &286650780661773837

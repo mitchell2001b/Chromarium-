@@ -1997,7 +1997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 5
-  drop: {fileID: 7997225781953757419, guid: be9dfc2059c46a14182f8b35215eb196, type: 3}
+  drop: {fileID: 3699831814405596915, guid: ec909115ec9dbd643aede4a35530d616, type: 3}
   isCargoUnit: 0
   cargo:
     cargoSpawnPrefab: {fileID: 0}
@@ -2091,6 +2091,7 @@ MonoBehaviour:
       Data4: 1358019038
     Path: event:/RockThrowExplosion
   debug: 0
+  moveSoundDisableOnStart: 0
 --- !u!114 &6382636095734989220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2109,7 +2110,7 @@ MonoBehaviour:
   occlusionBetweenWidthPlayer: 1
   occlusionLayerMask:
     serializedVersion: 2
-    m_Bits: 1271
+    m_Bits: 5367
   detectionRange: 12
   soundHandler: {fileID: 0}
 --- !u!1 &6300960005763356870

@@ -2609,7 +2609,7 @@ MonoBehaviour:
   occlusionBetweenWidthPlayer: 1
   occlusionLayerMask:
     serializedVersion: 2
-    m_Bits: 1271
+    m_Bits: 5367
   detectionRange: 12
   soundHandler: {fileID: 0}
 --- !u!114 &7005857889192889954
@@ -2646,6 +2646,7 @@ MonoBehaviour:
       Data4: -589083494
     Path: event:/RockGolemDeath
   debug: 0
+  moveSoundDisableOnStart: 0
 --- !u!114 &7005857889192889965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2713,7 +2714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 5
-  drop: {fileID: 7997225781953757419, guid: be9dfc2059c46a14182f8b35215eb196, type: 3}
+  drop: {fileID: 436546167634307493, guid: bc35377984ce36c44aea7a085a6b368a, type: 3}
   isCargoUnit: 1
   cargo:
     cargoSpawnPrefab: {fileID: 6076134796846391865, guid: b355ce8f7b6db0e43ba851816743eef5, type: 3}

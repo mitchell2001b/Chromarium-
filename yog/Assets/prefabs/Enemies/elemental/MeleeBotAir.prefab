@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 5
-  drop: {fileID: 4318968702811732409, guid: 57402dd61a6e4a14baaac2577c9fec44, type: 3}
+  drop: {fileID: 3699831814405596915, guid: ec909115ec9dbd643aede4a35530d616, type: 3}
   isCargoUnit: 0
   cargo:
     cargoSpawnPrefab: {fileID: 0}
@@ -1834,14 +1834,8 @@ MonoBehaviour:
       Data3: -419647814
       Data4: -1747636281
     Path: event:/RobotDeath
-  runSound:
-    Guid:
-      Data1: 1507564258
-      Data2: 1218056076
-      Data3: 264114583
-      Data4: 2103357818
-    Path: event:/RobotSmallFootstepsRun
   debug: 0
+  moveSoundDisableOnStart: 0
 --- !u!1 &5282863877465689655
 GameObject:
   m_ObjectHideFlags: 0

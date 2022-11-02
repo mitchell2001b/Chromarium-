@@ -1080,10 +1080,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 5
-  drop: {fileID: 505078265933199572, guid: d5ebc27b1835c964b813e2a405676f65, type: 3}
+  drop: {fileID: 480366847708479438, guid: b1a173fdae429214baae3c51bf66a056, type: 3}
   mask:
     serializedVersion: 2
-    m_Bits: 592
+    m_Bits: 4688
   eyes: {fileID: 5852786675760332197}
   stoppingDistanceRange: 10
 --- !u!195 &3200789443892998189
@@ -1141,14 +1141,8 @@ MonoBehaviour:
       Data3: -419647814
       Data4: -1747636281
     Path: event:/RobotDeath
-  runSound:
-    Guid:
-      Data1: 1507564258
-      Data2: 1218056076
-      Data3: 264114583
-      Data4: 2103357818
-    Path: event:/RobotSmallFootstepsRun
   debug: 0
+  moveSoundDisableOnStart: 0
 --- !u!114 &7405816309737979976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1167,7 +1161,7 @@ MonoBehaviour:
   occlusionBetweenWidthPlayer: 1
   occlusionLayerMask:
     serializedVersion: 2
-    m_Bits: 1271
+    m_Bits: 5367
   detectionRange: 12
   soundHandler: {fileID: 0}
 --- !u!1 &2922033356146249791

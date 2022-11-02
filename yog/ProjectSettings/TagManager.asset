@@ -8,6 +8,7 @@ TagManager:
   - Projectile
   - PlayerWeaponObject
   - DestructableEnemyPooler
+  - pickup
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Enemy
   - Player
   - SmallObstacle
-  - 
+  - pickup
   - 
   - 
   - 
