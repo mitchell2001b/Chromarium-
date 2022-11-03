@@ -21,7 +21,7 @@ public class GameSceneLoader : MonoBehaviour
 
     public void ReloadGame()
     {       
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
         Time.timeScale = 1;
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;      
     }

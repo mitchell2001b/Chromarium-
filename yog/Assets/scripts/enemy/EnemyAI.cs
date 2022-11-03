@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class EnemyAI : MonoBehaviour
             for (int i = 0; i < cargoUnitCount; i++)
             {
                 
-                float offset = Random.Range(0, cargoSpawnRange);
+                float offset = UnityEngine.Random.Range(0, cargoSpawnRange);
                 if (offsetBool)
                 {
                     Instantiate(cargoSpawnPrefab, new Vector3(transformEnemy.position.x + offset, transformEnemy.position.y + 1, transformEnemy.position.z + offset), cargoSpawnPrefab.transform.rotation);
@@ -74,7 +75,15 @@ public class EnemyAI : MonoBehaviour
 
     private void ChaseTarget()
     {
-        navMeshAgent.SetDestination(target.position);
+        try
+        {
+            navMeshAgent.SetDestination(target.position);
+        }
+        catch(Exception ex)
+        {
+
+        }
+        
         animator.SetBool("attack", false);
         animator.SetTrigger("move");
     }

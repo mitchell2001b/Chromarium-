@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401dc5d5f63741549b242de8bca42b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileDamage: 90
+  projectileDamage: 40
   explosionRadius: 12
   turnSpeed: 22
   vfx: {fileID: 3477696605598684849}
@@ -189,6 +189,7 @@ MonoBehaviour:
       Data4: 1358019038
     Path: event:/RockThrowExplosion
   debug: 0
+  moveSoundDisableOnStart: 0
 --- !u!1001 &7354970170702481013
 PrefabInstance:
   m_ObjectHideFlags: 0

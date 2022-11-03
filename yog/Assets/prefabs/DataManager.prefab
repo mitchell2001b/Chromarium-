@@ -60,14 +60,14 @@ MonoBehaviour:
   - typeOfAmmo: 0
     ammoAmount: 2147483647
   - typeOfAmmo: 1
-    ammoAmount: 5000
+    ammoAmount: 150
   - typeOfAmmo: 2
-    ammoAmount: 80
+    ammoAmount: 20
   - typeOfAmmo: 3
-    ammoAmount: 80
+    ammoAmount: 20
   - typeOfAmmo: 4
-    ammoAmount: 1000
+    ammoAmount: 150
   - typeOfAmmo: 5
-    ammoAmount: 25
+    ammoAmount: 20
   - typeOfAmmo: 6
-    ammoAmount: 25
+    ammoAmount: 20

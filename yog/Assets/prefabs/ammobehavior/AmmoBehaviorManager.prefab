@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b57f5a616fb4f674da89b84f7b0997a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 20
+  baseDamage: 17
   baseFiringDelay: 0.1
   muzzleFlash: {fileID: 0}
   baseRange: 70
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8295f7e501703a94db4f328e0d1e290f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 50
+  baseDamage: 30
   baseFiringDelay: 2
   muzzleFlash: {fileID: 0}
   baseRange: 40
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcc9845fe7e08d4d9e8beee9879df23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 40
+  baseDamage: 60
   baseFiringDelay: 1
   muzzleFlash: {fileID: 0}
   baseRange: 0

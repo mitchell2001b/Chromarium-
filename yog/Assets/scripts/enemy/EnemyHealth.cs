@@ -90,7 +90,11 @@ public class EnemyHealth : MonoBehaviour
 
         // Disable NavMeshAgent
         GetComponent<NavMeshAgent>().enabled = false;
-        pooler.SpawnFromPool(destructableVersion, transform.position, transform.rotation);
+        if(pooler != null)
+        {
+            pooler.SpawnFromPool(destructableVersion, transform.position, transform.rotation);
+        }
+       
         // Trigger death animation when present
         if (GetComponent<Animator>() != null) GetComponent<Animator>().SetTrigger("die");
 

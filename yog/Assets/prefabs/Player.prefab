@@ -343,6 +343,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  runModifier: 2
   freezeController: 0
 --- !u!54 &6579762513916172079
 Rigidbody:
@@ -468,7 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f64f48014164d4fa863fa550700a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initalMaxHealth: 5000
+  initalMaxHealth: 100
   HealthTextNumber: {fileID: 0}
 --- !u!114 &6579762514839986506
 MonoBehaviour:
@@ -1789,6 +1790,7 @@ MonoBehaviour:
   AmmoNumber: {fileID: 0}
   ammoTypeBehaviorManager: {fileID: 0}
   indicator: {fileID: 2060995569}
+  ammoSoundHandler: {fileID: 0}
   CanShoot: 1
 --- !u!1001 &6579762515033373606
 PrefabInstance:
