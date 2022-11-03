@@ -16,4 +16,9 @@ public class MainMenuHandler : MonoBehaviour
     {
         gameSceneLoader.StartGame();
     }
+
+    public void QuitGame()
+    {
+        gameSceneLoader.QuitGame();
+    }
 }
