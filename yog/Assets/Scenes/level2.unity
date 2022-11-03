@@ -10973,7 +10973,9 @@ PrefabInstance:
       objectReference: {fileID: 270966287}
     - target: {fileID: 1063663809379378764, guid: 2b6f632feeacac843be5a179b5b7c384, type: 3}
       propertyPath: m_text
-      value: Go to other planet
+      value: 'Play again
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1063663809379378764, guid: 2b6f632feeacac843be5a179b5b7c384, type: 3}
       propertyPath: m_fontSize
