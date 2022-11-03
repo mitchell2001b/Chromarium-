@@ -16941,7 +16941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7875165739562607617, guid: 7d209fe59ad82c5438516bcdaacb2d74, type: 3}
       propertyPath: waves.Array.data[6].enemyCount
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7875165739562607617, guid: 7d209fe59ad82c5438516bcdaacb2d74, type: 3}
       propertyPath: waves.Array.data[6].spawnDelay
@@ -17257,7 +17257,7 @@ PrefabInstance:
       objectReference: {fileID: 332273324}
     - target: {fileID: 7875165739562607617, guid: 7d209fe59ad82c5438516bcdaacb2d74, type: 3}
       propertyPath: waves.Array.data[6].availablePools.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7875165739562607617, guid: 7d209fe59ad82c5438516bcdaacb2d74, type: 3}
       propertyPath: waves.Array.data[6].spawnPoints.Array.data[0]
@@ -17601,7 +17601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7875165739562607617, guid: 7d209fe59ad82c5438516bcdaacb2d74, type: 3}
       propertyPath: waves.Array.data[6].availablePools.Array.data[0].tierLevel
-      value: 100
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7875165739562607617, guid: 7d209fe59ad82c5438516bcdaacb2d74, type: 3}
       propertyPath: waves.Array.data[6].availablePools.Array.data[1].tierLevel
@@ -18242,7 +18242,7 @@ PrefabInstance:
     - target: {fileID: 7875165739562607617, guid: 7d209fe59ad82c5438516bcdaacb2d74, type: 3}
       propertyPath: waves.Array.data[6].availablePools.Array.data[0].enemyPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 7924267645249581872, guid: caea182151af57243847fcf0b5464cdd, type: 3}
+      objectReference: {fileID: 2904838971076161992, guid: f9a4e41b5a486e040aff6f5345152c60, type: 3}
     - target: {fileID: 7875165739562607617, guid: 7d209fe59ad82c5438516bcdaacb2d74, type: 3}
       propertyPath: waves.Array.data[6].availablePools.Array.data[0].enemyPrefabs.Array.data[1]
       value: 
