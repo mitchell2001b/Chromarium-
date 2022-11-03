@@ -730,7 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495a610154aa32043b911f38e48c2754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 400
+  maxHealth: 300
   elementalAffinity: 2
   resistanceModifier: 1
   isInvalidToWaveCounter: 0
