@@ -14,6 +14,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] float timeBetweenShots = 0.5f;
     [SerializeField] TextMeshProUGUI AmmoNumber;
     [SerializeField] GameObject ammoTypeBehaviorManager;
+    [SerializeField] AmmoIndicatorHandler indicator;
+    [SerializeField] AmmoSoundHandler ammoSoundHandler;
 
     
 
@@ -53,13 +55,14 @@ public class Weapon : MonoBehaviour
     {
         StopAllCoroutines();
         CanShoot = true;
+        indicator.ChangeIndicatorMaterial(ammoHandler.GetCurrentAmmoType());
     }
 
     IEnumerator Shoot()
     {
         if (ammoHandler.GetCurrentAmmoAmount(ammoHandler.GetCurrentAmmoType()) > 0)
         {
-            
+            ammoSoundHandler.PlayAmmoShootSound(ammoHandler.GetCurrentAmmoType());
             float damageIncrease = attributes.GetDamageModifier();
             if (Random.Range(0, 100) < attributes.GetCritChance()) damageIncrease = damageIncrease * attributes.GetCritModifier();
             ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().AmmoTypeBehaviorShootEvent(ammoHandler.GetCurrentAmmoType(), damageIncrease, attributes.GetRangeModifier(), attributes.GetAoERangeModifier());          
@@ -95,10 +98,13 @@ public class Weapon : MonoBehaviour
                 yield return new WaitForSeconds(ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().GetAmmoShootCooldown(ammoHandler.GetCurrentAmmoType()));
                 CanShoot = true;
             }*/
+            indicator.ChangeIndicatorToReloadMaterial();
         }
 
         yield return new WaitForSeconds(ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().GetAmmoShootCooldown(ammoHandler.GetCurrentAmmoType()));
         CanShoot = true;
-       
+        indicator.ChangeIndicatorMaterial(ammoHandler.GetCurrentAmmoType());
+
+
     }
 }

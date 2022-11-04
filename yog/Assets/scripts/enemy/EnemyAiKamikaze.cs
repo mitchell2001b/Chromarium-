@@ -15,7 +15,7 @@ public class EnemyAiKamikaze : MonoBehaviour
     private float distanceToTarget = Mathf.Infinity;
     [SerializeField] GameObject drop;
     [SerializeField] float meleeRange = 10f;
-
+    private EnemySoundHandler soundHandler;
     public EnemyKamikazeAttack attack;
 
     private bool hasExploded = false;
@@ -27,6 +27,7 @@ public class EnemyAiKamikaze : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        soundHandler = GetComponent<EnemySoundHandler>();
         animator = GetComponent<Animator>();
         navMeshAgent.GetComponent<NavMeshAgent>();
         target = GameObject.FindWithTag("Player").transform;
@@ -83,6 +84,7 @@ public class EnemyAiKamikaze : MonoBehaviour
         {
             navMeshAgent.speed = runSpeed;
             animator.SetTrigger("run");
+            soundHandler.PlayRunSound();
             ChaseTarget();
         }
         else
@@ -90,6 +92,7 @@ public class EnemyAiKamikaze : MonoBehaviour
             
             navMeshAgent.speed = walkSpeed;
             animator.SetTrigger("walk");
+            soundHandler.PlayMoveSound();
             ChaseTarget();
         }
 

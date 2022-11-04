@@ -7,12 +7,12 @@ public class EnemyHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
     [SerializeField]
-    AmmoType elementalAffinity = AmmoType.Regular;  
-
+    AmmoType elementalAffinity = AmmoType.Regular;
+    private EnemySoundHandler soundHandler;
     [SerializeField]
     [Range(0, 1)]
     float resistanceModifier = .5f;
-
+    [SerializeField] bool isInvalidToWaveCounter;
     [SerializeField]
     [Range(0, 1)]
     float weaknessModifier = .5f;
@@ -26,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
     {
         hitPoints = maxHealth;
         pooler = GameObject.FindGameObjectWithTag("DestructableEnemyPooler").GetComponent<DestroyedObjectsPooler>();
+        soundHandler = GetComponent<EnemySoundHandler>();
     }
 
     
@@ -70,20 +71,30 @@ public class EnemyHealth : MonoBehaviour
         }
 
         if(hitPoints <= 0)
-        {
+        {           
             Die();
         }
     }
 
     private void Die()
     {
+        Debug.Log("pollo");
         if (isDead) return;
         isDead = true;
-        
-        GameObject.Find("WaveSystem").GetComponent<EnemyWaveHandler>().UpdateCurrentWaveKillCount();
+        if(!isInvalidToWaveCounter)
+        {
+            GameObject.Find("WaveSystem").GetComponent<EnemyWaveHandler>().UpdateCurrentWaveKillCount();
+            Debug.Log("lets go");
+        }
+        Debug.Log("pollo2");
+
         // Disable NavMeshAgent
         GetComponent<NavMeshAgent>().enabled = false;
-        pooler.SpawnFromPool(destructableVersion, transform.position, transform.rotation);
+        if(pooler != null)
+        {
+            pooler.SpawnFromPool(destructableVersion, transform.position, transform.rotation);
+        }
+       
         // Trigger death animation when present
         if (GetComponent<Animator>() != null) GetComponent<Animator>().SetTrigger("die");
 
@@ -106,6 +117,8 @@ public class EnemyHealth : MonoBehaviour
                 GetComponent<EnemyAI_Ranged>().DropMaterial();
                 Destroy(gameObject);
             }
+
+            
         }
         else if (GetComponent<EnemyAI_Boss>() != null)
         {
@@ -117,6 +130,8 @@ public class EnemyHealth : MonoBehaviour
             
             //Destroy(gameObject);
         }
-        
+
+        soundHandler.PlayDeathSound();
+
     }
 }

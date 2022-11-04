@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1827082215489415658}
   - component: {fileID: 4521595135938452768}
   - component: {fileID: 2989962924022186324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: redbrick3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2465383037495424291}
   - component: {fileID: 6994389411165470707}
   - component: {fileID: 5427097164122233984}
+  - component: {fileID: 7633463124210516193}
+  - component: {fileID: 8774619550583364145}
   m_Layer: 6
   m_Name: VoidBullet 1
   m_TagString: Untagged
@@ -133,7 +135,63 @@ MonoBehaviour:
   vfx: {fileID: 305894667688393990}
   mask:
     serializedVersion: 2
-    m_Bits: 1088
+    m_Bits: 5184
+--- !u!114 &7633463124210516193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4290542281625039995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994662ac6f8be7847a3313ecd07d607e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSound:
+    Guid:
+      Data1: -140515264
+      Data2: 1091378193
+      Data3: 1223064704
+      Data4: 698721001
+    Path: event:/voidExplosion
+  attackSound:
+    Guid:
+      Data1: -140515264
+      Data2: 1091378193
+      Data3: 1223064704
+      Data4: 698721001
+    Path: event:/voidExplosion
+  deathSound:
+    Guid:
+      Data1: -140515264
+      Data2: 1091378193
+      Data3: 1223064704
+      Data4: 698721001
+    Path: event:/voidExplosion
+  debug: 0
+  moveSoundDisableOnStart: 1
+--- !u!114 &8774619550583364145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4290542281625039995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c830982cb3b6679478b41c15bd0250b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  occlusionHitCount: 0
+  PlayerTarget: {fileID: 0}
+  occlusionBetweenWidthSound: 2
+  occlusionBetweenWidthPlayer: 2
+  occlusionLayerMask:
+    serializedVersion: 2
+    m_Bits: 5367
+  detectionRange: 17
+  soundHandler: {fileID: 0}
 --- !u!1001 &286650780661773837
 PrefabInstance:
   m_ObjectHideFlags: 0

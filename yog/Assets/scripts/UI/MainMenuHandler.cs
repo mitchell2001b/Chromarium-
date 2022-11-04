@@ -9,10 +9,16 @@ public class MainMenuHandler : MonoBehaviour
     void Start()
     {
         gameSceneLoader = GetComponent<GameSceneLoader>();
+        if(DataManager.instance != null) Destroy(DataManager.instance.gameObject);
     }
 
     public void StartNewGame()
     {
         gameSceneLoader.StartGame();
+    }
+
+    public void QuitGame()
+    {
+        gameSceneLoader.QuitGame();
     }
 }

@@ -32,7 +32,7 @@ public class Upgrade : MonoBehaviour
     private void Start() {
         playerAttributes = FindObjectOfType<PlayerAttributes>();
         if(upgradeVariant == UpgradeVariants.maxHP) upgradeTitleText.text = upgradeTitle + " - " + value.ToString() + " HP";
-        else if (upgradeVariant == UpgradeVariants.critChance) upgradeTitleText.text = upgradeTitle + " - " + value.ToString() + "%";
+        else if (upgradeVariant == UpgradeVariants.critChance || upgradeVariant == UpgradeVariants.range) upgradeTitleText.text = upgradeTitle + " - " + value.ToString() + "%";
         else upgradeTitleText.text = upgradeTitle + " - " + (Mathf.RoundToInt(value * 100)).ToString() + "%";
         costText.text = cost.ToString() + "$";
     }
@@ -69,10 +69,18 @@ public class Upgrade : MonoBehaviour
             case UpgradeVariants.movementSpeed:
                 playerAttributes.IncreaseMovementSpeedModifier(value);
                 break;
+            case UpgradeVariants.range:
+                playerAttributes.IncreaseRangeModifier(value);
+                break;
             default:
                 Debug.Log("Something went wrong...");
                 break;
         }
         if (gameObject.transform.parent != null) gameObject.transform.parent.GetComponent<UpgradeSection>().RefreshUpgrades();
+    }
+
+    public UpgradeVariants GetUpgradeType()
+    {
+        return upgradeVariant;
     }
 }

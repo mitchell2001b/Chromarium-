@@ -671,6 +671,9 @@ GameObject:
   - component: {fileID: 2269754041901767555}
   - component: {fileID: 2269754041901767580}
   - component: {fileID: 2269754041901767581}
+  - component: {fileID: 773103121}
+  - component: {fileID: 1705665061}
+  - component: {fileID: 1705665062}
   m_Layer: 9
   m_Name: RobotTank
   m_TagString: Enemy
@@ -790,6 +793,7 @@ MonoBehaviour:
   maxHealth: 750
   elementalAffinity: 0
   resistanceModifier: 0.5
+  isInvalidToWaveCounter: 0
   weaknessModifier: 0.5
   NoEraseAnimation: 1
   destructableVersion: 5
@@ -815,6 +819,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 2640
+  soundHandler: {fileID: 0}
   canSeePlayer: 0
 --- !u!114 &2269754041901767581
 MonoBehaviour:
@@ -829,12 +834,110 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 10
-  drop: {fileID: 505078265933199572, guid: 7b5536cfb07967f4ca367964d1c1b4a0, type: 3}
+  drop: {fileID: 480366847708479438, guid: b1a173fdae429214baae3c51bf66a056, type: 3}
   mask:
     serializedVersion: 2
     m_Bits: 592
   eyes: {fileID: 722979270577050224}
   stoppingDistanceRange: 20
+--- !u!114 &773103121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422751104556952818}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700a5edaf8f6258439c78d7c8d1885b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  occlusionHitCount: 0
+  PlayerTarget: {fileID: 0}
+  occlusionBetweenWidthSound: 2
+  occlusionBetweenWidthPlayer: 2
+  occlusionLayerMask:
+    serializedVersion: 2
+    m_Bits: 1271
+  moveSound:
+    Guid:
+      Data1: -258300200
+      Data2: 1127343747
+      Data3: 1057319072
+      Data4: -1692791217
+    Path: event:/tank moving
+  moveSound2:
+    Guid:
+      Data1: -2097716126
+      Data2: 1331850536
+      Data3: -1200913745
+      Data4: 775163002
+    Path: event:/tank shoot
+  moveSound3:
+    Guid:
+      Data1: -868606150
+      Data2: 1132797213
+      Data3: -1426019145
+      Data4: -840006099
+    Path: event:/tank death
+  isProjectile: 0
+  detectionRange: 25
+--- !u!114 &1705665061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422751104556952818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c830982cb3b6679478b41c15bd0250b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  occlusionHitCount: 0
+  PlayerTarget: {fileID: 0}
+  occlusionBetweenWidthSound: 2
+  occlusionBetweenWidthPlayer: 2
+  occlusionLayerMask:
+    serializedVersion: 2
+    m_Bits: 5367
+  detectionRange: 25
+  soundHandler: {fileID: 0}
+--- !u!114 &1705665062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422751104556952818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994662ac6f8be7847a3313ecd07d607e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSound:
+    Guid:
+      Data1: -258300200
+      Data2: 1127343747
+      Data3: 1057319072
+      Data4: -1692791217
+    Path: event:/tank moving
+  attackSound:
+    Guid:
+      Data1: -2097716126
+      Data2: 1331850536
+      Data3: -1200913745
+      Data4: 775163002
+    Path: event:/tank shoot
+  deathSound:
+    Guid:
+      Data1: -868606150
+      Data2: 1132797213
+      Data3: -1426019145
+      Data4: -840006099
+    Path: event:/tank death
+  debug: 0
+  moveSoundDisableOnStart: 0
 --- !u!1 &1430227007957029676
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,6 +41,8 @@ public class VictoryUIHandler : MonoBehaviour
     public void Restart()
     {
         PauseScreenHandler.UnPause();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         gameSceneLoader.RestartGame();
     }
 }

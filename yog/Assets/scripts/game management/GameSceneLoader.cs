@@ -21,7 +21,7 @@ public class GameSceneLoader : MonoBehaviour
 
     public void ReloadGame()
     {       
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
         Time.timeScale = 1;
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;      
     }
@@ -42,13 +42,37 @@ public class GameSceneLoader : MonoBehaviour
     {
         // Implement Return to Main Menu
         SceneManager.LoadScene(0);
-        Debug.Log("MainMenu");
     }
 
     public void RestartGame()
     {
         // Implement Restart Game
+        Destroy(DataManager.instance.gameObject);
         SceneManager.LoadScene(1);
-        Debug.Log("Restart Game");
+    }
+
+    public void LoadPlanetSelectorHub()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void LoadDesertPlanet()
+    {
+        // Insert Desert Planet Scene
+        SceneManager.LoadScene(2);
+        Time.timeScale = 1;
+    }
+
+    public void LoadJunglePlanet()
+    {
+        // Insert Jungle Planet Scene
+        SceneManager.LoadScene(3);
+        Time.timeScale = 1;
+    }
+
+    public void LoadVoidPlanet()
+    {
+        // Insert Void Planet Scene
+        //SceneManager.LoadScene(4);
     }
 }

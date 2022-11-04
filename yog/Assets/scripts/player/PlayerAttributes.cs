@@ -25,6 +25,7 @@ public class PlayerAttributes : MonoBehaviour
     [SerializeField] TextMeshProUGUI aoeModifierTextNumber;
     
     private void Start() {
+        GetData();
         currencyTextNumber.text = currency.ToString() + "$";
         damageModifierTextNumber.text = Mathf.RoundToInt(damageModifier * 100).ToString() + "%";
         attackSpeedModifierTextNumber.text = Mathf.RoundToInt(attackSpeedModifier * 100).ToString() + "%";
@@ -32,7 +33,6 @@ public class PlayerAttributes : MonoBehaviour
         critModifierTextNumber.text = Mathf.RoundToInt(critModifier * 100).ToString() + "%";
         rangeModifierTextNumber.text = Mathf.RoundToInt(rangeModifier * 100).ToString() + "%";
         aoeModifierTextNumber.text = Mathf.RoundToInt(aoeRangeModifier * 100).ToString() + "%";
-        baseMovementSpeed = GetComponent<FirstPersonController>().GetMovementSpeed();
         movementSpeedTextNumber.text = (Mathf.Round(baseMovementSpeed * movementSpeedModifier * 100) / 100).ToString() + " m/s";
     }
     public bool HasEnoughCurrency(int requiredAmount)
@@ -138,5 +138,22 @@ public class PlayerAttributes : MonoBehaviour
     public float GetAoERangeModifier()
     {
         return aoeRangeModifier;
+    }
+
+    private void GetData()
+    {
+        float maxHealth = GetComponent<PlayerHealth>().GetMaxHealth();
+        DataManager.instance.LoadData(out currency,
+                                      out maxHealth,
+                                      out damageModifier,
+                                      out attackSpeedModifier,
+                                      out critChance,
+                                      out critModifier,
+                                      out rangeModifier,
+                                      out aoeRangeModifier,
+                                      out baseMovementSpeed,
+                                      out movementSpeedModifier);
+        GetComponent<PlayerHealth>().ChangeMaxHealth(maxHealth);
+        GetComponent<FirstPersonController>().ChangeMovementSpeeds(baseMovementSpeed * movementSpeedModifier);
     }
 }
