@@ -19,8 +19,16 @@ public class UpgradeSection : MonoBehaviour
         {
             Destroy(upgrade.gameObject);
         }
-        Instantiate(upgradePrefabs[Random.Range(0, upgradePrefabs.Count)], gameObject.transform);
-        Instantiate(upgradePrefabs[Random.Range(0, upgradePrefabs.Count)], gameObject.transform);
-        Instantiate(upgradePrefabs[Random.Range(0, upgradePrefabs.Count)], gameObject.transform);
+        List<UpgradeVariants> pickedUpgradeVariants = new List<UpgradeVariants>();
+        GameObject pickedUpgrade;
+        while (pickedUpgradeVariants.Count < 3)
+        {
+            pickedUpgrade = upgradePrefabs[Random.Range(0, upgradePrefabs.Count)];
+            if(!pickedUpgradeVariants.Contains(pickedUpgrade.GetComponent<Upgrade>().GetUpgradeType()))
+            {
+                pickedUpgradeVariants.Add(pickedUpgrade.GetComponent<Upgrade>().GetUpgradeType());
+                Instantiate(pickedUpgrade, gameObject.transform);
+            }
+        }
     }
 }

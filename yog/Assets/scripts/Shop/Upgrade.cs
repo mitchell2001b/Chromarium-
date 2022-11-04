@@ -78,4 +78,9 @@ public class Upgrade : MonoBehaviour
         }
         if (gameObject.transform.parent != null) gameObject.transform.parent.GetComponent<UpgradeSection>().RefreshUpgrades();
     }
+
+    public UpgradeVariants GetUpgradeType()
+    {
+        return upgradeVariant;
+    }
 }
