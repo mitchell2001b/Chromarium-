@@ -19,11 +19,14 @@ public class EnemyHealth : MonoBehaviour
     public float hitPoints { get; private set; }
     public bool isDead { get; private set; } = false;
 
+    private MiscSoundHandler miscSoundHandler;
+
     [SerializeField] bool NoEraseAnimation = false;
     [SerializeField] DestructableObjectType destructableVersion;
     private DestroyedObjectsPooler pooler;
     void Start()
     {
+        miscSoundHandler = GameObject.Find("MiscSoundHandler").GetComponent<MiscSoundHandler>();
         hitPoints = maxHealth;
         pooler = GameObject.FindGameObjectWithTag("DestructableEnemyPooler").GetComponent<DestroyedObjectsPooler>();
         soundHandler = GetComponent<EnemySoundHandler>();
@@ -34,6 +37,10 @@ public class EnemyHealth : MonoBehaviour
     }
     public void RecieveDamage(float damageAmount, AmmoType ammoTypeUsed)
     {
+        if(ammoTypeUsed == elementalAffinity && ammoTypeUsed != AmmoType.Regular)
+        {
+            miscSoundHandler.PlayAffinityBlockSound();
+        }
         if (elementalAffinity == AmmoType.Regular) hitPoints -= damageAmount;
         else if (elementalAffinity == ammoTypeUsed) hitPoints -= damageAmount * (1 - resistanceModifier);
         else

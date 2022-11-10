@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour, IAttackable
 
     [SerializeField] TextMeshProUGUI HealthTextNumber;
 
+    private MiscSoundHandler miscSoundHandler;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class PlayerHealth : MonoBehaviour, IAttackable
         maxHealth = initalMaxHealth;
         health = maxHealth;
         UpdateUIHealth(health.ToString() + "/" + maxHealth.ToString());
+        miscSoundHandler = GameObject.Find("MiscSoundHandler").GetComponent<MiscSoundHandler>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class PlayerHealth : MonoBehaviour, IAttackable
     }
     public void ReceiveDamage(float damageCount)
     {
+        miscSoundHandler.PlayPlayerHitSound();
         health = health - damageCount;
         if (health < 0 || health == 0)
         {           

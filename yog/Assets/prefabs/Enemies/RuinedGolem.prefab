@@ -1820,25 +1820,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSound:
     Guid:
-      Data1: -1572120020
-      Data2: 1274998488
-      Data3: -801991803
-      Data4: 2011063882
-    Path: event:/RobotSmallFootstepsWalk
+      Data1: 175617893
+      Data2: 1241834757
+      Data3: -707486078
+      Data4: 1913187198
+    Path: event:/RockGolemFootsteps
   attackSound:
     Guid:
-      Data1: -2097716126
-      Data2: 1331850536
-      Data3: -1200913745
-      Data4: 775163002
-    Path: event:/tank shoot
+      Data1: -1038335990
+      Data2: 1315130982
+      Data3: -1636162409
+      Data4: 1358019038
+    Path: event:/RockThrowExplosion
   deathSound:
     Guid:
-      Data1: -389840003
-      Data2: 1296410614
-      Data3: -419647814
-      Data4: -1747636281
-    Path: event:/RobotDeath
+      Data1: -825167973
+      Data2: 1299920008
+      Data3: -1909056126
+      Data4: -589083494
+    Path: event:/RockGolemDeath
   debug: 0
   moveSoundDisableOnStart: 0
 --- !u!114 &5888882683504811097

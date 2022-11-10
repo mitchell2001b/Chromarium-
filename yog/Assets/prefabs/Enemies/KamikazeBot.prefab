@@ -568,11 +568,11 @@ MonoBehaviour:
     Path: event:/tankshell explosion
   deathSound:
     Guid:
-      Data1: -389840003
-      Data2: 1296410614
-      Data3: -419647814
-      Data4: -1747636281
-    Path: event:/RobotDeath
+      Data1: 256326351
+      Data2: 1099422468
+      Data3: 1996980403
+      Data4: -1506002966
+    Path: event:/tankshell explosion
   debug: 0
   moveSoundDisableOnStart: 0
 --- !u!114 &2203361148224043599
