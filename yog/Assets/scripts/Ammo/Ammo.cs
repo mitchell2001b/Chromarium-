@@ -97,7 +97,7 @@ public class Ammo : MonoBehaviour
     }
     void Start()
     {
-       DataManager.instance.LoadAmmoSlots(out ammoSlots);
+        DataManager.instance.LoadAmmoSlots(out ammoSlots);
         //SetCurrentAmmoSlot(AmmoType.Regular);
                
     }

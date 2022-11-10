@@ -28,9 +28,10 @@ public class EnemyHealth : MonoBehaviour
         pooler = GameObject.FindGameObjectWithTag("DestructableEnemyPooler").GetComponent<DestroyedObjectsPooler>();
         soundHandler = GetComponent<EnemySoundHandler>();
     }
-
-    
-
+    public void ChangeAffinity(AmmoType ammoType)
+    {
+        elementalAffinity = ammoType;
+    }
     public void RecieveDamage(float damageAmount, AmmoType ammoTypeUsed)
     {
         if (elementalAffinity == AmmoType.Regular) hitPoints -= damageAmount;
@@ -129,6 +130,16 @@ public class EnemyHealth : MonoBehaviour
             GetComponent<EnemyAiKamikaze>().enabled = false;
             
             //Destroy(gameObject);
+        }
+        else if (GetComponent<EnemyAI_Switcher>() != null)
+        {
+            if (NoEraseAnimation)
+            {
+                GetComponent<EnemyAI_Switcher>().enabled = false;
+                GetComponent<EnemyAI_Switcher>().DropMaterial();
+                Destroy(gameObject);
+            }
+               
         }
 
         soundHandler.PlayDeathSound();
