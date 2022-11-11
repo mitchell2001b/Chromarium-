@@ -101,7 +101,7 @@ public class Weapon : MonoBehaviour
             indicator.ChangeIndicatorToReloadMaterial();
         }
 
-        yield return new WaitForSeconds(ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().GetAmmoShootCooldown(ammoHandler.GetCurrentAmmoType()));
+        yield return new WaitForSeconds(ammoTypeBehaviorManager.GetComponent<AmmoBehaviorHandler>().GetAmmoShootCooldown(ammoHandler.GetCurrentAmmoType()) / attributes.GetAttackSpeedModifier());
         CanShoot = true;
         indicator.ChangeIndicatorMaterial(ammoHandler.GetCurrentAmmoType());
 

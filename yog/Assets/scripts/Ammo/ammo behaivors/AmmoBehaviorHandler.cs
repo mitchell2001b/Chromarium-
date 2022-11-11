@@ -20,7 +20,6 @@ public class AmmoBehaviorHandler : MonoBehaviour
     {
         switch (ammoType)
         {
-
             case AmmoType.Void:
                 return GetComponent<AmmoVoidBehavior>().GetBaseFiringDelay();
                 
@@ -36,13 +35,11 @@ public class AmmoBehaviorHandler : MonoBehaviour
             case AmmoType.Ice:
                 return GetComponent<AmmoIceBehavior>().GetBaseFiringDelay();
                 
-
             case AmmoType.Earth:
                 return GetComponent<AmmoEarthBehavior>().GetBaseFiringDelay();
 
             case AmmoType.Holy:
                 return GetComponent<AmmoHolyBehavior>().GetBaseFiringDelay();
-
         }
 
         //nothing found
