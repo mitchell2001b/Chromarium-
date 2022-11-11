@@ -3,12 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyWaveHandler : MonoBehaviour
-{
-
-    //[SerializeField]List<Transform> spawnPoints = new List<Transform>();
-
-
-
+{  
     public int currentActiveWaveIndex = 0;
     [SerializeField] List<GameObject> enemiesActive = new List<GameObject>();
     [SerializeField] int enemiesDefeated;
@@ -25,8 +20,7 @@ public class EnemyWaveHandler : MonoBehaviour
         [SerializeField]List<EnemyPool> availablePools = new List<EnemyPool>();
         [SerializeField]List<Transform> spawnPoints = new List<Transform>();
         public List<GameObject> activeEnemies = new List<GameObject>();
-        //public List<EnemyHealth> enemyHealthComponents = new List<EnemyHealth>();
-
+        
         private Transform GetRandomSpawnPoint()
         {
             int index = Random.Range(0, spawnPoints.Count);
@@ -54,8 +48,7 @@ public class EnemyWaveHandler : MonoBehaviour
                 if(CheckIfEnemyCanBeAdded(enemy, pool))
                 {
                     enemiesActiveCount++;
-                    AddActiveEnemy(enemy);
-                    //enemyHealthComponents.Add(enemy.GetComponent<EnemyHealth>());
+                    AddActiveEnemy(enemy);                 
                 }
             }
         }
@@ -86,20 +79,7 @@ public class EnemyWaveHandler : MonoBehaviour
         {
            
             activeEnemies.Add(enemy);
-        }
-
-        /*public bool CheckIfEnemyExistsInWave(GameObject enemy)
-        {
-            bool enemyExists = false;
-
-            if(activeEnemies.Find((x) => x.name == enemy.name))
-            {
-                enemyExists = true;
-            }
-
-            return enemyExists;
-        }*/
-
+        }       
     }
     [System.Serializable]
     public class EnemyPool
@@ -127,18 +107,14 @@ public class EnemyWaveHandler : MonoBehaviour
             return false;
 
         }
-    }
-
-
-    //public List<EnemyPool> availblePools = new List<EnemyPool>();
+    }  
     public List<Wave> waves = new List<Wave>();
 
     public void UpdateCurrentWaveKillCount()
     {
         enemiesDefeated++;
         if(CheckIfWaveIsCleared())
-        {
-            //StopCoroutine(WaveIsCleared());
+        {           
             StartCoroutine(WaveIsCleared());
         }
     }
@@ -164,9 +140,7 @@ public class EnemyWaveHandler : MonoBehaviour
        
     }
     private bool CheckIfWaveIsCleared()
-    {
-        //Debug.Log(waves[currentActiveWaveIndex - 1].enemyCount.ToString() + " aantal");
-        //Debug.Log(enemiesDefeated.ToString() + " defeated");
+    {      
         bool waveCleared = false; 
         if(enemiesDefeated == waves[currentActiveWaveIndex - 1].enemyCount)
         {          
@@ -176,14 +150,11 @@ public class EnemyWaveHandler : MonoBehaviour
         return waveCleared;
     }
     public void StartWave(int waveIndex)
-    {     
-        //Debug.Log(waveIndex.ToString() + " de wave idnex" + waves.Count.ToString() + " de wave count");                               
+    {                                     
         StartCoroutine(waves[waveIndex].TriggerWave());
         enemiesActive = waves[waveIndex].activeEnemies;
         currentActiveWaveIndex++;
-        enemiesDefeated = 0;
-        
-       
+        enemiesDefeated = 0;             
     }
 
     public int GetEnemiesDefeated()

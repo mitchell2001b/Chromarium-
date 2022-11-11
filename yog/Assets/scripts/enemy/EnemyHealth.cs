@@ -85,17 +85,14 @@ public class EnemyHealth : MonoBehaviour
     }
 
     private void Die()
-    {
-        Debug.Log("pollo");
+    {       
         if (isDead) return;
         isDead = true;
         if(!isInvalidToWaveCounter)
         {
-            GameObject.Find("WaveSystem").GetComponent<EnemyWaveHandler>().UpdateCurrentWaveKillCount();
-            Debug.Log("lets go");
+            GameObject.Find("WaveSystem").GetComponent<EnemyWaveHandler>().UpdateCurrentWaveKillCount();           
         }
-        Debug.Log("pollo2");
-
+        
         // Disable NavMeshAgent
         GetComponent<NavMeshAgent>().enabled = false;
         if(pooler != null)

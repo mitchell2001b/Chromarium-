@@ -72,8 +72,7 @@ public class DestroyedObjectsPooler : MonoBehaviour
     {
         GameObject objectToSpawn = null;
         if (tag != DestructableObjectType.Invalid)
-        {
-            Debug.Log(tag + "dit is de tag");
+        {         
             ObjectPool selectedPool = null;
             foreach (ObjectPool pool in ObjectPools)
             {

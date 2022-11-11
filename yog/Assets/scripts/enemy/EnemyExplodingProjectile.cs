@@ -38,24 +38,19 @@ public class EnemyExplodingProjectile : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
-
-
         
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
-        {
-            Debug.Log("hallo2");
+        {          
             return;
         }
 
         RaycastHit[] entitiesHit;
         entitiesHit = Physics.SphereCastAll(other.transform.position, explosionRadius, transform.up);
         foreach (RaycastHit entity in entitiesHit)
-        {
-            Debug.Log(entity.collider.gameObject.name);
-            Debug.Log("hallo");
+        {           
             if (entity.collider.gameObject.tag == "Player")
             {
                 

@@ -46,8 +46,7 @@ public class EnemyAI_Ranged : MonoBehaviour
         {
             if (hit.collider.tag == "Player")
             {
-                RotateToTarget();
-                Debug.Log("set the range");
+                RotateToTarget();             
                 navMeshAgent.stoppingDistance = stoppingDistanceRange;
             }
             else

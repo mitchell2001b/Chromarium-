@@ -19,11 +19,7 @@ public class EnemyAiKamikaze : MonoBehaviour
     public EnemyKamikazeAttack attack;
 
     private bool hasExploded = false;
-
-    //public EnemyHealth health;
    
-   // [SerializeField] float navmeshStoppingDistanceMelee = 2f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -32,25 +28,14 @@ public class EnemyAiKamikaze : MonoBehaviour
         navMeshAgent.GetComponent<NavMeshAgent>();
         target = GameObject.FindWithTag("Player").transform;
         walkSpeed = navMeshAgent.speed;
-        attack = GetComponent<EnemyKamikazeAttack>();
-        //health = GetComponent<EnemyHealth>();
+        attack = GetComponent<EnemyKamikazeAttack>();      
     }
 
     // Update is called once per frame
     void Update()
     {
         distanceToTarget = Vector3.Distance(target.position, transform.position);
-        EngageTarget();
-
-        /*if(health.isDead)
-        {
-            if (!hasExploded)
-            {
-                Debug.Log("explode");
-                attack.Explode();
-                hasExploded = true;
-            }
-        }*/
+        EngageTarget();       
     }
 
     private void RotateToTarget()
@@ -118,8 +103,7 @@ public class EnemyAiKamikaze : MonoBehaviour
     private void OnDisable()
     {
         if (!hasExploded)
-        {
-            Debug.Log("explode");
+        {          
             attack.Explode();
             hasExploded = true;
         }

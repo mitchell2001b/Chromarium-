@@ -30,12 +30,7 @@ public class Ammo : MonoBehaviour
         if(this.gameObject.activeSelf)
         {
             gunAnimationHandler.ChangeGunAnimation(ammoType);
-        }
-        
-        
-
-        //ammoNumber.text = GetAmmoSlot(ammoType).ammoAmount.ToString();
-        
+        }                           
     }
     public void WeaponChangeComplete()
     {
